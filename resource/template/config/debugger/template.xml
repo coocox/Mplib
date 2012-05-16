@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2010 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Debugger>
+	<Debug>
+		<Arch>XXX</Arch> <!-- Such as Cortex-M0 -->
+		
+		<SWD support="true">
+			<ExpectedID>XXX</ExpectedID> <!-- Such as 0x0BB11477 -->
+		</SWD>
+		
+		<JTAG support="XXX">	<!-- true or  false -->
+		</JTAG>
+		
+		<Reset>
+			<HwReset       support="XXX" />  <!-- true or  false -->
+			<SoftSysReset  support="XXX" select="XXX"/> <!-- true or  false -->
+			<SoftVectReset support="XXX" />  <!-- true or  false -->
+		</Reset>
+		
+		<SystemResetClkFreq>XXX</SystemResetClkFreq> <!-- Such as 12000000 -->
+	</Debug>
+
+	<!-- 
+		Memory Blocks that can be read/written/executed
+		exclude ram,rom blocks
+		read(true,false)
+		write(true,false)
+		execute(true,false)	
+	 -->
+	<MemMap>
+   <!-- <Block addr="XXX"        size="XXX"      read="true"   write="true"   execute="false" name="XXX" /> -->
+		<Block addr="0xE000ED00" size="0x0090"   read="true"   write="true"   execute="false" name="System Control" />
+		<Block addr="0xE000E100" size="0xC000"   read="true"   write="true"   execute="false" name="NVIC Controller" />
+		<Block addr="0xE000E010" size="0x0F00"   read="true"   write="true"   execute="false" name="System timer" />
+		
+		<Block addr="0x400E0000" size="0x10000"  read="true"   write="true"   execute="false" name="ADC" />
+		<Block addr="0x400D0000" size="0x4000"   read="true"   write="true"   execute="false" name="CMP" />
+		<Block addr="0x40050000" size="0x4000"   read="true"   write="true"   execute="false" name="UART" />
+		<Block addr="0x40040000" size="0x4000"   read="true"   write="true"   execute="false" name="PWM" />
+		<Block addr="0x40030000" size="0x4000"   read="true"   write="true"   execute="false" name="SPI" />
+		<Block addr="0x40020000" size="0x4000"   read="true"   write="true"   execute="false" name="I2C" />
+		<Block addr="0x40010000" size="0x4000"   read="true"   write="true"   execute="false" name="Timer" />
+		<Block addr="0x40004000" size="0x4000"   read="true"   write="true"   execute="false" name="WDT" />
+		
+		<Block addr="0x5000C000" size="0x4000"   read="true"   write="true"   execute="false" name="FMC" />
+		<Block addr="0x50004000" size="0x4000"   read="true"   write="true"   execute="false" name="GPIO" />
+		<Block addr="0x50000300" size="0x0400"   read="true"   write="true"   execute="false" name="INT" />
+		<Block addr="0x50000200" size="0x0100"   read="true"   write="true"   execute="false" name="Clock control" />
+		<Block addr="0x50000000" size="0x0200"   read="true"   write="true"   execute="false" name="global Control" />
+	</MemMap>
+</Debugger>

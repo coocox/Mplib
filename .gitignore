@@ -1,0 +1,9 @@
+
+*.out
+*.o
+*.d
+*.lst
+*.map
+*.dep
+*.uvgui.*
+*.uvopt

@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2011 Holtek Semiconductor Inc.
+    This file is part of Holtek Softwares.
+-->
+<Debugger>
+	<Debug>
+		<Arch>Cortex-M3</Arch>
+		<SWD support="true">
+			<ExpectedID>0x2BA01477</ExpectedID>
+		</SWD>
+		
+		<JTAG support="false">		
+		</JTAG>
+		
+		<Reset>
+			<HwReset       support="true" />
+			<SoftSysReset  support="true" select="true"/>
+			<SoftVectReset support="true" />
+		</Reset>
+		
+		<SystemResetClkFreq>8000000</SystemResetClkFreq> 
+	</Debug>
+	
+	
+	<!-- 
+		Memory Blocks that can be read/written/executed
+		exclude ram,rom blocks
+		read(true,false)
+		write(true,false)
+		execute(true,false)	
+	 -->
+	<MemMap>
+	<!-- Private Peripheral bus -->
+	<Block addr="0xE00FF000" size="0x1000" read="true" write="true" execute="false" name="ROM Table" /> 
+	<Block addr="0xE0042000" size="0xD000" read="true" write="true" execute="false" name="External PPB" /> 
+	<Block addr="0xE0041000" size="0x1000" read="true" write="true" execute="false" name="ETM" /> 
+	<Block addr="0xE0040000" size="0x1000" read="true" write="true" execute="false" name="TPIU" /> 
+	<Block addr="0xE000E000" size="0x1000" read="true" write="true" execute="false" name="System Control Space" /> 
+	<Block addr="0xE0002000" size="0x1000" read="true" write="true" execute="false" name="FPB" /> 
+	<Block addr="0xE0001000" size="0x1000" read="true" write="true" execute="false" name="DWT" /> 
+	<Block addr="0xE0000000" size="0x1000" read="true" write="true" execute="false" name="ITM" /> 
+  
+	<!-- APB Peripheral bus-->
+	<Block addr="0x40000000" size="0x1000" read="true" write="true" execute="false" name="USART" />
+	<Block addr="0x40004000" size="0x1000" read="true" write="true" execute="false" name="SPI" />
+	<Block addr="0x40010000" size="0x1000" read="true" write="true" execute="false" name="ADC" />
+	<Block addr="0x40018000" size="0x1000" read="true" write="true" execute="false" name="OPA/Comparator" />
+	<Block addr="0x4001A000" size="0x1000" read="true" write="true" execute="false" name="GPIOA" />
+	<Block addr="0x4001B000" size="0x1000" read="true" write="true" execute="false" name="GPIOB" />
+	<Block addr="0x40022000" size="0x1000" read="true" write="true" execute="false" name="AFIO" />
+	<Block addr="0x40024000" size="0x1000" read="true" write="true" execute="false" name="EXTI" />
+	<Block addr="0x40048000" size="0x1000" read="true" write="true" execute="false" name="I2C" />
+	<Block addr="0x40068000" size="0x1000" read="true" write="true" execute="false" name="WDT" />
+	<Block addr="0x4006A000" size="0x1000" read="true" write="true" execute="false" name="RTC/PWRCU" />
+	<Block addr="0x4006E000" size="0x1000" read="true" write="true" execute="false" name="GPTM0" />
+	<Block addr="0x4006F000" size="0x1000" read="true" write="true" execute="false" name="GPTM1" />
+  
+	<!-- AHB Peripheral bus-->
+	<Block addr="0x40080000" size="0x2000" read="true" write="true" execute="false" name="FMC" />
+	<Block addr="0x40088000" size="0x2000" read="true" write="true" execute="false" name="CKCU/RSTCU" />
+  
+	<!-- code area-->
+	<Block addr="0x1FF00000" size="0x400" read="true" write="false" execute="true" name="Option byte" /> 
+	<Block addr="0x1F000000" size="0x800" read="true" write="false" execute="true" name="BOOT loader" /> 
+	</MemMap>
+	
+</Debugger>

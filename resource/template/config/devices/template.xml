@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2010 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>XXX</Name>  <!-- such as HT32F1251 -->
+	<Vendor>XXX</Vendor> <!-- such as Holtek -->
+	<Family>XXX</Family>  <!-- such as HT32F125x -->
+	<Arch>XXX</Arch> <!-- such as Cortex-M3 -->
+	<Description>XXX</Description>
+	<!-- such as HOLTEK's HT32F1251 operates at a maximum speed of 72MHz and features 8 Kbytes of Flash and 2 Kbytes of SRAM. -->
+	<Parameters>
+	    <!-- You can copy the content to here from http://www.holtek.com.tw/english/docum/32bit_Flash_MCU/HT32F125x.htm for example -->
+		<Parameter>XXX</Parameter> <!-- such as 31 interrupt with 16-levels of priority -->
+		<Parameter>XXX</Parameter>
+		<Parameter>XXX</Parameter>
+		<Parameter>XXX</Parameter>
+		<Parameter>XXX</Parameter>
+		<Parameter>XXX</Parameter>
+		<Parameter>XXX</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">XXX</Link> <!-- such as http://www.holtek.com.cn/china/products/mcu_71.htm -->
+		<Link name="Chips Datasheet">XXX</Link><!-- such as http://www.holtek.com.cn/pdf/32bit_Flash_MCU/simHT32F125xv100.pdf -->
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\XXX.xml</DebugSetting><!-- such as HT32Fx.xml -->
+	
+	<Flash>
+		<Block addr="XXX" size="XXX" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- XXXK -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="XXX" size="XXX" read="true" write="true"  execute="true" name="Embedded SRAM" />	    <!-- XXXK -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\XXX.elf</loader> <!-- such as HT32F_8.elf -->
+	</FlashLoader>
+</Device>

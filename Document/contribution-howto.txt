@@ -1,0 +1,330 @@
+
+This file shows how to contribute to the Manufacture peripheral library project. 
+
+The contributer can:
+
+1. Add a new Manufacture peripheral Library which CoIDE not support yet.
+2. Improve Manufacture peripheral Library and correction bugs
+3. Add a new example to the existing library
+4. Update Manufacture peripheral Library which CoIDE already supported.
+5. Just add a new chip to CoIDE.
+
+1. Add a new Manufacture peripheral Library which CoIDE not support yet.
+-------------------------------------------------------------------------------
+
+    1.1. Completed Manufacture peripheral Library Directory Organizition
+-------------------------------------------------------------------------------
+
+    The root directory of the Manufacture peripheral Library is 
+/$manufacturer$\$series$, such as /ST\STM32F1xx.
+
+    This is Completed Manufacture peripheral Library Directory Organizition include Library, examples, 
+Some of the information required to support CoIDE.
+
+
+
+/$series$ (Mini51 for example)/
+	manufacturer library of Mini51.
+	
+	cmsis_lib/
+		CMSIS manufacturer library
+		
+		lib/
+			cmsis_boot/
+				cmsis boot include startup and CMSIS ARM Device Peripheral Access Layer File
+				MINI51 is the name of series
+			
+				startup/
+					document/
+						startup.xml
+					coide/
+						startup_MINI51.c
+				    iar/
+					    startup_MINI51.s
+					arm/
+					    startup_MINI51.s
+					
+				MINI51.h
+				system_MINI51.c
+				system_MINI51.h
+			
+			cmsis_core/
+				core_cm0.c
+				core_cm0.h
+			
+			Include/
+				Driver/
+					DrvADC.h
+					...
+				
+				System/
+					ModuleID.h
+					...
+			
+			Source/
+				DrvADC.c
+				...
+					
+					
+			
+		all/
+			A example project include all the MINI51 manufacturer library files
+			
+			example/
+			
+				ewarm/
+				src/
+				...
+			...
+		
+		acmp/
+			The example of a peripheral 
+			
+			document/
+				acmp.xml
+				description.html
+				
+			example/
+				SmplAcmp
+					doc/
+						SmplAcmp.xml
+					src/
+						SmplAcmp.c
+					ewarm/
+					    SmplAcmp.eww
+						SmplAcmp.ewp
+					rvmdk/
+					    SmplAcmp.uvproj
+		
+		...
+	
+	config
+        device/
+	        Chip device file which is used by CoIDE.If you want CoIDE to support a new chip,you can write
+		    a file like this.
+    	    Mini51LAN.xml
+		    Mini51ZAN.xml
+		    ...
+			
+		debugger/
+		    Nuvtonmi51x.xml
+			
+	flash/
+	    flash algorithm of Mini51
+		
+	    Mini51_8.elf
+		...
+	
+	resource/
+		Somer resources of Mini51
+		mini51_coide_empty_project/
+		
+	coide_gen.bat
+		Use to gen the CoIDE project
+	
+	...	 
+
+    1.2 Steps to add a Manufacture peripheral library to a new series mcu
+-------------------------------------------------------------------------------        
+Things you need to do:
+- Download Manufacture peripheral library from its official website.
+  Download reference Manual from its official website.
+
+- Split the Manufacture peripheral library to a series components.
+  Mini51 for example can Split to acmp, adc, fmc, gpio, i2c, pwm, spi, sysctl, timer, uart, wdt, system define, cmsis_boot, assert, core.
+  Generally speaking, a components is a C file with a H file,such as gpio.c and gpio.h. So a peripheral component is simple
+
+- Write a description document which used to show what is this component how to use this component for each component.
+- Write a description document which used to show how to upload this component for each component.
+- Wirte an example and corresponding document for each component.this document show what is the example for and how to use this example
+- Use the CoIDE to compile and test your code.
+- Commit to your fork repository, and send pull request on the github.
+
+Overall, a complete Manufacture peripheral library include the support information of CoIDE chip , component , component documentation , examples 
+(test project and source code ) , examples of documentation .
+The general situation is that ,you must support the chip before you can support the Manufacture library.
+
+Explaining the steps by taking example for adding a complete Manufacturer peripheral library.
+a.Download the appropriate Manufacturer peripheral library source code, reference manuals, data sheets from the official website;
+  Fork coocox Manufacturer peripheral library project from https://github.com/coocox/MPLib. Clone vendor library source from 
+  git://github.com/coocox/mplib.git. 
+  Of course ,you need to register for an account on https://github.com ,then need to install git before you can do above matter. 
+  Installation method is as follows : http://help.github.com/win-set-up-git/.
+
+b.Copy \resource\template file folder to   /$manufacturer$/ directory.The $manufacturer$ is the name of the Manufacturer 
+  which you are transplanting , and common is ST, TI, Atmel, NXP, holtck, Nuvoton, Energy Micro, ARM 
+ (This is a special manufacturer , the M0, M3 , M4). Renamed the "Template" to $series$, the $series$ is the series such as 
+  NUC1xx , M051 , LPC17xx and STM32F1xx etc. .
+
+c.In /$manufacturer$\$series$\config\device\directory , rename template.xml file to $chipname$.xml , for example: STM32F103VB.xml .
+  Refer to the reference manual, data sheet , replace the "XXX" in this file to a valid information .Each "XXX" followed by the 
+  corresponding notes reminder. If the Manufacture library support multiple chip, each chip corresponds to a chip file. You need to
+  write a file(file name is the chip name) for every chips.
+  
+d.In the /$Manufacturer$\$series$\Flash\ directory , rename the folder "template" to the "$series$" . According to the Reference Manual
+  and the following link contents to achieve FlashAlgoFncs.c and FlashAlgoInfo.c files .Use the GCC compiler to make makefile to generate
+  the required flash algorithm .
+  Links is: http://www.coocox.org/CoFlashGuide/CoFlash_UserGuide_Algorithm.htm.
+  
+e.In /$manufacturer$\$series$\config\debugger\ directory , rename template.xml file to the $series$.xml , such as lpc17xx.xml sam3uxx.xml.
+  Refer to the reference manual, data sheet , replace "XXX" in this file as a valid information . Each " XXX " followed by the 
+  corresponding notes to remind . When write memory map you should note that you need to fill the mapping of all the corresponding module .
+
+Until this point , CoIDE can support the chip or a series of chips . How to support it? You only need to submit these documents to github 
+and CooCox will arrange support .Then you can begin the component supporting.
+component supports have two parts ,one is the basic component (include component document) , the second is the component corresponding 
+example (test project and documents) .
+
+f.Open the Manufacture peripheral library which download from the official.Copy the source code to
+  /$manufacturer$\$series$\cmsis_lib\lib directory according to the directory organization.
+  Special attention to the startup code , if the official library, including the GCC startup code ( C file) ,
+  then rename the GCC start code to startup_coide.c , if the C startup code file is not available or
+  only provides the S startup code file , you need to transplant one .
+  
+g.Open the IAR project file under /$manufacturer$\$series$\cmsis_lib\all\example\ewarm directory . Readd the file in accordance with the 
+  project directory organization . Open the project options, configure your chip , debugger , and other information according to the
+  actual situation. Ensure it can compile pass.
+
+h.Open CoIDE . New a project named coide_empty_project , chip select corresponding chip ( Step 5 do support that) , do not selected
+ any of the components , compile , clean .
+  In the project directory,use the Notepad to open the build.xml file , find <includepath path="."/> , add following lines below 
+  this line.
+      <includepath path="cmsis_lib"/>
+      <includepath path="cmsis_boot"/>
+      <includepath path="cmsis_core"/>
+      <includepath path="cmsis_lib\include"/>
+  Save. Then copy all the files outside the main.c to /$manufacturer$\$series$\resource\coide_empty_project\ directory.
+
+i.Run /$manufacturer$\$series$\coide_gen.bat to product CoIDE project . 
+  Open the CoIDE project in /$manufacturer$\$series$\cmsis_lib\all\example\coide_gen. Do compilation tests .
+  When spliting CoIDE components , you need special attention to the file like lib.h config.h that manufacturers library provide.
+  This file is used to configure each components header files to be included or not.
+  CoIDE can automatically add components Dependencies, so do not need this file .
+  After compile pass, the basic components of the source code does not require changes . If compile do not pass, 
+  the most likely reason is that the boot code error or parameter checking code error.
+
+j.Under /$Manufacturer$\$series$\cmsis_lib\ directory, create a folder for each component, there already has a template ( the adc ),
+   use $components$ to indicate the components folder. There are two directories in the $components$ , a component document directory, 
+   a component example directory. Component document directory including component upload documentation and components help documentation.
+  
+k.Component upload documents , essential informations when uploading component : the name of the component ( ADC ), 
+   component description , in CoIDE in category ( manufacturer libraries are Peripheral ) , file path , file path in CoIDE ,
+   dependencies, the list of support chips.
+   Dependencies is that the use of one component must rely on other components , for example, any component must depend on CMSIS_BOOT
+   and clock module , the UART depend on the GPIO , under normal circumstances , the peripheral components will depend on the 
+   clock module , GPIO and CMSIS_BOOT .
+
+l.Components help document consists of two parts , First, what is this component , what functions , what features ? ( What ). Second, 
+   how to use the components,including the steps and application examples , can also contain some additional information , 
+   such as circuit diagrams , the development board . There has a html simple template in $components$/document.
+ 
+To far, CoIDE the components have been fully supportted , you can upload component in accordance with document that provided by coocox 
+(using the project in /$manufacturer$\$series$\cmsis_lib\all\example\coide_gen ) , document link is http://www.coocox.com/CoIDE/Upload_component.html .
+You can also submit the contents to the github, and then notify CooCox to upload .
+   
+m.After component transplant completed , you also need to add one or more examples for each component, you can still the transplant 
+   examples provide by manufacturers , more things you need to do when transplant examples as the change is relatively large , 
+   mainly in transplantation of printf , redirection and getchar . CoIDE can automatically add the example to project and be called in
+   main.c.That is, the CoIDE examples have some special form of expression. So CoIDE examples need to pay attention to the following points .
+
+n.Example only supports one file , a C file , so if the example contains more than a C file,you need combine them to a C file ; 
+   examples can be automatically called in main.c , so the main function of the examples must be put on the first position of the 
+   example file , the statement can be placed on the front . For example, an example file which contains three functions ,state 
+   these three functions in the file front (the order does not matter ) ,
+   Then, the main function must be the first function the three functions, the main function of the mean is , this function will
+   be automatically called in the main.c . The following structure , functionC will be called in the main.c .
+   void functionA(void);
+   void functionB(void);
+   void functionC(void);
+   void functionC(void)
+   {
+       functionB();
+	   functionA();
+	   ....
+   }
+   void functionA(void)
+   {
+	   ....
+   }
+   void functionB(void)
+   {
+	   ....
+   }
+   The function name of example must do not have a special symbol and spaces.
+
+o.The process of example transplant, open the IAR project under the $components$/example\template\ewarm directory.
+   Readd the file in accordance with the project directory organization. Open the project options, configure your chip , 
+   debugger , and other information according to the actual situation. Compile the project, it will pass if you has been 
+   completed the previous component supports. Then open template.c file , write your example in this file. compile, download , test 
+   , debug , until the phenomenon is entirely correct . To run coide_gen.bat , use CoIDE project to test it again.
+
+p.Write an examples documentation followed by completing the examples, example documentinclude the name , description, version,
+   development board that supported , file path , dependencies.
+   The part of description without spaces before each line , and should be only 66 characters each line.
+   dependencies depends on include header files in template.c. For example, there is a include "#include "stm32l1xx_gpio.h"",so 
+   the dependencies must add a line"<Dependency>GPIO</Dependency>".You will add "<Dependency>CMSIS_BOOT</Dependency>" in almost all
+   the examples document.
+
+2. Improve Manufacture peripheral library and correction bugs
+-------------------------------------------------------------------------------
+    Directly modify the file under the Manufacture peripheral library directory and write a  change log 
+	when you push.
+	
+3. Add a new example to the existing library
+-------------------------------------------------------------------------------
+    For example,if you want to add a GPIO example for NUVOTON Mini51,you can just create a new directory
+ in Nuvoton\Mini51\cmsis_lib\gpio\example\.
+ m--p show how to add a examples.	
+
+4. Update Manufacture peripheral Library which CoIDE already supported.
+-------------------------------------------------------------------------------
+   This is just like add a new Manufacture peripheral Library which CoIDE not support yet.But the main point is test.
+- Download the new Manufacture peripheral library from its official website.
+- Split the Manufacture peripheral library to a series components.
+- Update a description document which used to show what is this component how to use this component for each component.
+- Update a description document which used to show how to upload this component for each component.
+- Update an example and corresponding document for each component.This document show what is the example for and how to use this example
+- Use the CoIDE to compile and test your code.
+- Commit to your fork repository, and send pull request on the github.
+
+
+5. Add a new chip to CoIDE.
+-------------------------------------------------------------------------------
+The directory is
+config
+	device/
+		Chip device file which is used by CoIDE.If you want CoIDE to support a new chip,you can write
+		a file like this.
+		Mini51LAN.xml
+		Mini51ZAN.xml
+		...
+		
+	debugger/
+		Nuvtonmi51x.xml
+		
+flash/
+	flash algorithm of Mini51
+	
+	Mini51_8.elf
+1.Write a chip file:	
+Copy /resource\config\devices\template.xml to /$manufacturer$\$series$\config\device\,and and rename template.xml to $chipname$.xml.
+This file contains some basic information of the chip.It include Name\Vendor\Family\architecture\Description\Parameters\ReferenceLinks
+DebugSetting\Flash\RAM and FlashLoader
+You just need to change "XXX" in this file to effective information.
+
+2. Write a flash Algorithm file:
+Copy /resource\flash\source\template to /$manufacturer$\$series$\flash\source,and rename template to $series$.Then to achieve FlashAlgoFncs.c
+and FlashAlgoInfo.c based on the data sheet and the following information:
+http://www.coocox.org/CoFlashGuide/CoFlash_UserGuide_Algorithm.htm
+
+3.Write a Debug Mode file:
+Copy /resource\config\debugger\template.xml to /$manufacturer$\$series$\config\debugger\,and and rename template.xml to $series$.xml.
+This file contains some basic information of the Debug Mode.It include architecture, SWD setting, JTAG setting, Reset setting,
+System Reset clock Frequency setting and Memory maps.
+You just need to change "XXX" in this file to effective information.
+   
+
+
+
+
+    
