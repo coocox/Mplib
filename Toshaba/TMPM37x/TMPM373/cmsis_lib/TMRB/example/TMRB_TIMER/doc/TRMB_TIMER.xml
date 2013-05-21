@@ -1,0 +1,33 @@
+<Example>
+    <Name>
+        TMRB_TIMER
+    </Name>
+    <Description>
+        This example implements a general timer utilizing MCU timer.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TMRB
+    </Tags>
+    <EVKit>
+        TMPM373-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\TMRB\example\TMRB_TIMER\src\main.h
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\TMRB\example\TMRB_TIMER\src\led.h
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\TMRB\example\TMRB_TIMER\src\led.c
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\TMRB\example\TMRB_TIMER\src\led.h
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\TMRB\example\TMRB_TIMER\src\tmpm373_tmrb_int.h
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\TMRB\example\TMRB_TIMER\src\tmpm373_tmrb_int.c
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\TMRB\example\TMRB_TIMER\src\Example_TMRB_TIMER.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>

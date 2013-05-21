@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM363F10FG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM363</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM363F10FG operates at a maximum speed of 48MHz and features 1024 Kbytes of Flash and 64 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>High-speed interrupt response suitable for real-time control</Parameter>
+		<Parameter>DMA controller: 2 channels</Parameter>
+		<Parameter>16-bit timer: 16 channels</Parameter>
+		<Parameter>Real-time clock (RTC): 1 channel</Parameter>
+		<Parameter>Watchdog timer: 1 channel</Parameter>
+		<Parameter>General-purpose serial interface: 5 channels</Parameter>
+		<Parameter>Serial bus interface: 4 channels</Parameter>
+		<Parameter>Synchronous serial bus interface (SSP): 1 channel</Parameter>
+		<Parameter>USB host controller: 1 channel</Parameter>
+		<Parameter>CAN Controller: 1 channel</Parameter>
+		<Parameter>CEC: 1 channel</Parameter>
+		<Parameter>Remote control signal preprocessor: 1 channels</Parameter>
+		<Parameter>10-bit AD converter: 8 channels</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306618_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM363F10FG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM36x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00100000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 1024K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00010000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 64K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM36x_1024.elf</loader>
+	</FlashLoader>
+</Device>

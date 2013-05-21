@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>CEC</Name>
+  <Description>Consumer Electronics Control for TMPM36x</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>CEC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM361\cmsis_lib\lib\include\tmpm361_cec.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM361\cmsis_lib\lib\source\tmpm361_cec.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm361_cec.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm361_cec.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM361F10FG,TMPM361FDFG,TMPM361FYFG</Device>
+  </SupportDevices>
+
+   
+</Component>

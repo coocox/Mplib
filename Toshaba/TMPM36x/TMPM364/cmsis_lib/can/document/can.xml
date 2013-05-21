@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>CAN</Name>
+  <Description>CAN Controller for tmpm364</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>CAN</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM364\cmsis_lib\lib\include\tmpm364_can.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM364\cmsis_lib\lib\source\tmpm364_can.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm364_can.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm364_can.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM364F10FG</Device>
+  </SupportDevices>
+
+</Component>

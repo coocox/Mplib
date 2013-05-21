@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM366FWFG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM366</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM366FWFG operates at a maximum speed of 48MHz and features 128 Kbytes of Flash and 32 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>ARM Cortex-M3 microcontroller core</Parameter>
+		<Parameter>DMA controller: 4 channels</Parameter>
+		<Parameter>Watchdog timer (WDT): 1 channel</Parameter>
+		<Parameter>UART : 1 channel</Parameter>
+		<Parameter>General-purpose serial interface (SIO/UART): 2 channels</Parameter>
+		<Parameter>Serial bus interface (I2C/SIO): 2 channels</Parameter>
+		<Parameter>Synchronous Serial interface (SSP): 3 channel</Parameter>
+		<Parameter>USB Device controller : 1channel</Parameter>	
+        <Parameter>12-bit AD converter (ADC): 12channels</Parameter>
+        <Parameter>Clock generator (CG)</Parameter>		
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306622_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM366FWFG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM36x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00020000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 128K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00008000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 32K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM36x_128.elf</loader>
+	</FlashLoader>
+</Device>

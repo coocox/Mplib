@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>SSP</Name>
+  <Description>Synchronous Serial Port for tmpm363</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>SSP</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM363\cmsis_lib\lib\include\tmpm363_ssp.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM363\cmsis_lib\lib\source\tmpm363_ssp.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm363_ssp.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm363_ssp.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM363F10FG</Device>
+  </SupportDevices>
+
+</Component>

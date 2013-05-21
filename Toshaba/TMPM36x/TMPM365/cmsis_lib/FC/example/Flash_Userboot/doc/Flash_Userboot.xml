@@ -1,0 +1,2 @@
+<?xml version="1.0" ?><Example>  <Name>Flash_Userboot</Name>  <Description>   This demo is an example which introduces how to use flash driver and user boot mode.  </Description>  <Version>1.200</Version>  <Tags>FC</Tags>  <EVKit>TMPM365FYXBG Development Board</EVKit>    <Files>    <File>$REPO_ROOT$\TMPM36x\TMPM365\cmsis_lib\FC\example\Flash_Userboot\src\Flash_Userboot.c</File>  </Files>    <Dependencys>	<Dependency>GPIO</Dependency>
+	<Dependency>FC</Dependency>  </Dependencys></Example>

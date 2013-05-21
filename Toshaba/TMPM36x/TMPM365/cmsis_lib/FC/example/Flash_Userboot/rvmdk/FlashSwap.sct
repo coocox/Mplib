@@ -1,0 +1,48 @@
+;;  M365 scatter file
+
+;;  Vector table starts at 0
+;;    Initial SP == |Image$$ARM_LIB_STACK$$ZI$$Limit| (for two region model)
+;;               or |Image$$ARM_LIB_STACKHEAP$$ZI$$Limit| (for one region model)
+;;    Initial PC == &__main (with LSB set to indicate Thumb)
+;;    These two values are provided by the library
+;;    Other vectors must be provided by the user
+;;  Code starts after the last possible vector
+;;  Data starts at 0x20000000
+;;    Heap is positioned by ARM_LIB_HEAB (this is the heap managed by the ARM libraries)
+;;    Stack is positioned by ARM_LIB_STACK (library will use this to set SP - see above)
+
+;; Compatible with ISSM model
+
+LOAD_ROM 0x00000000
+{ 
+;;ROM_region
+    VECT             0x0 	   
+	{ 
+	 startup_TMPM365.o(RESET, +FIRST)  
+     *.o (+RO) 
+    }	 
+        
+    FLASH_DEMO_A     0x8000  EMPTY 0x1000 {}
+    
+    FLASH_DEMO_B     0x10000 EMPTY 0x1000 {}
+
+;;RAM_region
+
+    FLASH_CODE_RAM   0x20000000
+    {
+     main.o(FLASH_ROM)
+     tmpm365_fc.o(+RO)     
+    }  
+    
+    RAM_DEMO_A   +0  EMPTY 0x1000 {}
+    
+    RAM_DEMO_B   +0  EMPTY 0x1000 {}
+  
+    RW_ZI   0x20002600
+    {
+       *.o(+RW, +ZI)	   
+    }
+	  
+    ARM_LIB_STACK   0x20003600 EMPTY -0x100 {}
+	  
+}

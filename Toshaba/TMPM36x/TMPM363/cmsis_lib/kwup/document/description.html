@@ -1,0 +1,10 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>KWUP</h1>
+<h2>Overview</h2>
+<ul>
+    <li>The TMPM363F10 has four key inputs, KWUP0  to KWUP3. They can be used as interrupts for waking up from STOP mode or normal external interrupts. The four inputs share a single interrupt source (INTKWUP), which needs to  be set in the clock generator (CG) block. KWUP0 to KWUP3 can be enabled or disabl ed individually in the <KEYEN> bit of the KWUP control register (KWUPCRn).  
+	The active state of each KWUP input can  be selected in the KWUPCRn<KEY> bits from rising edge, falling edge, both edges, High level and Low level.  
+	All interrupt requests can be cleared by setti ng the KWUP interrupt all clear register (KWUPCLR)  in an interr upt service routine.  
+	Each KWUP input pin has a pull-up, which c an individually be configured as static or dynamic in the KWUPCRn<DPE> bit.  </li>
+</ul>

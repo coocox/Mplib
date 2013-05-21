@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM370FYFG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM370</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM370FYFG operates at a maximum speed of 80MHz and features 256 Kbytes of Flash and 10 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>ARM Cortex-M3 microcontroller core</Parameter>
+		<Parameter>Interrupt source-Internal: 62 factors,External: 16 factors </Parameter>
+		<Parameter>Input/Output: 74 pins Input: 2pins</Parameter>
+		<Parameter>Watchdog timer (WDT): 1 channel</Parameter>
+		<Parameter>Power_On reset function(POR)</Parameter>
+		<Parameter>Voltage detect function(VLTD)</Parameter>
+		<Parameter>Oscillation frequency detect function(OFD)</Parameter>
+		<Parameter>Encoder input circuit(ENC): 2 channel</Parameter>
+		<Parameter>General-purpose serial interface(SIO): 4 channel</Parameter>
+		<Parameter>12-bit A/D converter (ADC): 2unit( 22 channel for analog input)</Parameter>
+		<Parameter>OP-Amp(AMP): 4 channel</Parameter>
+		<Parameter>comparator(CMP): 3+1 channel</Parameter>
+		<Parameter>Standby mode</Parameter>
+		<Parameter>Clock generator(CG)</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306646_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM370FYFG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM37x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00040000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 256K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00002800" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 10K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM37x_256.elf</loader>
+	</FlashLoader>
+</Device>

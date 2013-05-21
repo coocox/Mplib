@@ -1,0 +1,35 @@
+;;  TMPM366 scatter file
+
+;;  Vector table starts at 0
+;;    Initial SP == |Image$$ARM_LIB_STACK$$ZI$$Limit| (for two region model)
+;;               or |Image$$ARM_LIB_STACKHEAP$$ZI$$Limit| (for one region model)
+;;    Initial PC == &__main (with LSB set to indicate Thumb)
+;;    These two values are provided by the library
+;;    Other vectors must be provided by the user
+;;  Code starts after the last possible vector
+;;  Data starts at 0x20000000
+;;    Heap is positioned by ARM_LIB_HEAB (this is the heap managed by the ARM libraries)
+;;    Stack is positioned by ARM_LIB_STACK (library will use this to set SP - see above)
+
+;; Compatible with ISSM model
+
+FLASH_LOAD 0x0000 0x00080000
+{
+  CODE_AREA 0x00000000 0x00080000
+  {
+    startup_TMPM366.o (RESET, +First)
+    * (+RO)
+  }
+
+  DATA_AREA 0x20000000 0x00010000
+  {
+    * (+RW, +ZI)
+  }
+}
+
+PERIPHERAL_RAM 0x40000000 0x02000000
+{
+  PERIPHERAL_AREA 0x40000000 EMPTY 0x2000000
+  {
+  }
+}

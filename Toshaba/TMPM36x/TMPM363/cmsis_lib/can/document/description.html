@@ -1,0 +1,32 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>CAN</h1>
+<h2>Overview</h2>
+<ul>
+    <li>Compliant with CAN version 2.0 B ;
+	Standard and extended formats supported;
+	Data frames and remote frames supported for each format ;
+	32 Mailboxes (31 receive & transmit  ? 1 receive-only); 
+	CAN bus baud rate up to 1 Mbps (with a system clock of at least 48 MHz) ;
+	Bit timing parameter equivalent to Intel 82527 ;
+	Baud rate prescaler built in ;
+	The order in which messages are transmitted  can be selected from the following two types of internal arbitrations: 
+	(1)  The mailbox with the lower number will be sent first ;
+	(2)  The mailbox with the higher priority identifier will be sent first. 
+	Time stamp function for receive and transmit messages Operation mode :
+	(1)  Normal operation mode ;
+	(2) Configuration mode ;
+	(3)  Sleep mode: Can wake up with CAN bus active state detection (at WUBA  =  1) or a write access to the master control register MCR. 
+	(4)  Suspend mode: Inactive state on the CAN bus ;
+	(5)  Test loop back mode: Self acknowledge ;
+	(6)  Test error mode: Writable error counters; 
+	Message receive mask function for two systems :
+	(1  Programmable global receive mask (common to mailboxes 0 to 30) ;
+	(2)  Programmable local receive mask (for mailbox 31 only) .
+	Receive mask bit for ID extension bit ;
+	Interrupt signal :
+	(1)  INTCANRX: CAN receive completion interrupt ;
+	(2)  INTCANTX: CAN transmit completion interrupt ;
+	(3)  INTCANGB: CAN global interrupt .
+	(Interrupts from eight causes includi ng warning level, error passive, and bus-off interrupts) </li>
+</ul>

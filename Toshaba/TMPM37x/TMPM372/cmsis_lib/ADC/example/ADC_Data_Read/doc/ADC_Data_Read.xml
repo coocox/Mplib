@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        ADC_Data_Read
+    </Name>
+    <Description>
+        This demo is to show ADC function with software trigger on M372-SK board
+        The loop blinking speed of the 4 LEDs is varied depend on the AD result.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ADC
+    </Tags>
+    <EVKit>
+        TMPM372-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\ADC\example\ADC_Data_Read\src\Example_ADC_ReadData.c
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\ADC\example\ADC_Data_Read\src\led.h
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\ADC\example\ADC_Data_Read\src\led.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>

@@ -1,0 +1,34 @@
+<Example>
+    <Name>
+        CG_ModeSwitch
+    </Name>
+    <Description>
+        This example shows how to change CPU operation mode. only 2 modes are supported.
+        Normal and stop. Press key to switch the power mode.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        CG
+    </Tags>
+    <EVKit>
+        TMPM372-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\CG\example\CG_ModeSwitch\Example_ModeSwitch.c
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\CG\example\CG_ModeSwitch\src\led.h
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\CG\example\CG_ModeSwitch\src\led.c
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\CG\example\CG_ModeSwitch\src\sw.h
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\CG\example\CG_ModeSwitch\src\sw.c
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\CG\example\CG_ModeSwitch\src\main.h
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+            
+        </Dependency>
+    </Dependencys>
+</Example>
+

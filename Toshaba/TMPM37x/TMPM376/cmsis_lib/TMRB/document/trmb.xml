@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>TRMB</Name>
+  <Description>Timer/Event Counters</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>TRMB</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM33x\TMPM376\cmsis_lib\lib\inc\tmpm376_trmb.h</File>
+    <File>$REPO_ROOT$\TMPM33x\TMPM376\cmsis_lib\lib\src\tmpm376_trmb.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm376_trmb.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm376_trmb.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device> TMPM376FDDFG, TMPM376FDFG </Device>
+  </SupportDevices>
+
+</Component>

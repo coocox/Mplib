@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM376FDFG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM376</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM376FDFG operates at a maximum speed of 80MHz and features 512 Kbytes of Flash and 32 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>ARM Cortex-M3 microcontroller core</Parameter>
+		<Parameter>16-bit timer (TMRB) 8 channels</Parameter>
+		<Parameter>Watchdog timer (WDT) 1 channel</Parameter>
+		<Parameter>Programmable motor driver (PMD) 2 channels</Parameter>
+		<Parameter>Vector engine (VE) 1unit</Parameter>
+		<Parameter>Voltage detect function(VLTD)</Parameter>
+		<Parameter>Encoder input circuit (ENC) 2 channels</Parameter>
+		<Parameter>General-purpose serial interface(SIO/UART) 4 channels</Parameter>
+		<Parameter>Serial bus interface (I2C/SIO) 1 channel</Parameter>
+		<Parameter>12 bit AD converter (ADC) 2 units (22channel for analog input)</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306651_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM376FDFG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM37x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00080000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 512K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00008000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 32K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM37x_512.elf</loader>
+	</FlashLoader>
+</Device>

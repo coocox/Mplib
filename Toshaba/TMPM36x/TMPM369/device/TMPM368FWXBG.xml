@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM368FWXBG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM368</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM368FWXBG operates at a maximum speed of 80MHz and features 512 Kbytes of Flash and 128 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>μDMA controller (μDMAC) : 32 channels / 2 units</Parameter>
+		<Parameter>16-bit timer (TMRB) : 8 channels</Parameter>
+		<Parameter>Real-time clock (RTC) : 1 channel</Parameter>
+		<Parameter>Watch-dog timer (WDT) : 1 channel</Parameter>
+		<Parameter>General-purpose serial interface (SIO/UART) : 4 channels</Parameter>
+		<Parameter>Serial bus interface (I2C/SIO) : 3 channels</Parameter>
+		<Parameter>Synchronous serial interface (SSP) : 3 channels</Parameter>
+		<Parameter>UART : 2 channels</Parameter>
+		<Parameter>12-bit AD converter (ADC) : 8 channels/ 2 units, 10-bit DA converter (DAC) : 2 channels</Parameter>
+		<Parameter>CAN2.0 : 1 channel</Parameter>
+		<Parameter>USB2.0 full-speed device : 1 channel, USB2.0 full-speed host : 1 channel</Parameter>
+		<Parameter>Remote control signal preprocessor (RMC) : 1 channel</Parameter>
+		<Parameter>Multi-purpose timer (MPT) : 4 channels</Parameter>
+		<Parameter>Encoder input function (ENC) : 1 channels</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/list/index.php?code=param_808&lang=en</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM368FWXBG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM36x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00080000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 512K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00020000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 128K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM36x_512.elf</loader>
+	</FlashLoader>
+</Device>

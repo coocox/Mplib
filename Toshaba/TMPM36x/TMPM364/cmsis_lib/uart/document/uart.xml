@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>UART</Name>
+  <Description>Serial Channel for TMPM36x</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>UART</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM364\cmsis_lib\lib\include\tmpm364_uart.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM364\cmsis_lib\lib\source\tmpm364_uart.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm364_uart.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm364_uart.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM364F10FG</Device>
+  </SupportDevices>
+
+   
+</Component>

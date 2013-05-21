@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM367FYFG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM367</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM367FYFG operates at a maximum speed of 80MHz and features 256 Kbytes of Flash and 66 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>ARM Cortex-M3 microcontroller core</Parameter>
+		<Parameter>USB Device (Full Speed):1 channel</Parameter>
+		<Parameter>DMA controllers: 32 channel</Parameter>
+		<Parameter>watchdog timer: enable</Parameter>
+		<Parameter>Sync. Serial Interface: 3 channel</Parameter>
+		<Parameter>General-purpose serial interface (SIO/UART): 4 channels</Parameter>
+		<Parameter>Full UART: 2 channels</Parameter>
+		<Parameter>I2C/SIO: 3 channels</Parameter>
+		<Parameter>A/D converters(12bit):2 unit, 8 channel</Parameter>
+		<Parameter>D/A converters(10bit):2 channel</Parameter>
+		<Parameter>timer/counter(16bit):8 channel</Parameter>
+        <Parameter>remote control:1 channel</Parameter>
+        <Parameter>3-phase PWM output:1 channel</Parameter>
+		<Parameter>Multi-purpose timer (MPT):4 channel</Parameter>
+		<Parameter>remote control:1 channel</Parameter>
+		<Parameter>incremental encoder input:1 channel</Parameter>
+		<Parameter>CS/WAIT controller:4 channel</Parameter>
+		<Parameter>RTC:1 channel</Parameter>
+		<Parameter>clock gear function:available</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306630_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM367FYFG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM36x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00040000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 256K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00010800" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 66K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM36x_256.elf</loader>
+	</FlashLoader>
+</Device>

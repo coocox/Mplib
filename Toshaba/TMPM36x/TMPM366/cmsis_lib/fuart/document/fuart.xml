@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>FUART</Name>
+  <Description>Asynchronous Serial Channel for TMPM366</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>FUART</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM366\cmsis_lib\lib\include\tmpm366_fuart.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM366\cmsis_lib\lib\source\tmpm366_fuart.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm366_fuart.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm366_fuart.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM366FDXBG, TMPM366FYXBG, TMPM366FWXBG</Device>
+  </SupportDevices>
+
+   
+</Component>

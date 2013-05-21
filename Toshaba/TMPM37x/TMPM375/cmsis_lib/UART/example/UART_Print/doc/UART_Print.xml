@@ -1,0 +1,32 @@
+<Example>
+    <Name>
+        UART_Print
+    </Name>
+    <Description>
+        This example show how to use SIO to print characters.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SIO
+    </Tags>
+    <EVKit>
+        TMPM375-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\UART\example\UART_Print\src\Example_UARTPrint.c
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\UART\example\UART_Print\src\main.h
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\UART\example\UART_Print\src\tmpm375_uart_int.c
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\UART\example\UART_Print\src\tmpm375_uart_int.h
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\UART\example\UART_Print\src\uart.c
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\UART\example\UART_Print\src\uart.h
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>

@@ -1,0 +1,31 @@
+<Example>
+    <Name>
+        OFD_DEMO
+    </Name>
+    <Description>
+        This example show how to initialize the OFD function.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        OFD
+    </Tags>
+    <EVKit>
+        TMPM373-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\OFD\example\OFD_DEMO\src\led.h
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\OFD\example\OFD_DEMO\src\led.c
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\OFD\example\OFD_DEMO\src\main.h
+            $REPO_ROOT$\TMPM37x\TMPM373\cmsis_lib\OFD\example\OFD_DEMO\src\Example_OFD_Demo.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

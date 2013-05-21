@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>FC</Name>
+  <Description>Flash Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>FC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM33x\TMPM372\cmsis_lib\lib\inc\tmpm372_fc.h</File>
+    <File>$REPO_ROOT$\TMPM33x\TMPM372\cmsis_lib\lib\src\tmpm372_fc.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm372_fc.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm372_fc.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM372FWUG	TMPM372FWFG</Device>
+  </SupportDevices>
+
+</Component>

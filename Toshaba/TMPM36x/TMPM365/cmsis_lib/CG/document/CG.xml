@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>CG</Name>
+  <Description>clock/mode control block for tmpm365</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>CG</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM365\cmsis_lib\lib\include\tmpm365_cg.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM365\cmsis_lib\lib\source\tmpm365_cg.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm365_cg.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm365_cg.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM365FWXBG,TMPM365FYXBG</Device>
+  </SupportDevices>
+
+</Component>

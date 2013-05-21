@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM374FWUG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM374</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM374FWUG operates at a maximum speed of 80MHz and features 128 Kbytes of Flash and 6 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>High-speed interrupt response suitable for real-time control</Parameter>
+		<Parameter>Interrupt source(Internal: 44 / External: 7)</Parameter>
+		<Parameter>Watchdog timer (WDT): 1 channel</Parameter>
+		<Parameter>Vector engine (VE): 1 unit</Parameter>
+		<Parameter>Programmable motor driver (PMD): 1channel</Parameter>
+		<Parameter>Encoder input circuit (ENC): 1 channel</Parameter>
+		<Parameter>16-bit timer (TMRB): 8 channel</Parameter>
+		<Parameter>General-purpose serial interface (SIO): 3 channel</Parameter>
+		<Parameter>12-bit A/D converter (ADC): 1unit</Parameter>
+		<Parameter>Standby mode: IDLE, STOP</Parameter>
+		<Parameter>Clock generator (CG)</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306649_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM374FWUG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM37x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00020000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 128K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00001800" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 6K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM37x_128.elf</loader>
+	</FlashLoader>
+</Device>

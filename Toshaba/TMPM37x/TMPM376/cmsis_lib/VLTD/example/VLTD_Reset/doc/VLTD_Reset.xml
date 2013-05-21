@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        VLTD_Reset
+    </Name>
+    <Description>
+        This example implements power supply voltage status detecting by VLTD.
+        when the power supply voltage is lower than the detection voltage, the
+        MCU reset automatically by hardware and PC0 is set to high level by 
+        software.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        VLTD
+    </Tags>
+    <EVKit>
+        TMPM376-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM376\cmsis_lib\VLTD\example\VLTD_Reset\src\Example_VLTDReset.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>

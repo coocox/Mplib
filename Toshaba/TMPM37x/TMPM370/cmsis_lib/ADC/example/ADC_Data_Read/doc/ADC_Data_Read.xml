@@ -1,0 +1,36 @@
+<Example>
+    <Name>
+        ADC_Data_Read
+    </Name>
+    <Description>
+        This example shows how to use the ADC peripheral to measure the
+        volatge level. If the UART is connected to PC, the transformed
+        data will be printed on Hyperterminal. 
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ADC
+    </Tags>
+    <EVKit>
+        TMPM370FYDFG Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\ADC\example\ADC_Data_Read\src\ADC_ReadData.c
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\ADC\example\ADC_Data_Read\src\adc.h
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\ADC\example\ADC_Data_Read\src\adc.c
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\ADC\example\ADC_Data_Read\src\tmpm370_int.h
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\ADC\example\ADC_Data_Read\src\tmpm370_int.c
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\ADC\example\ADC_Data_Read\src\uart.h
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\ADC\example\ADC_Data_Read\src\uart.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+            UART
+        </Dependency>
+    </Dependencys>
+</Example>
+

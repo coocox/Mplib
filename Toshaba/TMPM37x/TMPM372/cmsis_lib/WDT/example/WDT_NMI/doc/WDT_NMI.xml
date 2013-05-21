@@ -1,0 +1,42 @@
+<Example>
+    <Name>
+        WDT_NMI
+    </Name>
+    <Description>
+        The watchdog timer cannot be used in the stop mode where high-speed frequency clock is
+        stopped.
+        watch dog timer is enabled after reset, and is disabled in systeminit();
+        The driver example step:
+        1. Initialize WDT by setting detection time and selecting WDT interrupt as counter overflow operation.
+        2. There are two demos for WDT in whcih DEMO2 is switched by macro definition.
+        DEMO1:
+            when timer is overflow, NMI interrupt is generated and then WDT will be cleared.
+        DEMO2:
+            WDT clear code will be written to the watchdog timer control register and watch dog timer counter
+            will cleared.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        WDT
+    </Tags>
+    <EVKit>
+        TMPM372-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\WDT\example\WDT_NMI\src\led.h
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\WDT\example\WDT_NMI\src\led.c
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\WDT\example\WDT_NMI\src\tmpm372_wdt_int.h
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\WDT\example\WDT_NMI\src\tmpm372_wdt_int.c
+            $REPO_ROOT$\TMPM37x\TMPM372\cmsis_lib\WDT\example\WDT_NMI\src\Example_WDT_NMI.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

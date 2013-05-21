@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>RTC</Name>
+  <Description>Real Time Control for TMPM369</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>RTC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM369\cmsis_lib\lib\include\tmpm369_rtc.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM369\cmsis_lib\lib\source\tmpm369_rtc.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm369_rtc.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm369_rtc.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM369FDFG,TMPM369FDXBG,TMPM369FYFG,TMPM369FYXBG</Device>
+  </SupportDevices>
+
+   
+</Component>

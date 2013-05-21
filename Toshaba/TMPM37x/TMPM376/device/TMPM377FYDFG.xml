@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM377FYDFG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM377</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM377FYDFG operates at a maximum speed of 80MHz and features 256 Kbytes of Flash and 16 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>ARM Cortex-M3 microcontroller core</Parameter>
+		<Parameter>PMD (timer for motor cont.):2ch</Parameter>
+		<Parameter>16-bit Timer:8channels</Parameter>
+		<Parameter>Vector Engine:1Unit</Parameter>
+		<Parameter>UART/SIO:3channels</Parameter>
+		<Parameter>I2C/SIO:1channel</Parameter>
+		<Parameter>12-bit ADC:2Units:12channels</Parameter>
+		<Parameter>Watchdog timer</Parameter>		
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/list/index.php?code=param_808&lang=en</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM377FYDFG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM37x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00040000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 256K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00004000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 16K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM37x_256.elf</loader>
+	</FlashLoader>
+</Device>

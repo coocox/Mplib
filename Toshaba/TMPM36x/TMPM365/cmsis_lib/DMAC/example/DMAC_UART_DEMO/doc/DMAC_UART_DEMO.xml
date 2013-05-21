@@ -1,0 +1,2 @@
+<?xml version="1.0" ?><Example>  <Name>DMAC_UART_DEMO</Name>  <Description>   This demo is an example which introduces how to dma to transfer data through uart.  </Description>  <Version>1.200</Version>  <Tags>DMAC</Tags>  <EVKit>TMPM365FYXBG Development Board</EVKit>    <Files>    <File>$REPO_ROOT$\TMPM36x\TMPM365\cmsis_lib\DMA\example\DMAC_UART_DEMO\src\DMAC_UART_DEMO.c</File>  </Files>    <Dependencys>	<Dependency>GPIO</Dependency>	<Dependency>UART</Dependency>
+	<Dependency>DMAC</Dependency>  </Dependencys></Example>

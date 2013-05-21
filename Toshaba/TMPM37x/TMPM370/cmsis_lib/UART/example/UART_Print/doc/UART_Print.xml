@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        UART_Print
+    </Name>
+    <Description>
+        This example show how to use SIO to print characters.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SIO
+    </Tags>
+    <EVKit>
+        TMPM370-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM370\cmsis_lib\UART\example\UART_Print\src\Example_UARTPrint.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM330FDFG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM330</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM330FDFG operates at a maximum speed of 40MHz and features 512 Kbytes of Flash and 32 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>16-bit timer (TMRB): 10 channels</Parameter>
+		<Parameter>Real time clock (RTC): 1 channel</Parameter>
+		<Parameter>Watchdog timer (WDT): 1 channel</Parameter>
+		<Parameter>General-purpose serial interface (SIO/UART): 3 channels</Parameter>
+		<Parameter>Serial bus interface (I2C/SIO): 3channels</Parameter>
+		<Parameter>CEC function (CEC): 1 channel</Parameter>
+		<Parameter>Remote control signal preprocessor (RMC): 2 channels</Parameter>
+		<Parameter>10-bit AD converter (ADC): 12 channels</Parameter>
+		<Parameter>Interrupt:Internal-42 factors,External-8 factors</Parameter>
+		<Parameter>Clock generator (CG)</Parameter>
+		<Parameter>Standby modes: IDLE, SLOW, SLEEP, STOP</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306601_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM330FDFG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM33x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00080000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 512K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00008000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 32K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM33x_512.elf</loader>
+	</FlashLoader>
+</Device>

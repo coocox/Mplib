@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>ADC</Name>
+  <Description>Analog to Digital Converter for tmpm376</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>ADC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM33x\TMPM376\cmsis_lib\lib\inc\tmpm376_adc.h</File>
+    <File>$REPO_ROOT$\TMPM33x\TMPM376\cmsis_lib\lib\src\tmpm376_adc.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm376_adc.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm376_adc.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device> TMPM376FDDFG, TMPM376FDFG </Device>
+  </SupportDevices>
+
+</Component>

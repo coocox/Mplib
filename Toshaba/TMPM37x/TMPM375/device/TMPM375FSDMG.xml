@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM375FSDMG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM375</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM375FSDMG operates at a maximum speed of 40MHz and features 64 Kbytes of Flash and 4 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>ARM Cortex-M3 microcontroller core</Parameter>
+		<Parameter>16-bit TMRB:4 Channels</Parameter>
+		<Parameter>WDT:1 Channel</Parameter>
+		<Parameter>PMD:1 Channel</Parameter>
+		<Parameter>ENC:1 Channel</Parameter>
+		<Parameter>SIO/UART:2 Channel</Parameter>
+		<Parameter>I2C/SIO:1 Channel</Parameter>
+		<Parameter>ADC:1units(4 Channel)</Parameter>
+		<Parameter>AMP:1 Channel</Parameter>
+		<Parameter>Clock generator</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1323581_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM375FSDMG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM37x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00010000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 64K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00001000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 4K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM37x_64.elf</loader>
+	</FlashLoader>
+</Device>

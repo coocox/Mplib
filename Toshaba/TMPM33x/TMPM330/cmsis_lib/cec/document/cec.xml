@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>CEC</Name>
+  <Description>Consumer Electronics Control for TMPM33x</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>CEC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM33x\TMPM330\cmsis_lib\lib\include\tmpm330_cec.h</File>
+    <File>$REPO_ROOT$\TMPM33x\TMPM330\cmsis_lib\lib\source\tmpm330_cec.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm330_cec.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm330_cec.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM330FDFG, TMPM330FYFG, TMPM330FWFG</Device>
+  </SupportDevices>
+
+   
+</Component>

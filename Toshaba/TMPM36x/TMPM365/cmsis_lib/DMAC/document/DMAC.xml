@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>DMAC</Name>
+  <Description>DMA Controller for tmpm365</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>FC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM365\cmsis_lib\lib\include\tmpm365_dmac.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM365\cmsis_lib\lib\source\tmpm365_dmac.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm365_dmac.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm365_dmac.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM365FYXBG	,TMPM365FWXBG</Device>
+  </SupportDevices>
+
+</Component>

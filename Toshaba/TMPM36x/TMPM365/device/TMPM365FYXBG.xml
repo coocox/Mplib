@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM365FYXBG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM365</Family>
+	<Arch>Cortex-M3</Arch>
+	<Description>TOSHIBA's TMPM365FYXBG operates at a maximum speed of 48MHz and features 256 Kbytes of Flash and 24 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>High-speed interrupt response suitable for real-time control</Parameter>
+		<Parameter>DMA controller: 2 channels</Parameter>
+		<Parameter>16-bit timer: 10 channels</Parameter>
+		<Parameter>Real-time clock (RTC): 1 channel</Parameter>
+		<Parameter>Watchdog timer: 1 channel</Parameter>
+		<Parameter>General-purpose serial interface: 2 channels</Parameter>
+		<Parameter>USB Device controller : 1channel</Parameter>
+		<Parameter>12-bit AD converter (ADC): 12channels</Parameter>
+		<Parameter>Interrupt source(Internal : 47 factors, External : 10 factors)</Parameter>
+		<Parameter>Non-maskable interrupt (NMI)</Parameter>
+		<Parameter>Standby modes: IDLE, STOP1</Parameter>
+		<Parameter>Clock generator (CG)</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/eng/product/micro/tx03_detail/1306606_13778.html</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM365FYXBG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM36x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00040000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 256K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00006000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 24K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM36x_256.elf</loader>
+	</FlashLoader>
+</Device>

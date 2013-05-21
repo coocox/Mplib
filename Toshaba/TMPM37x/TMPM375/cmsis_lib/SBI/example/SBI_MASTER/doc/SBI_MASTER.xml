@@ -1,0 +1,35 @@
+<Example>
+    <Name>
+        SBI_MASTER
+    </Name>
+    <Description>
+        This example show how to configure SBI into master mode.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SBI
+    </Tags>
+    <EVKit>
+        TMPM375-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\OFD\example\OFD_DEMO\src\sw.h
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\OFD\example\OFD_DEMO\src\sw.c
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\OFD\example\OFD_DEMO\src\common_uart.h
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\OFD\example\OFD_DEMO\src\common_uart.c
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\OFD\example\OFD_DEMO\src\tmpm375_sbi_int.h
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\OFD\example\OFD_DEMO\src\tmpm375_sbi_int.c
+            $REPO_ROOT$\TMPM37x\TMPM375\cmsis_lib\OFD\example\OFD_DEMO\src\Example_SBI_MASTER.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

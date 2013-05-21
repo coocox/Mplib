@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>RMC</Name>
+  <Description>Remote control signal preprocessor for tmpm363</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>RMC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM36x\TMPM363\cmsis_lib\lib\include\tmpm363_rmc.h</File>
+    <File>$REPO_ROOT$\TMPM36x\TMPM363\cmsis_lib\lib\source\tmpm363_rmc.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm363_rmc.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm363_rmc.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM363F10FG</Device>
+  </SupportDevices>
+
+</Component>

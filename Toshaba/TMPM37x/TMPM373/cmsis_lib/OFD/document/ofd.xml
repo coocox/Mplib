@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>OFD</Name>
+  <Description>Oscillation Frequency Detector</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>OFD</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM33x\TMPM373\cmsis_lib\lib\inc\tmpm373_ofd.h</File>
+    <File>$REPO_ROOT$\TMPM33x\TMPM373\cmsis_lib\lib\src\tmpm373_ofd.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm373_ofd.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm373_ofd.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM373FWDUG</Device>
+  </SupportDevices>
+
+</Component>
