@@ -1,0 +1,32 @@
+<Example>
+    <Name>
+        Smpl_VCOM
+    </Name>
+    <Description>
+        This example configures USB , used as a VCOM.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        UAB CDC VCOM
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\USB\example\USB\src\Smpl_VCOM.c
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\USB\example\USB\src\VCOMSys.c
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\USB\example\USB\src\VCOMSys.h
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\USB\example\USB\src\Smpl_VCOM.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

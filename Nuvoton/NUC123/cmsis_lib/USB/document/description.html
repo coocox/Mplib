@@ -1,0 +1,30 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>USB</h1>
+<h2>Overview</h2>
+<ul>
+    <li>There is one set of USB 2.0 full-speed device controller and transceiver in this device. It is
+compliant with USB 2.0 full-speed device specification and supports control/bulk/interrupt/
+isochronous transfer types.
+In this device controller, there are two main interfaces: APB bus and USB bus which comes from
+the USB PHY transceiver. For the APB bus, the CPU can program control registers through it.
+There are 512 bytes internal SRAM as data buffer in this controller. For IN or OUT transfer, it is
+necessary to write data to SRAM or read data from SRAM through the APB interface or SIE. User
+needs to set the effective starting address of SRAM for each endpoint buffer through ¡°buffer
+segmentation register (BUFSEGx)¡±.
+There are 8 endpoints in this controller. Each of the endpoint can be configured as IN or OUT
+endpoint. All the operations including Control, Bulk, Interrupt and Isochronous transfer are
+implemented in this block. The block of ENDPOINT CONTROL is also used to manage the data
+sequential synchronization, endpoint states, current start address, transaction status, and data
+buffer status for each endpoint.
+There are four different interrupt events in this controller. They are the wake-up function, device
+plug-in or plug-out event, USB events, such as IN ACK, OUT ACK, and BUS events, such as
+suspend and resume, etc. Any event will cause an interrupt, and user just needs to check the
+related event flags in interrupt event status register (USB_INTSTS) to acknowledge what kind of
+interrupt occurring, and then check the related USB Endpoint Status Register (USB_EPSTS) to
+acknowledge what kind of event occurring in this endpoint.
+A software-disable function is also supported for this USB controller. It is used to simulate the
+disconnection of this device from the host. If user enables DRVSE0 bit (USB_DRVSE0), the USB
+controller will force the output of USB_DP and USB_DM to level low and its function is disabled.
+After disable the DRVSE0 bit, host will enumerate the USB device again. </li>
+</ul>

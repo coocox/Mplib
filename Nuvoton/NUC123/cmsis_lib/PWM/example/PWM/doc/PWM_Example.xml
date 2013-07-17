@@ -1,0 +1,32 @@
+<Example>
+    <Name>
+        PWM_Example
+    </Name>
+    <Description>
+        This example configures PWM,Connecting PIN45_PWM0 to PIN10. LED will light gradually and then dark gradually following PWM0.
+        Connecting PIN1 to PIN43_PWM2. Captured time of pulse will display at DEBUG UART1 windows.
+        Connecting PIN1 to PIN10.     LED will blinking base on main routines.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        PWM
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\PWM\example\PWM\src\PWM_Example.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\PWM\example\PWM\src\PWM_Example.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,35 @@
+<Example>
+    <Name>
+        TIMER_Example
+    </Name>
+    <Description>
+         Timer0 toggles PIN64:PB8_TM0 every 10ms and PIN10:PB4_LED blinks every 1s at Duty=10%
+        Timer1, count pulse from PIN32:PB9_TM1.Connect this PIN to PIN10,you can watch TDR1 increasing
+        Timer2 capture pulse from PIN23:PB2_T2EX, Please connect this PIN to PIN10
+        PIN64 will output 1KHz wave.
+    
+        Please watch DEBUG UART1 window while debug routines. And watch the value of TDR1
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TIMER
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\TIMER\example\TIMER\src\TIMER_Example.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\TIMER\example\TIMER\src\TIMER_Example.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        I2C_Master
+    </Name>
+    <Description>
+        This example configures I2C  used as a master.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        I2C
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\I2C\example\I2C\src\I2C_Master.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\I2C\example\I2C\src\I2C_Master.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

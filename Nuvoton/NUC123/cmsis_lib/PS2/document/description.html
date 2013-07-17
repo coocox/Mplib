@@ -1,0 +1,14 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>PS2</h1>
+<h2>Overview</h2>
+<ul>
+    <li>PS/2 device controller provides basic timing control for PS/2 communication. All communication
+between the device and the host is managed through the CLK and DATA pins. Unlike PS/2
+keyboard or mouse device controller, the received/transmit code needs to be translated as
+meaningful code by firmware. The device controller generates the CLK signal after receiving a
+request to send, but host has ultimate control over communication. DATA sent from the host to
+the device is read on the rising edge and DATA sent from device to the host is change after rising
+edge. A 16 bytes FIFO is used to reduce CPU intervention. S/W can select 1 to 16 bytes for a
+continuous transmission. </li>
+</ul>

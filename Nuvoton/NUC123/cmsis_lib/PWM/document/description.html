@@ -1,0 +1,47 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>PWM</h1>
+<h2>Overview</h2>
+<ul>
+    <li>This chip has 1 set of PWM group supporting 1 set of PWM generators which can be configured
+as 4 independent PWM outputs, PWM0~PWM3, or as 2 complementary PWM pairs, (PWM0,
+PWM1), (PWM2, PWM3) with two programmable dead-zone generators.
+Each PWM generator has one 8-bit prescaler, one clock divider with 5 divided frequencies (1, 1/2,
+1/4, 1/8, 1/16), two PWM Timers including two clock selectors, two 16-bit PWM down-counters for
+PWM period control, two 16-bit comparators for PWM duty control and one dead-zone generator.
+The PWM generators provide four independent PWM interrupt flags which are set by hardware
+when the corresponding PWM period down counter reaches zero. Each PWM interrupt source
+with its corresponding enable bit can cause CPU to request PWM interrupt. The PWM generators
+can be configured as one-shot mode to produce only one PWM cycle signal or auto-reload mode
+to output PWM waveform continuously.
+When PCR.DZEN01 is set, PWM0 and PWM1 perform complementary PWM paired function; the
+paired PWM period, duty and dead-time are determined by PWM0 timer and dead-zone generator
+0. Similarly, the complementary PWM pairs of (PWM2, PWM3) , timers and dead-zone generator
+2, respectively. Refer to Figure 5-38 to Figure 5-41 for the architecture of PWM Timers.
+To prevent PWM driving output pin with unsteady waveform, the 16-bit period down counter and
+16-bit comparator are implemented with double buffer. When user writes data to
+counter/comparator buffer registers the updated value will be load into the 16-bit down counter/
+comparator at the time down counter reaching zero. The double buffering feature avoids glitch at
+PWM outputs.
+When the 16-bit period down counter reaches zero, the interrupt request is generated. If PWMtimer
+is set as auto-reload mode, when the down counter reaches zero, it is reloaded with PWM
+Counter Register (CNRx) automatically then start decreasing, repeatedly. If the PWM-timer is set
+as one-shot mode, the down counter will stop and generate one interrupt request when it reaches
+zero.
+The value of PWM counter comparator is used for pulse high width modulation. The counter
+control logic changes the output to high level when down-counter value matches the value of
+compare register.
+The alternate feature of the PWM-timer is digital input Capture function. If Capture function is
+enabled the PWM output pin is switched as capture input mode. The Capture0 and PWM0 share
+one timer which is included in PWM0 and the Capture1 and PWM1 share PWM1 timer, and etc.
+Therefore user must setup the PWM-timer before enable Capture feature. After capture feature is
+enabled, the capture always latched PWM-counter to Capture Rising Latch Register (CRLR)
+when input channel has a rising transition and latched PWM-counter to Capture Falling Latch
+Register (CFLR) when input channel has a falling transition. Capture channel 0 interrupt is
+programmable by setting CCR0.CRL_IE0[1] (Rising latch Interrupt enable) and
+CCR0.CFL_IE0[2]] (Falling latch Interrupt enable) to decide the condition of interrupt occur.
+Capture channel 1 has the same feature by setting CCR0.CRL_IE1[17] and CCR0.CFL_IE1[18].
+And capture channel 2 to channel 3 on each group have the same feature by setting the
+corresponding control bits in CCR2. For each group, whenever Capture issues Interrupt 0/1/2/3,
+the PWM counter 0/1/2/3 will be reload at this moment.</li>
+</ul>

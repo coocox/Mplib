@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>NUC123ZD4AN0</Name>
+	<Vendor>NUVOTON</Vendor>
+	<Family>NUC123</Family>
+	<Arch>Cortex-M0</Arch>
+	<Description>NUVOTON's NUC123ZD4AN0 operates at a maximum speed of 72MHz and features 68 Kbytes of Flash and 20 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>32-bit timer (TMRB): 4 channels</Parameter>
+		<Parameter>Watchdog/Windowed-Watchdog timer (WDT): 1 channel</Parameter>
+		<Parameter>General-purpose serial interface (UART): 1 channel</Parameter>
+		<Parameter>Serial bus interface (I2C): 1 channel</Parameter>
+		<Parameter>Serial Peripheral interface (SPI): 3 channels</Parameter>
+		<Parameter>Inter-Integrated Circuit interface (I2S): 1 channel</Parameter>
+		<Parameter>PS/2 Device interface (PS2D): 1 channel</Parameter>
+		<Parameter>USB interface (USB): 1 channel</Parameter>
+		<Parameter>Peripheral DMA function (PDMA): 6 channels</Parameter>
+		<Parameter>PWM Generateor and Capture Timer (PWM): 2 channels</Parameter>
+		<Parameter>Interrupt:Internal-28 factors,External-4 factors</Parameter>
+		<Parameter>Standby modes: IDLE, SLOW, SLEEP, STOP</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.nuvoton.com/NuvotonMOSS/Community/ProductInfo.aspx?tp_GUID=5dbf7d7a-b6df-4fe1-91c9-063449500ce7</Link>
+		<Link name="Chips Datasheet">http://download.nuvoton.com/NuvotonMOSS/DownloadService/Member/DocumentsInfo.aspx?tp_GUID=UG0820120913151706</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\NUC123.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00010000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 64K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00005000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 20K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\NUC123_68.elf</loader>
+	</FlashLoader>
+</Device>

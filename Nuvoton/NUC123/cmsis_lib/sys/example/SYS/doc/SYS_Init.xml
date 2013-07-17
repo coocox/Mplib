@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        SYS_Example
+    </Name>
+    <Description>
+        Init system clock.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SYS
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\SYS\example\SYS\src\SYS_Example.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\SYS\example\SYS\src\SYS_Example.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

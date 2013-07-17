@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        PS2_Example
+    </Name>
+    <Description>
+        This example configures PS2 ,The demo code will show the cursor moving on the screen
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        PS2
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\PS2\example\PS2\src\PS2_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+            
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

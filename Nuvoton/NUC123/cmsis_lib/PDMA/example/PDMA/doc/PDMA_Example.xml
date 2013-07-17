@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        PDMA_Example
+    </Name>
+    <Description>
+        This example configures PDMA to use DMA to get the ADC data.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        PDMA
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\PDMA\example\PDMA\src\ADC_PDMA_Example.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\PDMA\example\PDMA\src\ADC_PDMA_Example.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency>UART, C lib, ADC, GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

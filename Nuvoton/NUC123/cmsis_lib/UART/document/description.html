@@ -1,0 +1,25 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>UART</h1>
+<h2>Overview</h2>
+<ul>
+    <li>The Universal Asynchronous Receiver/Transmitter (UART) performs a serial-to-parallel
+conversion on data received from the peripheral, and a parallel-to-serial conversion on data
+transmitted from the CPU. The UART controller also supports IrDA SIR Function and RS-485
+mode functions. Each UART channel supports six types of interrupts including transmitter FIFO
+empty interrupt (INT_THRE), receiver threshold level reaching interrupt (INT_RDA), line status
+interrupt (parity error or framing error or break interrupt) (INT_RLS), receiver buffer time out
+interrupt (INT_TOUT), MODEM/Wake-up status interrupt (INT_MODEM) and Buffer error interrupt
+(INT_BUF_ERR). Interrupts of UART0 number is 12 (vector number is 28); Interrupt number 13
+(vector number is 29) supports UART1 interrupt. Refer to Nested Vectored Interrupt Controller
+chapter for System Interrupt Map.
+The UART0 and UART1 are built-in with a 16-byte transmitter FIFO (TX_FIFO) and a 16-byte
+receiver FIFO (RX_FIFO) that reduces the number of interrupts presented to the CPU. The CPU
+can read the status of the UART at any time during the operation. The reported status information
+includes the type and condition of the transfer operations being performed by the UART, as well
+as 4 error conditions (parity error, framing error, break interrupt and buffer error) probably occur
+while receiving data. The UART includes a programmable baud rate generator that is capable of
+dividing clock input by divisors to produce the serial clock that transmitter and receiver need. The
+baud rate equation is Baud Rate = UART_CLK / M * [BRD + 2], where M and BRD are defined in
+Baud Rate Divider Register (UA_BAUD).</li>
+</ul>

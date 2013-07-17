@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        CRC_Example
+    </Name>
+    <Description>
+        This example NUC123 Series CRC Driver Sample Code
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        CRC
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\CRC\example\CRC\src\CRC_Example.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\CRC\example\CRC\src\CRC_Example.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency>UART, C lib, GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

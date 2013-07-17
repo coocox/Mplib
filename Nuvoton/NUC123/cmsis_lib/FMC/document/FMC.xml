@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>FMC</Name>
+  <Description>NUC123 FLASH MEMORY CONTROLLER </Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>FMC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\inc\FMC.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\src\DrvFMC.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\FMC.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\DrvFMC.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>GPIO</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC123LC2AN1, NUC123LD4AN0, NUC123SC2AN1, NUC123SD4AN0, NUC123ZC2AN1, NUC123ZD4AN0</Device>
+  </SupportDevices>
+
+</Component>

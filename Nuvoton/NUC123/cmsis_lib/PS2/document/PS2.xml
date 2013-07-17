@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>PS2</Name>
+  <Description>NUC123 PS/2 Device Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>PS2</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\inc\PS2.h</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\PS2.h</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>GPIO</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC123LC2AN1, NUC123LD4AN0, NUC123SC2AN1, NUC123SD4AN0, NUC123ZC2AN1, NUC123ZD4AN0</Device>
+  </SupportDevices>
+
+</Component>

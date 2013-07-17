@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>TIMER</Name>
+  <Description>NUC123 Serial Peripheral Interface</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>TIMER</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\inc\TIMER.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\src\DrvTIMER.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\TIMER.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\DrvTIMER.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>GPIO</Dependency>
+    <Dependency>WWDT</Dependency>
+    <Dependency>WDT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC123LC2AN1, NUC123LD4AN0, NUC123SC2AN1, NUC123SD4AN0, NUC123ZC2AN1, NUC123ZD4AN0</Device>
+  </SupportDevices>
+
+</Component>
