@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        WDT_Example
+    </Name>
+    <Description>
+        Main function of this demo is to test WDT reset and restart MCU.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        WDT
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\WDT\example\WDT\src\WDT_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+            GPIO,UART, SYS, C lib
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

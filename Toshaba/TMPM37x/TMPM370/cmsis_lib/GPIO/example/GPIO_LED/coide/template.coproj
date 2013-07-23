@@ -29,7 +29,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="d:/coocox/coide1.7.1/configuration/programdata/template/link.ld" type="0"/>
+        <LocateLinkFile path="d:/coocox/coide1.7.2.3/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -85,8 +85,8 @@
     <File name="app/main.c" path="../src/main.c" type="1"/>
     <File name="cmsis" path="" type="2"/>
     <File name="cmsis/core_cm3.c" path="../../../../lib/cmsis_core/core_cm3.c" type="1"/>
-    <File name="driver/inc/tmpm370_wdt.h" path="../../../../lib/inc/tmpm370_wdt.h" type="1"/>
     <File name="cmsis/TMPM370.h" path="../../../../lib/cmsis_boot/TMPM370.h" type="1"/>
+    <File name="driver/inc/tmpm370_wdt.h" path="../../../../lib/inc/tmpm370_wdt.h" type="1"/>
     <File name="driver" path="" type="2"/>
     <File name="cmsis/system_TMPM370.h" path="../../../../lib/cmsis_boot/system_TMPM370.h" type="1"/>
     <File name="driver/inc/tmpm370_cg.h" path="../../../../lib/inc/tmpm370_cg.h" type="1"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Project version="2G" name="template">
   <Target name="template" isCurrent="1">
-    <Device manufacturerId="8" manufacturerName="Nuvoton" chipId="193" chipName="NUC122LC1AN" boardId="" boardName=""/>
+    <Device manufacturerId="8" manufacturerName="Nuvoton" chipId="443" chipName="NUC123LC2AN1" boardId="" boardName=""/>
     <BuildOption>
       <Compile>
         <Option name="OptimizationLevel" value="0"/>
@@ -11,7 +11,9 @@
           <Includepath path="."/>
           <Includepath path="../../cmsis_lib/lib/include"/>
         </Includepaths>
-        <DefinedSymbols/>
+        <DefinedSymbols>
+          <Define name="NUC123LC2AN1"/>
+        </DefinedSymbols>
       </Compile>
       <Link useDefault="0">
         <Option name="DiscardUnusedSection" value="0"/>
@@ -20,8 +22,8 @@
         <Option name="Library" value="Not use C Library"/>
         <LinkedLibraries/>
         <MemoryAreas debugInFlashNotRAM="1">
-          <Memory name="IROM1" type="ReadOnly" size="0x00010000" startValue="0x00000000"/>
-          <Memory name="IRAM1" type="ReadWrite" size="0x00004000" startValue="0x20000000"/>
+          <Memory name="IROM1" type="ReadOnly" size="0x00008000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00003000" startValue="0x20000000"/>
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
@@ -56,7 +58,7 @@
       <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
-      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./nuc1xx_64.elf"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="NUC1xx_32.elf"/>
     </DebugOption>
     <ExcludeFile/>
   </Target>
@@ -85,18 +87,18 @@
     <File name="cmsis_lib/source/DrvUSB.c" path="../../../../lib/src/DrvUSB.c" type="1"/>
     <File name="cmsis_lib/source/DrvADC.c" path="../../../../lib/src/DrvADC.c" type="1"/>
     <File name="cmsis_lib/source/DrvPWM.c" path="../../../../lib/src/DrvPWM.c" type="1"/>
-    <File name="cmsis_lib" path="" type="2"/>
     <File name="cmsis_boot/system_NUC123Series.h" path="../../../../lib/cmsis_boot/system_NUC123Series.h" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
     <File name="cmsis_core/core_cm0.h" path="../../../../lib/cmsis_core/core_cm0.h" type="1"/>
     <File name="cmsis_lib/source/DrvUART.c" path="../../../../lib/src/DrvUART.c" type="1"/>
     <File name="cmsis_lib/source" path="" type="2"/>
     <File name="cmsis_lib/source/DrvSPI.c" path="../../../../lib/src/DrvSPI.c" type="1"/>
     <File name="cmsis_lib/source/DrvI2S.c" path="../../../../lib/src/DrvI2S.c" type="1"/>
-    <File name="cmsis_lib/include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
-    <File name="cmsis_lib/include/CRC.h" path="../../../../lib/inc/CRC.h" type="1"/>
     <File name="cmsis_lib/include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
     <File name="cmsis_lib/include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
+    <File name="cmsis_lib/include/CRC.h" path="../../../../lib/inc/CRC.h" type="1"/>
     <File name="cmsis_lib/include/CLOCK.h" path="../../../../lib/inc/CLOCK.h" type="1"/>
+    <File name="cmsis_lib/include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
     <File name="cmsis_lib/include/WWDT.h" path="../../../../lib/inc/WWDT.h" type="1"/>
     <File name="cmsis_lib/source/DrvCRC.c" path="../../../../lib/src/DrvCRC.c" type="1"/>
     <File name="cmsis_lib/include" path="" type="2"/>

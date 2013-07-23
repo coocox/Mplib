@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        WWDT_Example
+    </Name>
+    <Description>
+        Main function of this demo is to test WWDT
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        WWDT
+    </Tags>
+    <EVKit>
+        NUC123SD4ANO Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\WWDT\example\WWDT\src\WWDT_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+            
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

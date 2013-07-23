@@ -1,19 +1,17 @@
 <?xml version="1.0" ?>
 <Component>
-  <Name>ADC</Name>
-  <Description>NUC123 Analog-to-Digital Converter</Description>
+  <Name>WWDT</Name>
+  <Description>NUC123 Watchdog Timer (WDT)</Description>
   <Category>Peripheral</Category>
   <Version>1.200</Version>
-  <Tags>ADC</Tags>
+  <Tags>WWDT</Tags>
   
   <files>
-    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\inc\ADC.h</File>
-    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\src\DrvADC.c</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\inc\WWDT.h</File>
   </files>
   
   <CoIDEFiles>
-    <File>$PROJECT_ROOT$\cmsis_lib\include\ADC.h</File>
-    <File>$PROJECT_ROOT$\cmsis_lib\source\DrvADC.c</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\WWDT.h</File>
   </CoIDEFiles>
   
   <Dependencys>
