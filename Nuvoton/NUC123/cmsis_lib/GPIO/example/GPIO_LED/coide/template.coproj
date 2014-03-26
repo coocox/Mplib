@@ -29,7 +29,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="d:/coocox/coide1.7.3_coocox/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="d:/coocox/coide1.7.4/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -72,16 +72,16 @@
     <File name="cmsis_lib/Include/GPIO.h" path="../../../../lib/inc/GPIO.h" type="1"/>
     <File name="cmsis_lib/Source/DrvPWM.c" path="../../../../lib/src/DrvPWM.c" type="1"/>
     <File name="cmsis_lib/Include/WDT.h" path="../../../../lib/inc/WDT.h" type="1"/>
-    <File name="cmsis_lib/Include/I2S.h" path="../../../../lib/inc/I2S.h" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
+    <File name="cmsis_lib/Include/I2S.h" path="../../../../lib/inc/I2S.h" type="1"/>
     <File name="cmsis_lib/Include/PWM.h" path="../../../../lib/inc/PWM.h" type="1"/>
     <File name="cmsis_lib/Source/DrvPDMA.c" path="../../../../lib/src/DrvPDMA.c" type="1"/>
+    <File name="cmsis_lib/Include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
     <File name="cmsis_lib/Include/PS2.h" path="../../../../lib/inc/PS2.h" type="1"/>
     <File name="cmsis_lib/Include/SPI.h" path="../../../../lib/inc/SPI.h" type="1"/>
-    <File name="cmsis_lib/Include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
     <File name="cmsis_lib/Source/DrvFMC.c" path="../../../../lib/src/DrvFMC.c" type="1"/>
-    <File name="cmsis_lib/Source/DrvADC.c" path="../../../../lib/src/DrvADC.c" type="1"/>
     <File name="cmsis_core" path="" type="2"/>
+    <File name="cmsis_lib/Source/DrvADC.c" path="../../../../lib/src/DrvADC.c" type="1"/>
     <File name="cmsis_boot/system_NUC123Series.c" path="../../../../lib/cmsis_boot/system_NUC123Series.c" type="1"/>
     <File name="cmsis_lib/Include/CLOCK.h" path="../../../../lib/inc/CLOCK.h" type="1"/>
     <File name="cmsis_lib/Include/ADC.h" path="../../../../lib/inc/ADC.h" type="1"/>
@@ -91,8 +91,8 @@
     <File name="cmsis_lib/Include/FMC.h" path="../../../../lib/inc/FMC.h" type="1"/>
     <File name="cmsis_lib/Include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
     <File name="cmsis_lib/Include/CRC.h" path="../../../../lib/inc/CRC.h" type="1"/>
-    <File name="cmsis_lib/Include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
     <File name="Example" path="" type="2"/>
+    <File name="cmsis_lib/Include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
     <File name="cmsis_lib" path="" type="2"/>
     <File name="cmsis_boot/system_NUC123Series.h" path="../../../../lib/cmsis_boot/system_NUC123Series.h" type="1"/>
     <File name="cmsis_core/core_cm0.h" path="../../../../lib/cmsis_core/core_cm0.h" type="1"/>
@@ -100,8 +100,8 @@
     <File name="cmsis_lib/Source/DrvCRC.c" path="../../../../lib/src/DrvCRC.c" type="1"/>
     <File name="cmsis_lib/Source/DrvI2C.c" path="../../../../lib/src/DrvI2C.c" type="1"/>
     <File name="cmsis_lib/Include/WWDT.h" path="../../../../lib/inc/WWDT.h" type="1"/>
-    <File name="cmsis_lib/Source/DrvUSB.c" path="../../../../lib/src/DrvUSB.c" type="1"/>
     <File name="cmsis_lib/Source/DrvSPI.c" path="../../../../lib/src/DrvSPI.c" type="1"/>
+    <File name="cmsis_lib/Source/DrvUSB.c" path="../../../../lib/src/DrvUSB.c" type="1"/>
     <File name="cmsis_lib/Source/DrvUART.c" path="../../../../lib/src/DrvUART.c" type="1"/>
     <File name="Example/Example_LED.c" path="../src/Example_LED.c" type="1"/>
     <File name="cmsis_boot/Startup/startup_NUC123.c" path="../../../../lib/cmsis_boot/startup/coide/startup_NUC123.c" type="1"/>

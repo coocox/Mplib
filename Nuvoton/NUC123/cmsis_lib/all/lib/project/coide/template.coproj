@@ -27,7 +27,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="d:/coocox/coide1.7.3_coocox/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="d:/coocox/coide1.7.4/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -94,11 +94,11 @@
     <File name="cmsis_lib/source" path="" type="2"/>
     <File name="cmsis_lib/source/DrvSPI.c" path="../../../../lib/src/DrvSPI.c" type="1"/>
     <File name="cmsis_lib/source/DrvI2S.c" path="../../../../lib/src/DrvI2S.c" type="1"/>
-    <File name="cmsis_lib/include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
-    <File name="cmsis_lib/include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
     <File name="cmsis_lib/include/CRC.h" path="../../../../lib/inc/CRC.h" type="1"/>
     <File name="cmsis_lib/include/CLOCK.h" path="../../../../lib/inc/CLOCK.h" type="1"/>
+    <File name="cmsis_lib/include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
     <File name="cmsis_lib/include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
+    <File name="cmsis_lib/include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
     <File name="cmsis_lib/include/WWDT.h" path="../../../../lib/inc/WWDT.h" type="1"/>
     <File name="cmsis_lib/source/DrvCRC.c" path="../../../../lib/src/DrvCRC.c" type="1"/>
     <File name="cmsis_lib/include" path="" type="2"/>
