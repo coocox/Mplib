@@ -1,0 +1,72 @@
+<Example>
+    <Name>
+        USART_DaExDMA_Example
+    </Name>
+    <Description>
+    This example provides a small application in which joystick buttons are used 
+to trigger USART communications using DMA and though using USART firmware library.
+
+- Hardware Description
+
+To use this example, you need to load it on two STM32 boards (let's call them 
+Board A and Board B) then connect these two boards through USART lines and GND.
+- Software Description
+
+On Board A, at each joystick buttons press:
+- The USART Board A sends the specific command to the USART Board B (the command 
+  contains the transaction code (CMD_RIGHT, CMD_LEFT, CMD_UP, CMD_DOWN or CMD_SEL)
+  followed by the number of data to be transmitted (CMD_RIGHT_SIZE, CMD_LEFT_SIZE, 
+  CMD_UP_SIZE, CMD_DOWN_SIZE or CMD_SEL_SIZE)
+
+- The USART Board B receives the command and sends the CMD_ACK command to the USART board A
+
+- The USART Board A receives the CMD_ACK command and sends the number of bytes 
+  from TxBuffer to the USART Board B.
+  
+- The USART Board B compares the number of bytes received with the defined ones into
+  his TxBuffer.
+  
+  Received data correctness is signaled by LED lightening and though as follow:
+   - Joystick RIGHT and data correctly received ==> LD2, LD3 ON and LD4 OFF 
+   - Joystick LEFT and data correctly received  ==> LD4 ON, LD2 and LD3 are OFF
+   - Joystick UP and data correctly received    ==> LD2 ON, LD3 and LD4 are OFF
+   - Joystick DOWN and data correctly received  ==> LD3 ON, LD2 and LD4 are OFF
+   - Joystick SEL and data correctly received   ==> LD2, LD3 and LD4 are ON
+
+The steps described above can be also initiated and ensured by Board B. 
+
+In both boards(Board A or Board B), the data transfers is managed using the USART 
+Tx/Rx channels DMA requests.
+
+The SysTick is configured to generate interrupt each 10ms. A dedicated counter 
+inside the SysTick ISR is used to toggle the LD1 each 100ms indicating that the 
+firmware is running.
+
+A defined communication timeout is insuring that the application will not remain 
+stuck if the USART communication is corrupted.
+You can adjust this timeout through the USER_TIMEOUT  define inside main.h file
+depending on CPU frequency and application conditions (interrupts routines, 
+number of data to transfer, baudrate, CPU frequency...).
+
+These operations can be repeated infinitely.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        USART_DaExDMA
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\USART\example\USART_DataExchangeDMA\src\USART_DaExDMA_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,DMA</Dependency>
+    </Dependencys>
+</Example>
+
+

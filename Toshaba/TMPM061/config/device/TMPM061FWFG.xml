@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>TMPM061FWFG</Name>
+	<Vendor>TOSHIBA</Vendor>
+	<Family>TMPM061</Family>
+	<Arch>Cortex-M0</Arch>
+	<Description>TOSHIBA's TMPM061FWFG operates at a maximum speed of 16MHz and features 128 Kbytes of Flash and 8 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>16-bit timer (TMRB): 9 channels</Parameter>
+		<Parameter>Real time clock (RTC): 1 channel</Parameter>
+		<Parameter>Watchdog timer (WDT): 1 channel</Parameter>
+		<Parameter>General-purpose serial interface (SIO/UART): 4 channels</Parameter>
+		<Parameter>Serial bus interface (UART/SIO): 4 channels</Parameter>
+		<Parameter>Serial bus interface (I2C/SIO): 1 channels</Parameter>
+		<Parameter>Dual clock operation</Parameter>
+		<Parameter>Power calculation engine: 1 channel</Parameter>
+		<Parameter>10-bit AD converter (ADC): 2 channels</Parameter>
+		<Parameter>24-bit AD converter (ADC): 3 channels</Parameter>
+		<Parameter>Interrupt:Internal-32 factors,External-4 factors</Parameter>
+		<Parameter>Clock generator (CG)</Parameter>
+		<Parameter>LCD driver: 1 channel</Parameter>
+		<Parameter>Temperature sensor: 1 channel</Parameter>
+		<Parameter>Voltage detecting circuit: 1 channel</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.semicon.toshiba.co.jp/info/lookup.jsp?pid=TMPM061FWFG&lang=en</Link>
+		<Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM061FWFG</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\TMPM06x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00020000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 128K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00002000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 8K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\TMPM06x_128.elf</loader>
+	</FlashLoader>
+</Device>

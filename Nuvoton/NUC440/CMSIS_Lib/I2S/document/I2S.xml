@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>I2S</Name>
+  <Description>NUC400 I2S Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>I2S</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\I2S.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\I2S.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\I2S.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\I2S.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>clk</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>nuc440,nuc470series</Device>
+  </SupportDevices>
+
+</Component>

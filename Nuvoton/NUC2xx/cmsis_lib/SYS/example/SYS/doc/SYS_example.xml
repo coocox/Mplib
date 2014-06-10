@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        SYS_example
+    </Name>
+    <Description>
+        This example is NUC200 SYS Driver Sample Code.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SYS
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\SYS\example\SYS\src\SYS_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

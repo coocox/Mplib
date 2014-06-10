@@ -1,0 +1,46 @@
+<Example>
+    <Name>
+        RTC_Timer_Example
+    </Name>
+    <Description>
+     This example provides a short description of how to use the RTC peripheral’s with 
+  Alarm sub seconds feature to simulate a timer with refresh time equal to 250 ms
+  (1 second/ 8) * 2).
+  The RTC is configured to generate sub seconds interrupt each 125ms (will have
+  8 interrupt per 1 second).
+  
+  For this example an interactive human interface is developed using
+  LCD and Push Buttons to allow user to use Timer with a real "sand timer"
+  display.
+
+  After startup, the sand timer is equal to 1 Minute (60 Seconds) and by pressing on
+  the RIGHT button the bottom bulb start to be filled for each 2 successive
+  interrupts (after each 250ms).
+  After 480 interrupts (60 * 8) the bottom bulb will be full.
+
+  User can manipulate the chronometer features using the Joystick SEL, RIGHT, UP and DOWN buttons:
+    - press Joystick SEL button to Start the timer.
+    - press again Joystick SEL button to stop the timer.
+    - press Joystick RIGHT button to Restart the timer.
+    - press Joystick UP/DWON button to adjust the timer.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        RTC_Timer
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\RTC\example\RTC_Timer\src\RTC_Timer_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,SPI,NVIC,PWR,EXTI</Dependency>
+    </Dependencys>
+</Example>
+
+

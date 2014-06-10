@@ -1,0 +1,36 @@
+<Example>
+    <Name>
+        ADC_Data_Read
+    </Name>
+    <Description>
+        This example show how to use ADC module to measure analog data.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ADC
+    </Tags>
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\adc.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\adc.c
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\ADC_Data_Read.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\printf.c
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\tmpm341_int.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\tmpm341_int.c
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\uart.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\ADC\example\ADC_Data_Read\src\uart.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

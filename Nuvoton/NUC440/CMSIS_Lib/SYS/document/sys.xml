@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>SYS</Name>
+  <Description>NUC400 System Manager and Clock Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>SYS</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\SYS.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\CLK.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\SYS.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\Include\SYS.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\Include\CLK.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\Source\SYS.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+	<Dependency>clk</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC440 Series,NUC470 Series,</Device>
+  </SupportDevices>
+
+</Component>

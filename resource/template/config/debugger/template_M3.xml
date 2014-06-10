@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2010 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Debugger>
+	<Debug>
+		<Arch>Cortex-M3</Arch>
+		
+		<SWD support="true">
+			<ExpectedID>0x1BA01477</ExpectedID>
+			<ExpectedID>0x2BA01477</ExpectedID>
+		</SWD>
+		
+		<JTAG support="true">
+			<TAP name="ARM CoreSight JTAG-DP"    irLen="4" ircapture="0x1" irmask="0xF" irIDCode="0xE" select="true">
+				<ExpectedID>0x3BA00477</ExpectedID>
+				<ExpectedID>0x4BA00477</ExpectedID>
+			</TAP>	
+		</JTAG>
+		
+		<Reset>
+			<HwReset       support="true" />
+			<SoftSysReset  support="true" select="true"/>
+			<SoftVectReset support="true" />
+		</Reset>
+		
+		<SystemResetClkFreq>XXX</SystemResetClkFreq> <!-- HSI 8MHZ 根据芯片实际的复位时钟填写，一般就是内部时钟的值 -->
+	</Debug>
+
+	<!-- 
+		Memory Blocks that can be read/written/executed
+		exclude ram,rom blocks
+		read(true,false)
+		write(true,false)
+		execute(true,false)	
+	 -->
+	<MemMap>
+   <!-- <Block addr="XXX"        size="XXX"      read="true"   write="true"   execute="false" name="XXX" /> -->
+        <!--  Private peripheral bus - Internal --> 
+		<Block addr="0xE00FF000" size="0x1000" read="true" write="true" execute="false" name="ROM Table" /> 
+		<Block addr="0xE0042000" size="0xD000" read="true" write="true" execute="false" name="External PPB" /> 
+		<Block addr="0xE0041000" size="0x1000" read="true" write="true" execute="false" name="ETM" /> 
+		<Block addr="0xE0040000" size="0x1000" read="true" write="true" execute="false" name="TPIU" /> 
+		<!--  Private peripheral bus - Internal --> 
+		<Block addr="0xE000E000" size="0x1000" read="true" write="true" execute="false" name="System Control Space" /> 
+		<Block addr="0xE0002000" size="0x1000" read="true" write="true" execute="false" name="FPB" /> 
+		<Block addr="0xE0001000" size="0x1000" read="true" write="true" execute="false" name="DWT" /> 
+		<Block addr="0xE0000000" size="0x1000" read="true" write="true" execute="false" name="ITM" /> 
+        
+        <!-- AHB 这里会有多个外设，可以按照参考手册中的memory map 来填写-->
+		<Block addr="XXX"        size="XXX"      read="true"   write="true"   execute="false" name="XXX" />
+		
+        <!-- APB 有的芯片可能份 APB1 和APB2，这里会有多个外设，可以按照参考手册中的memory map 来填写  -->
+		<Block addr="XXX"        size="XXX"      read="true"   write="true"   execute="false" name="XXX" />
+	</MemMap>
+</Debugger>

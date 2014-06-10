@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        DAC_Demo
+    </Name>
+    <Description>
+        This example show how to Configure DAC module.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        DAC
+    </Tags>
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\DAC\example\DAC_Demo\src\DAC_Demo.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

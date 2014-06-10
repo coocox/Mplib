@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>DEBUG</Name>
+  <Description>STM32L1xx DEBUG</Description>
+  <Category>Peripheral</Category>
+  <Version>1.2.0</Version>
+  <Tags>DEBUG</Tags>
+  
+  <Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\lib\inc\stm32l1xx_dbgmcu.h</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\lib\src\stm32l1xx_dbgmcu.c</File>
+	</Files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\stm32l1xx_dbgmcu.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\stm32l1xx_dbgmcu.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>RCC</Dependency>
+    <Dependency>GPIO</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>STM32L100C6, STM32L100R8, STM32L100RB, STM32L100RC, STM32L151C6, STM32L151C8, STM32L151CB, STM32L151CC, STM32L151QC, STM32L151QD, STM32L151R6, STM32L151R8, STM32L151RB, STM32L151RC, STM32L151RD, STM32L151UC, STM32L151V8, STM32L151VB, STM32L151VC, STM32L151VD, STM32L151ZC, STM32L151ZD, STM32L152C6, STM32L152C8, STM32L152CB, STM32L152CC, STM32L152QC, STM32L152QD, STM32L152R6, STM32L152R8, STM32L152RB, STM32L152RC, STM32L152RD, STM32L152V8, STM32L152VB, STM32L152VC, STM32L152VD, STM32L152ZC, STM32L152ZD, STM32L162QD, STM32L162RC, STM32L162RD, STM32L162VC, STM32L162VD, STM32L162ZD</Device>
+  </SupportDevices>
+
+</Component>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+    
+    This file is part of CooCox Softwares.
+-->
+<Device>
+    <Name>M058SLAN</Name>
+    <Vendor>NUVOTON</Vendor>
+    <Family>M058S</Family>
+    <Arch>Cortex-M0</Arch>
+    <Description>NUVOTON's M058SLAN operates at a maximum speed of 50MHz and features 32 Kbytes of Flash and 4 Kbytes of RAM.</Description>
+    <Parameters>
+        <Parameters>SPI : 1 ch<Parameters>
+        <Parameters>UART: 1 ch<Parameters>
+        <Parameters>I2C: 2 ch<Parameters>
+        <Parameters>A/D converters(12bit): 8 ch<Parameters>
+        <Parameters>timer(32bit): 4 ch<Parameters>
+        <Parameters>PWM : 4   ch<Parameters>
+        <Parameters>RTC : Available<Parameters>
+        <Parameters>ISP/ICP/IAP: Available<Parameters>
+        <Parameters>IRC 22MHz: Available<Parameters>
+        <Parameters>VBAT supply 22MHz : Available<Parameters>
+        <Parameters>I/O Ports: 40 pins<Parameters>
+    </Parameters>
+    <ReferenceLinks>
+        <Link name="Chips Page">http://www.nuvoton.com/NuvotonMOSS/Community/ProductInfo.aspx?tp_GUID=5dbf7d7a-b6df-4fe1-91c9-063449500ce7</Link>
+        <Link name="Chips Datasheet">http://download.nuvoton.com/NuvotonMOSS/DownloadService/Member/DocumentsInfo.aspx?tp_GUID=TD0120130712142252</Link>
+    </ReferenceLinks>
+    
+    
+    <DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\nucm058sx.xml</DebugSetting>
+    
+    <Flash>
+        <Block addr="0x00000000" size="0x00008000" read="true" write="false" execute="true" name="Embedded Flash" />    <!-- 32K -->
+    </Flash>
+    
+    <Ram>
+        <Block addr="0x20000000" size="0x00001000" read="true" write="true"  execute="true" name="Embedded RAM" />      <!-- 4K -->
+    </Ram>
+    
+    <FlashLoader>
+        <loader>$TOOLKIT_FLASH_DIR$\M051_32.elf</loader>
+    </FlashLoader>
+</Device>

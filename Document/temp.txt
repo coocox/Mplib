@@ -1,0 +1,100 @@
+CoIDE中贡献厂商库分为几个方面：
+1.增加一个CoiDE的芯片支持
+2.移植厂商库到CoIDE（分模块、分组件）并写CoIDE上传文档。
+3.为每一个组件写一个说明性的文档。
+4.为每一个组件写一个或多个例子，并附带相应的文档
+5.更新厂商库（CoIDE已经支持，但是官方出了新版本的厂商库）
+6.修复厂商库中的BUG
+
+总体来说一个完整的厂商库包括，COIDE芯片支持的相关信息、组件、组件文档、例子（测试工程和源码）、例子文档。
+一般情况是，要想支持厂商库，必须先支持芯片。
+现在以添加一个完整的厂商库为例，来讲解步骤：
+1.在官方网站下载相应的厂商库源码、参考手册、数据手册；从https://github.com/coocox/MPLib上Fork coocox的厂商库项目。
+  从git://github.com/coocox/mplib.git上clone 厂商库源码。当然在做这些之前，你需要在https://github.com，上注册一个帐号，
+  然后需要安装git。安装方法如下：http://help.github.com/win-set-up-git/
+2.将\resource\template文件夹复制到/$manufacturer$/目录下。这个$manufacturer$是你说移植的厂商库厂商的名字，常见的
+  有 ST、TI、Atmel、NXP、holtck、Nuvoton、Energy Micro、ARM（这是个特殊的厂商，M0、M3、M4）。然后将template重命名为
+  $series$，这个$series$表示一个系列，比如NUC1xx、M051、LPC17xx、STM32F1xx等。
+3.在/$manufacturer$\$series$\config\device\目录下，重命名template.xml文件，为$chipname$.xml，比如STM32F103VB。
+  参考参考手册、数据手册，将这个文件中的"XXX"替换为有效的信息。没个"XXX"后面都有相应的注释提醒。如果支持多个芯片，
+  则每个芯片对应一个芯片文件。
+4.在/$manufacturer$\$series$\flash\source目录下，重命名template 为 $series$。根据参考手册和以下链接提供的内容实现
+FlashAlgoFncs.c 和FlashAlgoInfo.c 文件。用GCC编译makefile文件生成所需的flash算法。
+链接为：http://www.coocox.org/CoFlashGuide/CoFlash_UserGuide_Algorithm.htm
+5.在/$manufacturer$\$series$\config\debugger\目录下，重命名template.xml文件，为$series$.xml，比如lpc17xx.xml、sam3uxx.xml。
+  参考参考手册、数据手册，将这个文件中的"XXX"替换为有效的信息。没个"XXX"后面都有相应的注释提醒。需要注意的是，在写内存映射的
+  时候，需要补齐相应模块的映射。
+
+到了这一步为止，CoIDE就可以支持，这个芯片或者是这个系列的芯片了。如何就支持了？你只需提交这些文件到github，CooCox就可以安排支持了。
+然后就可以开始组件的支持了，组件支持就分几点，一是基本组件（组件文档），二是组件对应的例子（工程文档）。
+
+6.打开从官方下载的厂商库，将其中的源码，按照/$manufacturer$\$series$\cmsis_lib\lib目录下的目录组织存放源码。
+  特别注意启动代码，如果官方库，包含了GCC的启动代码（C文件），则将GCC的启动代码重命名为startup_coide.c，如果没有提供C文件的启动代码或者
+  只提供了汇编文件的启动代码，则需要自己移植一个。
+7.打开/$manufacturer$\$series$\cmsis_lib\all\example\ewarm下的IAR工程文件。按照工程中的目录组织重新添加文件。打开工程选项，按照实际
+  情况配置你的芯片、调试器等信息。保证编译通过。
+8.打开CoIDE。新建一个coide_empty_project工程，芯片选择对应的芯片（做了前5步的时候就已经可以支持了），不够选任何组件，编译，clean。
+  在工程所在目录，记事本打开build.xml文件，找到<includepath path="."/>，在这行下面加上
+      <includepath path="cmsis_lib"/>
+      <includepath path="cmsis_boot"/>
+      <includepath path="cmsis_core"/>
+      <includepath path="cmsis_lib\include"/>
+  保存。然后将除了main.c以外的所有文件，复制到/$manufacturer$\$series$\resource\coide_empty_project\目录下。
+9.运行/$manufacturer$\$series$\coide_gen.bat生成CoIDE工程。打开/$manufacturer$\$series$\cmsis_lib\all\example\coide_gen中
+  的CoIDE工程。进行编译测试。
+  在拆分CoIDE组件的时候，需要特别注意一点，一般的厂商库都有一个lib.h或者config.h之类一个文件，他用于配置各个组件的头文件是否要包含。
+  由于CoIDE可以自动添加组件依赖关系，所以不需要这个文件。
+  当编译通过之后，基本组件的源代码就不需要变动了，如果没有编译通过，最有可能的原因就是启动代码，参数检查。
+10.在/$manufacturer$\$series$\cmsis_lib\目录下为每一个组件创建一个文件夹，模版里面已经有了一个模版（adc），暂时以
+   $components$来表示组件文件夹。在$components$下有两个目录，一个是组件文档，一个是组件例子。其中组件文档包括组件上传说明文档、
+   组件帮助文档。
+11.组件上传文档：上传组件时的一些必备信息：组件名（ADC）、组件描述、在CoIDE中的类别（厂商库都是Peripheral）、文件路径、CoIDE中路径
+   依赖关系、支持芯片列表。
+   其中依赖关系表示，一个组件的使用必须依赖其他组件，比如，任何组件的使用都需要CMSIS_BOOT、时钟模块，UART的使用需要GPIO，一般情况下，
+   都是外设组件会依赖时钟模块、GPIO、CMSIS_BOOT。
+12.组件帮助文档包括两个部分，一是，这个组件是什么组件，有什么功能，有什么特性？（What）。二是，这个组件怎么用，
+   包括使用步骤，应用示例等，还可以包含一些其他附加信息，比如电路图、开发板等。在每个$components$/document下都有一个html的简易模版。
+   
+到了这一步为止，CoIDE的组件已经完全支持，可以上传组件了，你可以自己上传，按照CoIDE的组件上传教程操作就可以了（使用
+/$manufacturer$\$series$\cmsis_lib\all\example\coide_gen这个工程），链接是 http://www.coocox.com/CoIDE/Upload_component.html。
+你也可以将上面的内容提交到github，然后通知CooCox上传。
+
+13.组件移植完成之后，还需要为每个组件添加一个或者多个例子，依然是移植厂商提供的例子，例子需要移植的内容较多，改动也比较大，主要集中在
+   printf的移植，getchar的移植和重定向等。将这个移植好了之后，就要注意CoIDE下例子的一些特殊表现形式了，CoIDE可以自动添加例子到工程和
+   main.c函数里面，所以CoIDE的例子需要注意一下几点。
+14.例子只支持一个文件，一个C文件，所以，如果是一个C一个H文件的例子需要合成一个C文件；例子能自动添加到main.c，所以例子的主体函数，要
+   放在例子文件的第一个位置，声明可以放在前面。举个例子，一个例子文件里面包含了三个函数，在文件最前面 声明这三个函数（顺序没有关系），
+   然后，将主体函数放在三个函数的最前面，主体函数的意思就是，这个函数会被CoIDE自动添加到main.c中。下面的结构中，functionC被加到main.c中。
+   void functionA(void);
+   void functionB(void);
+   void functionC(void);
+   void functionC(void)
+   {
+       functionB();
+	   functionA();
+	   ....
+   }
+   void functionA(void)
+   {
+	   ....
+   }
+   void functionB(void)
+   {
+	   ....
+   }
+   例子函数命中不要有空格，不要有特殊符号。
+15.例子移植的过程，打开$components$/example\template\ewarm下的IAR工程，添加IAR的工程目录组织需要涉及的文件。打开工程选项，按照实际
+  情况配置你的芯片、调试器等信息。编译，如果已经完成了前面的组件支持，这里编译可以直接编译通过。打开template.c文件，将例子移植在这个
+  文件里面。移植完成后，编译下载测试，调试，直到现象完全正确。运行coide_gen.bat，生成CoIDE工程，用CoIDE测试。
+  
+16. 例子完成之后就是例子文档，例子文档主要包括名字、描述、版本、支持的开发板、文件路径、依赖。
+    其中描述没行之前不要有空格，描述最长一行只能那个有66个字符。
+	依赖取决于template.c文件中，包含了哪些头文件。比如template.c文件中包含了“#include "stm32l1xx_gpio.h"”就需要在文档中添加
+	“<Dependency>GPIO</Dependency>”，几乎所有的例子都会依赖“<Dependency>CMSIS_BOOT</Dependency>”。
+  
+   
+
+   
+
+
+  

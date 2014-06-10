@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>SBI</Name>
+  <Description>Serial Bus interface</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>SBI</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\lib\inc\tmpm061_sbi.h</File>
+    <File>$REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\lib\src\tmpm061_sbi.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm061_sbi.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm061_sbi.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM061FWFG</Device>
+  </SupportDevices>
+
+</Component>

@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+       TMRB_PPG
+    </Name>
+    <Description>
+        This example show how to use TMRB to product PWM pluse.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> TMRB <Tags>
+
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\TMRB\example\TMRB_PPG\src\TMRB_PPG.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

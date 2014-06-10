@@ -1,5 +1,14 @@
 
 *.out
+*.bin
+*.dis
+*.info
+*.src
+*.cogui
+*.comemgui
+*.comarker
+*.log
+*.pbxproj
 *.o
 *.d
 *.lst
@@ -7,4 +16,8 @@
 *.dep
 *.uvgui.*
 *.uvopt
+*.zip
+*.rar
 temp/
+bin/
+obj/

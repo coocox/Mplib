@@ -1,0 +1,39 @@
+<Example>
+    <Name>
+        RTC_StopWatch_Example
+    </Name>
+    <Description>
+     This example illustrates how to simulate a precise chronometer with 5 record 
+  times possibilities stored in the Backup registers (5 registers for time (second,
+  minutes and hours) and 5 registers for subsecond).
+  
+  For this example an interactive human interface is developed using LCD and Push 
+  Buttons to allow user to use StopWatch with real time display.
+
+  After startup, a default 00:00:00:000 chronometer counter is displayed on the 
+  LCD, it corresponds to [Hours]:[minutes]:[seconds]:[milliseconds].
+  User can manipulate the chronometer features using Joystick LEFT, RIGHT and SEL buttons:
+    - press Joystick LEFT  button to start counter.
+    - press Joystick RIGHT button to save trials in the backup registers (max 5 actions).
+    - press and hold SEL button for 1 sec to reset all the backup registers.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        RTC_StopWatch
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\RTC\example\RTC_StopWatch\src\RTC_StopWatch_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,SPI,NVIC,PWR,EXTI</Dependency>
+    </Dependencys>
+</Example>
+
+

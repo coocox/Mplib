@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        Timer_Delay_Example
+    </Name>
+    <Description>
+        This sample code use timer to create a small delay.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TIMER
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\TIMER\example\Timer_Delay\src\Timer_Delay_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

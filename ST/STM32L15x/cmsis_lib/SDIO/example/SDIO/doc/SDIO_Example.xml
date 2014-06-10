@@ -1,0 +1,17 @@
+<Example>
+	<Name>SDIO_Example.c</Name>
+	<Description>This example provides a basic example of how to use the SDIO firmware library and an associate driver to perform read/write operations on the SD Card memory (SD Card V1.0, V1.1, V2.0 and SDHC (High Capacity) protocol)that could be mounted on theSTM32L152D-EVAL board.</Description>
+	<Version>1.2.0</Version>
+	<Tags>SDIO</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SDIO\example\SDIO\src\SDIO_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SDIO\example\SDIO\src\stm32l152d_eval_sdio_sd.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SDIO\example\SDIO\src\stm32l152d_eval_sdio_sd.h</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SDIO\example\SDIO\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SDIO\example\SDIO\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,DMA,SDIO</Dependency>
+	</Dependencys>
+</Example>

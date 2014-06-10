@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        GPIO_example
+    </Name>
+    <Description>
+        This example configures GPIO , then test the GPIO int.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        GPIO
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\GPIO\example\GPIO\src\GPIO_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,55 @@
+<Example>
+    <Name>
+        COMP_PulseWidthMeasurement
+    </Name>
+    <Description>
+   This example shows how to configure the COMP1 peripheral to measure pulse width.
+This method (measuring signal pulse using comparator is interesting when
+external signal doesn't respect the VIL and VIH levels).
+
+  - COMP1 is configured as following:
+     - Inverting input is internally connected to DAC1 output
+     - Non Inverting input is connected to PA1
+     - Output is internally connected to TIM2 Input Capture 4 (IC4)
+
+  - DAC channel 1 is used as a digital threshold for measurement, DAC1 output
+    is internally connected to COMP1 inverting input. 
+    DAC1 is configured in 12-bit right alignment. DAC1 output = VREF * DOR / 4095
+                                                               = 3.3 * 2000 / 4095
+                                                               = 1.61V
+
+    In this example, the pulse of an external signal of around 1.6V 
+    (e.g. high level = 1.7V and low level = 1.5V) can be performed.
+
+  - TIM2 counter is clocked by TIM2CLK = 72MHz, TIM2 channel 4 is configured in
+    input capture mode.
+    TIM2 counter is captured at each transition detection: rising or falling edges
+    (each time COMP1 inverting input crosses DAC1 output)
+
+  - External signal should be connected to PA1. 
+    Pulse is computed in microsecond then displayed on Color LCD 
+    for STM32303C-EVAL.
+    Pulse duration shouldn't be higher than 65535 * TIM2CLK = 0.910 ms
+    Pulse duration shouldn't be lower than TIM2 ISR processing time / TIM2CLK 
+                                         ~ 110 (clock cycle) / 72 MHz = 1.5 us
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        COMP_PulseWidthMeasurement
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\COMP\example\COMP_PulseWidthMeasurement\src\COMP_PulseWidthMeasurement.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,TIM,DAC,NVIC,SPI,C Library</Dependency>
+    </Dependencys>
+</Example>
+
+

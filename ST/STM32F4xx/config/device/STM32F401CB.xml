@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+    
+    This file is part of CooCox Softwares.
+-->
+<Device>
+    <Name>STM32F401CB</Name>
+    <Vendor>STMicroeletronics</Vendor>
+    <Family>STM32F401</Family>
+    <Arch>Cortex-M4</Arch>
+    <Description>
+        STMicroeletronics's STM32F401CB operates at a maximum speed of 84MHz and features 128 Kbytes of Flash and 64 Kbytes of RAM.
+    </Description>
+    <Parameters>
+        <Parameter>16-bit timers (IC/OC/PWM) : 6x16-bit                                              </Parameter>
+        <Parameter>32-bit timers (IC/OC/PWM) : 2x32-bit                                              </Parameter>
+        <Parameter>24-bit downcounter        : 1                                                     </Parameter>
+        <Parameter>WDG                       : Independent watchdog (IWDG) and Window watchdog (WWDG)</Parameter>
+        <Parameter>RTC                       : 1                                                     </Parameter>
+        <Parameter>ADC                       : 10x12-bit                                             </Parameter>
+        <Parameter>High Current gpio         : 36                                                    </Parameter>
+        <Parameter>SPI                       : 3                                                     </Parameter>
+        <Parameter>I2S                       : 2                                                     </Parameter>
+        <Parameter>I2C                       : 3                                                     </Parameter>
+        <Parameter>USART(IrDA, ISO 7816)     : 3                                                     </Parameter>
+        <Parameter>USB OTG FS                : 1                                                     </Parameter>
+        <Parameter>SDIO                      : 1                                                     </Parameter>
+    </Parameters>
+    <ReferenceLinks>
+        <Link name="Chips Page">http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1577/LN1810/PF258491</Link>
+        <Link name="Chips Datasheet">http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00086815.pdf</Link>
+    </ReferenceLinks>
+    
+    <DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\STM32F4x.xml</DebugSetting>
+    
+    <Flash>
+        <Block addr="0x00000000" size="0x00020000" read="true" write="false" execute="true" name="Embedded Flash" />    <!-- 128K -->
+    </Flash>
+    
+    <Ram>
+        <Block addr="0x20000000" size="0x00010000" read="true" write="true"  execute="true" name="Embedded RAM" />      <!-- 64K -->
+    </Ram>
+    
+    <FlashLoader>
+        <loader>$TOOLKIT_FLASH_DIR$\STM32F4xx_128.elf</loader>
+    </FlashLoader>
+</Device>

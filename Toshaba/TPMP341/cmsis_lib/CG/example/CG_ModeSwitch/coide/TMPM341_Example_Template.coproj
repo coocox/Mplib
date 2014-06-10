@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.4" name="TMPM341_Example_Template">
+  <Target name="TMPM341_Example_Template" isCurrent="1">
+    <Device manufacturerId="1" manufacturerName="ARM" chipId="3" chipName="M3" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="M3"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00080000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00008000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide/configuration/programdata/tmpm341_example_template/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="TMPM341_Example_Template"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="J-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V472a\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2331"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F10x_LD_32.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="lib/cmsis_boot/startup/coide/startup_coide.c" path="../../../../lib/cmsis_boot/startup/coide/startup_coide.c" type="1"/>
+    <File name="lib/src/tmpm341_tmrd.c" path="../../../../lib/src/tmpm341_tmrd.c" type="1"/>
+    <File name="lib/src/tmpm341_adc.c" path="../../../../lib/src/tmpm341_adc.c" type="1"/>
+    <File name="lib/inc/tmpm341_dac.h" path="../../../../lib/inc/tmpm341_dac.h" type="1"/>
+    <File name="lib/inc/tmpm341_uart.h" path="../../../../lib/inc/tmpm341_uart.h" type="1"/>
+    <File name="example/CG_ModeSwitch/src" path="" type="2"/>
+    <File name="example/CG_ModeSwitch/src/CG_ModeSwitch.c" path="../src/CG_ModeSwitch.c" type="1"/>
+    <File name="lib/inc/tmpm341_adc.h" path="../../../../lib/inc/tmpm341_adc.h" type="1"/>
+    <File name="lib/cmsis_boot/TMPM341.h" path="../../../../lib/cmsis_boot/TMPM341.h" type="1"/>
+    <File name="lib/cmsis_boot/system_TMPM341.c" path="../../../../lib/cmsis_boot/system_TMPM341.c" type="1"/>
+    <File name="lib/inc/tmpm341_fc.h" path="../../../../lib/inc/tmpm341_fc.h" type="1"/>
+    <File name="example/CG_ModeSwitch/src/tmpm341_int.c" path="../src/tmpm341_int.c" type="1"/>
+    <File name="example/CG_ModeSwitch/src/cg.c" path="../src/cg.c" type="1"/>
+    <File name="lib/inc/tmpm341_dmac.h" path="../../../../lib/inc/tmpm341_dmac.h" type="1"/>
+    <File name="lib/src/tmpm341_uart.c" path="../../../../lib/src/tmpm341_uart.c" type="1"/>
+    <File name="lib/inc/tmpm341_gpio.h" path="../../../../lib/inc/tmpm341_gpio.h" type="1"/>
+    <File name="lib/inc/tmpm341_ofd.h" path="../../../../lib/inc/tmpm341_ofd.h" type="1"/>
+    <File name="lib/cmsis_boot/startup/coide" path="" type="2"/>
+    <File name="lib/src/tmpm341_ofd.c" path="../../../../lib/src/tmpm341_ofd.c" type="1"/>
+    <File name="lib/cmsis_boot/system_TMPM341.h" path="../../../../lib/cmsis_boot/system_TMPM341.h" type="1"/>
+    <File name="example" path="" type="2"/>
+    <File name="lib/src/tmpm341_fc.c" path="../../../../lib/src/tmpm341_fc.c" type="1"/>
+    <File name="example/CG_ModeSwitch" path="" type="2"/>
+    <File name="lib/cmsis_core/core_cm3.h" path="../../../../lib/cmsis_core/core_cm3.h" type="1"/>
+    <File name="lib/cmsis_boot/startup" path="" type="2"/>
+    <File name="lib/inc/tx03_common.h" path="../../../../lib/inc/tx03_common.h" type="1"/>
+    <File name="example/CG_ModeSwitch/src/tmpm341_int.h" path="../src/tmpm341_int.h" type="1"/>
+    <File name="example/CG_ModeSwitch/src/cg.h" path="../src/cg.h" type="1"/>
+    <File name="lib/cmsis_boot" path="" type="2"/>
+    <File name="lib/src/tmpm341_cg.c" path="../../../../lib/src/tmpm341_cg.c" type="1"/>
+    <File name="lib/src/tmpm341_dmac.c" path="../../../../lib/src/tmpm341_dmac.c" type="1"/>
+    <File name="lib/src/tmpm341_gpio.c" path="../../../../lib/src/tmpm341_gpio.c" type="1"/>
+    <File name="Utilities/TMPM341-SK/led.h" path="../../../../Utilities/TMPM341-SK/led.h" type="1"/>
+    <File name="lib" path="" type="2"/>
+    <File name="lib/inc/tmpm341_tmrb.h" path="../../../../lib/inc/tmpm341_tmrb.h" type="1"/>
+    <File name="lib/inc/tmpm341_wdt.h" path="../../../../lib/inc/tmpm341_wdt.h" type="1"/>
+    <File name="lib/inc/tmpm341_sbi.h" path="../../../../lib/inc/tmpm341_sbi.h" type="1"/>
+    <File name="lib/inc/tmpm341_ssp.h" path="../../../../lib/inc/tmpm341_ssp.h" type="1"/>
+    <File name="lib/cmsis_core/core_cm3.c" path="../../../../lib/cmsis_core/core_cm3.c" type="1"/>
+    <File name="Utilities/TMPM341-SK/led.c" path="../../../../Utilities/TMPM341-SK/led.c" type="1"/>
+    <File name="lib/src" path="" type="2"/>
+    <File name="lib/inc/tmpm341_tmrd.h" path="../../../../lib/inc/tmpm341_tmrd.h" type="1"/>
+    <File name="lib/cmsis_core" path="" type="2"/>
+    <File name="Utilities/TMPM341-SK" path="" type="2"/>
+    <File name="lib/src/tmpm341_sbi.c" path="../../../../lib/src/tmpm341_sbi.c" type="1"/>
+    <File name="Utilities" path="" type="2"/>
+    <File name="example/CG_ModeSwitch/src/main.h" path="../src/main.h" type="1"/>
+    <File name="lib/src/tmpm341_tmrb.c" path="../../../../lib/src/tmpm341_tmrb.c" type="1"/>
+    <File name="lib/inc/tmpm341_cg.h" path="../../../../lib/inc/tmpm341_cg.h" type="1"/>
+    <File name="lib/src/tmpm341_dac.c" path="../../../../lib/src/tmpm341_dac.c" type="1"/>
+    <File name="lib/src/tmpm341_exb.c" path="../../../../lib/src/tmpm341_exb.c" type="1"/>
+    <File name="lib/inc" path="" type="2"/>
+    <File name="lib/src/tmpm341_wdt.c" path="../../../../lib/src/tmpm341_wdt.c" type="1"/>
+    <File name="lib/src/tmpm341_ssp.c" path="../../../../lib/src/tmpm341_ssp.c" type="1"/>
+    <File name="lib/inc/tmpm341_exb.h" path="../../../../lib/inc/tmpm341_exb.h" type="1"/>
+    <File name="main.c" path="../main.c" type="1"/>
+  </Files>
+</Project>

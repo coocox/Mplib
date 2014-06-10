@@ -1,0 +1,36 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>I2C</h1>
+<h2>Overview</h2>
+<ul>
+	The I2C (inter-integrated circuit) bus interface handles communications between the 
+microcontroller and the serial I2C bus. It provides multimaster capability, and controls all I2C bus-specific sequencing, protocol, arbitration and timing. It supports standard speed mode, Fast Mode and Fast Mode Plus.It is also SMBus (system management bus) and PMBus (power management bus) compatible.
+	I2C main features    
+	<li>I2C bus specification rev03 compatibility:
+每 Slave and master modes
+每 Multimaster capability
+每 Standard mode (up to 100 kHz)
+每 Fast Mode (up to 400 kHz)
+每 Fast Mode Plus (up to 1 MHz)
+每 7-bit and 10-bit addressing mode 
+每 Multiple 7-bit slave addresses (2 addresses, 1 with configurable mask)
+每 All 7-bit addresses acknowledge mode 
+每 General call
+每 Programmable setup and hold times
+每 Easy to use event management
+每 Optional clock stretching
+每 Software reset</li>
+	<li>1-byte buffer with DMA capability</li>
+	<li>Programmable analog and digital noise filters</li>
+	<li> SMBus specification rev 2.0 compatibility:
+每 Hardware PEC (Packet Error Checking) generation and verification with ACK control
+每 Command and data acknowledge control
+每 Address resolution protocol (ARP) support
+每 Host and Device support
+每 SMBus alert
+每 Timeouts and idle condition detection</li>
+	<li>PMBus rev 1.1 standard compatibility</li>
+	<li>Independent clock: a choice of independent clock sources allowing the I2C 
+communication speed to be independent from the PCLK reprogramming </li>
+	<li>Wakeup from Stop on address match. </li>
+</ul>

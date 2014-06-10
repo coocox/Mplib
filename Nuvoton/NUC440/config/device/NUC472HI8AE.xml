@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>NUC472HI8AE </Name>
+	<Vendor>NUVOTON</Vendor>
+	<Family>NUC400</Family>
+	<Arch>Cortex-M4</Arch>
+	<Description>The  NuMicroNUC470 Connectivity series with embedded Cortex-M4F core with DSP 
+extensions and a Floating Point Unit runs up to 84 MHz with 512K flash memories and 64K SRAM.</Description>
+	<Parameters>
+		<Parameter>4*32-bit timer (TIMRE)</Parameter>		
+		<Parameter>6*UART(General-purpose serial interface)</Parameter>	
+		<Parameter>5*I2C Serial bus interface  </Parameter>
+		<Parameter>4*SPI(Serial Peripheral interface)</Parameter>
+		<Parameter>6*LIN(Local Interconnect Network)</Parameter>
+		<Parameter>2*CAN(Controller Area Network)</Parameter>
+		<Parameter>6*SC( Smart Card Interface )</Parameter>
+		<Parameter>2*I2S(Inter-Integrated Circuit interface)</Parameter>
+		<Parameter>16*PWM Generateor and Capture Timer (PWM)</Parameter>
+		<Parameter>3*Comp(Analog Comparator Controller)</Parameter>
+		<Parameter>2*Operational amplifiers</Parameter>
+		<Parameter>2*ADC(16-ch)(12-bit Analog-to-Digital Converter )</Parameter>
+		<Parameter>16*PDMA(Peripheral DMA function)</Parameter>
+		<Parameter>USB,Ethernet, RTC</Parameter>		
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page"></Link>
+		<Link name="Chips Datasheet"></Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\NUC470.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" size="0x00080000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 64K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00010000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 20K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\NUC472_512.elf</loader>
+	</FlashLoader>
+</Device>

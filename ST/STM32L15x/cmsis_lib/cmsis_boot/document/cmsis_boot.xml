@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>cmsis_boot</Name>
+  <Description>STM32L1xx CMSIS BOOT</Description>
+  <Category>Peripheral</Category>
+  <Version>1.2.0</Version>
+  <Tags>cmsis_boot</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\lib\cmsis_boot\startup\coide\startup_stm32l1xx_md.c</File>
+    <File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\lib\cmsis_boot\stm32l1xx.h</File>
+    <File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\lib\cmsis_boot\startup\system_stm32l1xx.c</File>
+    <File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\lib\cmsis_boot\startup\system_stm32l1xx.h</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_boot\startup\startup_stm32l1xx.c</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\system_stm32l1xx.c</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\stm32l1xx.h</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\system_stm32l1xx.h</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency></Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>STM32L100C6, STM32L100R8, STM32L100RB, STM32L100RC, STM32L151C6, STM32L151C8, STM32L151CB, STM32L151CC, STM32L151QC, STM32L151QD, STM32L151R6, STM32L151R8, STM32L151RB, STM32L151RC, STM32L151RD, STM32L151UC, STM32L151V8, STM32L151VB, STM32L151VC, STM32L151VD, STM32L151ZC, STM32L151ZD, STM32L152C6, STM32L152C8, STM32L152CB, STM32L152CC, STM32L152QC, STM32L152QD, STM32L152R6, STM32L152R8, STM32L152RB, STM32L152RC, STM32L152RD, STM32L152V8, STM32L152VB, STM32L152VC, STM32L152VD, STM32L152ZC, STM32L152ZD, STM32L162QD, STM32L162RC, STM32L162RD, STM32L162VC, STM32L162VD, STM32L162ZD</Device>
+  </SupportDevices>
+
+</Component>

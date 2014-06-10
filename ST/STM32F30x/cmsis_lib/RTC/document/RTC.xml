@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>SPI</Name>
+  <Description>The real-time clock (RTC) is an independent BCD timer/counter. The RTC provides a time-
+of-day clock/calendar with programmable alarm interrupts.Two 32-bit registers contain the seconds, minutes, hours (12- or 24-hour format), day (day of week), date (day of month), month, and year, expressed in binary coded decimal format (BCD). The sub-seconds value is also available in binary format.
+  </Description>
+  <Category>Peripheral</Category>
+  <Version>1.0.0</Version>
+  <Tags>RTC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\inc\stm32f30x_rtc.h</File>
+	<File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\src\stm32f30x_rtc.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\stm32f30x_rtc.h</File>
+	<File>$PROJECT_ROOT$\cmsis_lib\rource\stm32f30x_rtc.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>RCC</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>STM32F302CB, STM32F302CC, STM32F302RB, STM32F302RC, STM32F302VB, STM32F302VC,STM32F303CB, STM32F303CC, STM32F303RB, STM32F303RC, STM32F303VB, STM32F303VC,STM32F313CC, STM32F313RC, STM32F313VC</Device>
+  </SupportDevices>
+
+</Component>

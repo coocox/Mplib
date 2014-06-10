@@ -1,0 +1,36 @@
+<Example>
+    <Name>
+        SYS_Example
+    </Name>
+    <Description>
+        This sample code will show some function about system manager controller and clock controller:
+        1. Read PDID
+        2. Get and clear reset source
+        3. Setting about BOD
+        4. Change system clock depended on different PLL settings
+        5. Output system clock from CKO pin, and the output frequency = system clock / 4
+		note: If this example can not achieve, you can modify the line 253 and 296 value.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SYS
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\SYS\example\SYS\src\SYS_Example.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\SYS\example\SYS\src\SYS_Example.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> SYS,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

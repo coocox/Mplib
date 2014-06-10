@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        I2S_example
+    </Name>
+    <Description>
+        This example is NUC200 I2S Driver Sample Code.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        I2S
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\I2S\example\I2S\src\I2S_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

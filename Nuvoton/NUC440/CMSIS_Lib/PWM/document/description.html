@@ -1,0 +1,24 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>PWM</h1>
+<h2>Overview</h2>
+<ul>
+    <li>The NUC400 has two PWM generators гн PWM0 and PWM1. PWM0 supports 6 channels PWM 
+output or 6 channels input capture, and these two functions share the same pins (PWM0_CH0/ 
+PWM0_CH1/PWM0_CH2/PWM0_CH3/PWM0_CH4/PWM0_CH5).  PWM1  supports  6  channels 
+PWM  output  or  6  channels  input  capture,  and  these  two  functions  share  the  same  pins 
+(PWM1_CH0/PWM1_CH1/PWM1_CH2/ PWM1_CH3/PWM1_CH4/PWM1_CH5). 
+The PWM generator  has 16-bit PWM counter and comparator, and the PWM counter supports 
+edge-aligned or center-aligned operating types. The PWM generator supports two standard PWM 
+output modes: Independent output mode and Complementary output mode with 8-bit Dead-zone 
+generator. In addition, PWM generator supports two special output mode: Synchronize mode and 
+Group mode. It also has 8-bit prescaler and clock divider with 5 divided frequencies (1, 1/2, 1/4, 
+1/8, 1/16) to support wide range clock frequency of PWM counter. For PWM output control unit, it 
+supports  polarity  output  function,  independent  pin  mask  function  and  brake  function.  PWM 
+generator  can  send  ADC  start  trigger  signal  if  one  of  the  following  conditions  happened:  PWM 
+counter period point, PWM counter center point, PWM output rising edge and PWM output falling 
+edge. 
+The PWM generator also supports input capture function. It supports latch PWM counter value to 
+corresponding  register  when  input  channel  has  a  rising  transition,  falling  transition  or  both 
+transition is happened. </li>
+</ul>

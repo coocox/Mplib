@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+       TMRD_Interlock_PPG
+    </Name>
+    <Description>
+        This example show how to use TMRD to product pwm pluse.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> TMRD <Tags>
+
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\TMRD\example\TMRD_Interlock_PPG\src\TMRD_InterLock_ppg.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

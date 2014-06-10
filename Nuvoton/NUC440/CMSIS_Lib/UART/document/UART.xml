@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>UART</Name>
+  <Description>NUC400 UART Interface Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>UART</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\UART.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\UART.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\UART.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\UART.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+	<Dependency>clk</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC440,NUC470 Series</Device>
+  </SupportDevices>
+
+</Component>

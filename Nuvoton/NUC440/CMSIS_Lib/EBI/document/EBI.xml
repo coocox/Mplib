@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>EBI</Name>
+  <Description>NUC400 EBI Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>EBI</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\EBI.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\EBI.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\EBI.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\EBI.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>clk</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>nuc440,nuc470series</Device>
+  </SupportDevices>
+
+</Component>

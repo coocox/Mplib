@@ -1,0 +1,51 @@
+<Example>
+    <Name>
+        CAN_BasicMode_Tx
+    </Name>
+    <Description>
+          Nuvoton CAN BUS DRIVER DEMO,Receive a message by normal mode.
+	+------------------------------------------------------------------------+
+    |  About CAN sample code configure                                       |
+    +------------------------------------------------------------------------+
+    |   The sample code provide a simple sample code for you study CAN       |
+    |   Before execute it, please check description as below                 |
+    |                                                                        |
+    |   1.CAN_TX and CAN_RX should be connected to your CAN transceiver      |
+    |   2.Using two module board and connect to the same CAN BUS             |
+    |   3.Check the terminal resistor of bus is connected                    |
+    |   4.Using UART0 as print message port(Both of NUC1xx module boards)    |
+    |                                                                        |
+    |  |--------|       |-----------|  CANBUS |-----------|       |--------| |
+    |  |        |------>|           |<------->|           |<------|        | |
+    |  |        |CAN_TX |   CAN     |  CAN_H  |   CAN     |CAN_TX |        | |
+    |  | NUC4XX |       |Transceiver|         |Transceiver|       | NUC4XX | |
+       |        |<------|           |<------->|           |------>|        | |
+       |        |CAN_RX |           |  CAN_L  |           |CAN_RX |        | |
+       |--------|       |-----------|         |-----------|       |--------| |
+    |   |                                                           |        |
+    |   |                                                           |        |
+    |   V                                                           V        |
+    | UART0                                                         UART0    |
+    |(print message)                                          (print message)|
+    +------------------------------------------------------------------------+
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        CAN
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\CAN\example\CAN_BasicMode_Tx\src\CAN_BasicMode_Tx.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,uart,retarget printf,c library</Dependency>
+    </Dependencys>
+</Example>
+
+

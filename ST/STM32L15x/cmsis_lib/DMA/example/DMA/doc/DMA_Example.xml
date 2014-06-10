@@ -1,0 +1,15 @@
+<Example>
+	<Name>DMA_Example</Name>
+	<Description>This example provides a description of how to use a DMA channel to transfer a word data buffer from FLASH memory to embedded SRAM memory.</Description>
+	<Version>1.2.0</Version>
+	<Tags>DMA</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\DMA\example\DMA\src\DMA_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\DMA\example\DMA\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\DMA\example\DMA\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,DMA</Dependency>
+	</Dependencys>
+</Example>

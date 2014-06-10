@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2010 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Debugger>
+	<Debug>
+		<Arch>Cortex-M0</Arch>
+		
+		<SWD support="true">
+			<ExpectedID>0x0BB11477</ExpectedID>
+		</SWD>
+		
+		<JTAG support="false">		
+		</JTAG>
+		
+		<Reset>
+			<HwReset       support="false" />
+			<SoftSysReset  support="true" select="true"/>
+			<SoftVectReset support="true" />
+		</Reset>
+		
+		<SystemResetClkFreq>8000000</SystemResetClkFreq> <!-- PAC5XXX INT oscillator 8MHZ -->
+	</Debug>
+
+	<!-- 
+		Memory Blocks that can be read/written/executed
+		exclude ram,rom blocks
+		read(true,false)
+		write(true,false)
+		execute(true,false)	
+	 -->
+		<!-- Private peripheral bus - External -->
+		<Block addr="0xE00FF000" size="0x1000"   read="true"   write="true"   execute="false" name="ROM Table" />
+		
+		<!-- Private peripheral bus - Internal-->
+		<Block addr="0xE000E000" size="0x1000"   read="true"   write="true"   execute="false" name="System Control Space" />
+		<Block addr="0xE0002000" size="0x1000"   read="true"   write="true"   execute="false" name="FPB" />
+		<Block addr="0xE0001000" size="0x1000"   read="true"   write="true"   execute="false" name="DWT" />
+		<Block addr="0xE0000000" size="0x1000"   read="true"   write="true"   execute="false" name="ITM" />
+		
+		<!-- AHB -->
+		<Block addr="0x40200000" size="0x1000"   read="true"   write="true"   execute="false" name="SOC BUS" />
+		<Block addr="0x40210000" size="0x1000"   read="true"   write="true"   execute="false" name="SPIB" />
+		
+		<!-- APB -->
+		<Block addr="0x40000000" size="0x1000"   read="true"   write="true"   execute="false" name="SYS/CLK CTL" />
+		<Block addr="0x40020000" size="0x1000"   read="true"   write="true"   execute="false" name="FLASH CONTROLLER" />
+		<Block addr="0x40030000" size="0x1000"   read="true"   write="true"   execute="false" name="WDT" />
+		<Block addr="0x40040000" size="0x1000"   read="true"   write="true"   execute="false" name="RTC" />
+		<Block addr="0x40070000" size="0x1000"   read="true"   write="true"   execute="false" name="GPIO A/B" />
+		<Block addr="0x40080000" size="0x1000"   read="true"   write="true"   execute="false" name="GPIO C/D" />
+		<Block addr="0x40090000" size="0x1000"   read="true"   write="true"   execute="false" name="GPIO E" />
+		<Block addr="0x400D0000" size="0x1000"   read="true"   write="true"   execute="false" name="TIMER A" />
+		<Block addr="0x400E0000" size="0x1000"   read="true"   write="true"   execute="false" name="TIMER B" />
+		<Block addr="0x400F0000" size="0x1000"   read="true"   write="true"   execute="false" name="TIMER C" />
+		<Block addr="0x40010000" size="0x1000"   read="true"   write="true"   execute="false" name="TIMER D" />
+		<Block addr="0x40015000" size="0x1000"   read="true"   write="true"   execute="false" name="ADC" />
+		<Block addr="0x4001B000" size="0x1000"   read="true"   write="true"   execute="false" name="I2C" />
+		<Block addr="0x4001D000" size="0x1000"   read="true"   write="true"   execute="false" name="UART" />
+		
+</Debugger>

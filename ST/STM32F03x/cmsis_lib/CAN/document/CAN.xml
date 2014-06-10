@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>CAN</Name>
+  <Description>STM32F0xx Analog-to-Digital Converter</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>CAN</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\STM32F0xx\cmsis_lib\lib\inc\stm32f0xx_can.h</File>
+    <File>$REPO_ROOT$\Nuvoton\STM32F0xx\cmsis_lib\lib\inc\stm32f0xx_can.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\stm32f0xx_can.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\stm32f0xx_can.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>RCC</Dependency>
+    <Dependency>GPIO</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device><!--STM32F030C6T6, STM32F030C8T6, STM32F030F4P6, STM32F030K6T6, STM32F030R8T6, STM32F050C4,STM32F050C6,STM32F050F4,
+            STM32F050F6, STM32F050G4, STM32F050G6, STM32F050K4, STM32F050K6, STM32F051C4, STM32F051C6,STM32F051C8,STM32F051K4,
+            STM32F051K6, STM32F051K8,STM32F051R4,STM32F051R6,STM32F051R8,-->
+            STM32F052F4,STM32F052G4,STM32F052K4,STM32F052T4, 
+            STM32F052C4, STM32F052F6, STM32F052G6, STM32F052K6, STM32F052T6, STM32F052C6,STM32F052VB, STM32F052V8,STM32F052RB
+            STM32F052R8, STM32F052CB, STM32F052C8
+    </Device>
+  </SupportDevices>
+</Component>

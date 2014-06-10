@@ -1,0 +1,15 @@
+<Example>
+	<Name>COMP_Example</Name>
+	<Description>This example shows how to configure the COMP peripheral to compare the external voltage applied on PB12 with the Internal Voltage Reference. And when the comparator 1 non inverting input (which is connected to PB12) crosses (either rising or falling edges) the internal reference voltage VREFINT (1.22V), the comparator 1 generates an interrupt and toggles LED1.</Description>
+	<Version>1.2.0</Version>
+	<Tags>COMP</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\COMP\example\COMP\src\COMP_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\COMP\example\COMP\src\stm32l1xx_it.h</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\COMP\example\COMP\src\stm32l1xx_it.c</File>
+	</Files>
+	<Dependencys>
+		<Dependency>GPIO,RCC,EXTI,COMP,SYSCFG</Dependency>
+	</Dependencys>
+</Example>

@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+    
+    This file is part of CooCox Softwares.
+-->
+<Device>
+    <Name>TMPM341FYXBG</Name>
+    <Vendor>TOSHIBA</Vendor>
+    <Family>TMPM341</Family>
+    <Arch>Cortex-M3</Arch>
+    <Description>TOSHIBA's TMPM341FYXBG operates at a maximum speed of 54MHz and features 256 Kbytes of Flash and 32 Kbytes of RAM.</Description>
+    <Parameters>
+        <Parameters>DMA controllers                         : 4   ch   <Parameters>
+        <Parameters>Sync Serial Interface                   : 1   ch   <Parameters>
+        <Parameters>UART/SIO                                : 5   ch   <Parameters>
+        <Parameters>I2C/SIO                                 : 2   ch   <Parameters>
+        <Parameters>A/D converters(12bit)                   : 15  ch   <Parameters>
+        <Parameters>D/A converters(10bit)                   : 2   ch   <Parameters>
+        <Parameters>timer/counter(16bit)                    : 10  ch   <Parameters>
+        <Parameters>interrupt controllers                   : 12  pins <Parameters>
+        <Parameters>CS/WAIT controller                      : 2   ch   <Parameters>
+        <Parameters>high-resolution 16-bit timer/PPG output : 2   ch   <Parameters>
+        <Parameters>watchdog timer                          : Available<Parameters>
+        <Parameters>clock gear function                     : Available<Parameters>
+        <Parameters>oscillation frequency detector          : Available<Parameters>
+        <Parameters>remote memory I/F                       : Available<Parameters>
+        <Parameters>multiply and accumulation unit          : Available<Parameters>
+        <Parameters>JTAG (Boundary-Scan)                    : Available<Parameters>
+        <Parameters>trace function                          : Available<Parameters>
+        <Parameters>on-chip debug function                  : Available<Parameters>
+        <Parameters>I/O Ports                               : 86 pins  <Parameters>
+    </Parameters>
+    <ReferenceLinks>
+        <Link name="Chips Page"http://www.semicon.toshiba.co.jp/info/lookup.jsp?pid=TMPM341FYXBG&lang=en</Link>
+        <Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM341FYXBG</Link>
+    </ReferenceLinks>
+    
+    
+    <DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\$XXX$.xml</DebugSetting>
+    
+    <Flash>
+        <Block addr="0x00000000" size="0x00040000" read="true" write="false" execute="true" name="Embedded Flash" />    <!-- 256K -->
+    </Flash>
+    
+    <Ram>
+        <Block addr="0x20000000" size="0x00008000" read="true" write="true"  execute="true" name="Embedded RAM" />      <!-- 32K -->
+    </Ram>
+    
+    <FlashLoader>
+        <loader>$TOOLKIT_FLASH_DIR$\$XXX$_256.elf</loader>
+    </FlashLoader>
+</Device>

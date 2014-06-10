@@ -1,0 +1,32 @@
+<Example>
+    <Name>
+       SBI_SLAVE
+    </Name>
+    <Description>
+        This example show how to configure SBI into I2C slave mode.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> SBI </Tags>
+    <Tags> I2C </Tags>
+
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\SBI\example\SBI_SLAVE\src\main.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\SBI\example\SBI_SLAVE\src\SBI_SLAVE.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\SBI\example\SBI_SLAVE\src\tmpm061_sbi_int.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\SBI\example\SBI_SLAVE\src\tmpm061_sbi_int.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

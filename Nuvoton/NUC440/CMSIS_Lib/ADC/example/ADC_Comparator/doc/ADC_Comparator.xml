@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        ADC_Comparator
+    </Name>
+    <Description>
+        This sample code demonstrate ADC conversion and comparison function by monitoring the conversion result of channel 0
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ADC
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\ADC\example\ADC_Comparator\src\ADC_Comparator.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

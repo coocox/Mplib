@@ -1,0 +1,28 @@
+<Example>
+    <Name>
+       UART_Retarget
+    </Name>
+    <Description>
+        This example show how to retarget printf function with uart module.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> UART <Tags>
+
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\UART\example\UART_Retarget\src\tmpm341_wdt_int.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\UART\example\UART_Retarget\src\tmpm341_wdt_int.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

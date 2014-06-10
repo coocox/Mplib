@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>PAC5210</Name>
+	<Vendor>Active Semi</Vendor>
+	<Family>PAC52xx</Family>
+	<Arch>Cortex-M0</Arch>
+	<Description>Active-Semi's PAC5210 operates at a maximum speed of 50MHz and features 32 Kbytes of Flash and 8 Kbytes of SRAM.</Description>
+	<Parameters>
+		<Parameter>4*24-bit timer (TMER)</Parameter>
+		<Parameter>36*GPIO(General Purpose Input Output) </Parameter>
+		<Parameter>3*Diff-PGA ( differential programmable gain amplifiers)</Parameter>
+		<Parameter>4*PGA (programmable gain amplifiers)</Parameter>
+		<Parameter>10*Comparators</Parameter>
+		<Parameter>2*DAC(10-bit and 8-bit)</Parameter>
+		<Parameter>11*ADC(10-bit ) </Parameter>
+		<Parameter>1*WDT(Watchdog/Windowed-Watchdog timer)</Parameter>
+		<Parameter>1*UART(Universal Asynchronous Receiver/Transmitter)</Parameter>
+		<Parameter>1*I2C(Inter-Integrated Circuit interface)</Parameter>
+		<Parameter>1*SPI(Serial Peripheral interface)</Parameter>	
+		<Parameter>14*PWM </Parameter>
+		<Parameter>Multi-Mode Switching Supply (MMSS) Controller</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.active-semi.com/products/power-application-controllers/</Link>
+		<Link name="Chips Datasheet">http://www.active-semi.com/sheets/PAC/PAC5210_Datasheet.pdf</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\PAC5XXX.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x00000000" execute="true" name="FLASH" read="true" size="0x00008000" write="false"/>
+	</Flash>
+	<Ram>
+		<Block addr="0x20000000" execute="true" name="SRAM" read="true" size="0x00002000" write="true"/>
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\PAC5210_32.elf</loader>
+	</FlashLoader>
+</Device>

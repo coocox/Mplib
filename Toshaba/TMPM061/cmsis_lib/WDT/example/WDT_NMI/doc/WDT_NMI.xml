@@ -1,0 +1,31 @@
+<Example>
+    <Name>
+       WDT_NMI
+    </Name>
+    <Description>
+        This example show how to use WDT module.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> WDT <Tags>
+
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\WDT\example\WDT_NMI\src\WDT_NMI.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\WDT\example\WDT_NMI\src\tmpm061_wdt_int.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\WDT\example\WDT_NMI\src\tmpm061_wdt_int.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\led.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\led.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        GPIO_LED
+    </Name>
+    <Description>
+        This example configures GPIO to LED , then turn on the LED or turn off the LED.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        GPIO
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\GPIO\example\GPIO_Toggle\src\GPIO_Toggle_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+            
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

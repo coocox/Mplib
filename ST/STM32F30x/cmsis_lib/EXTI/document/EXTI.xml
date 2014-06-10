@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>EXTI</Name>
+  <Description>Extended interrupts and events controller.The extended interrupts and events controller (EXTI) manages the external and internal asynchronous events/interrupts and generates the event request to the CPU/Interrupt Controller and a wake-up request to the Power Manager. The EXTI allows the management of up to 36 external/internal event line (28 external event lines and 8 internal event lines).</Description>
+  <Category>Peripheral</Category>
+  <Version>1.0.0</Version>
+  <Tags>EXTI</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\inc\stm32f30x_exti.h</File>
+	<File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\src\stm32f30x_exti.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\stm32f30x_exti.h</File>
+	<File>$PROJECT_ROOT$\cmsis_lib\rource\stm32f30x_exti.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>RCC</Dependency>
+	<Dependency>NVIC</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>STM32F302CB, STM32F302CC, STM32F302RB, STM32F302RC, STM32F302VB, STM32F302VC,STM32F303CB, STM32F303CC, STM32F303RB, STM32F303RC, STM32F303VB, STM32F303VC,STM32F313CC, STM32F313RC, STM32F313VC</Device>
+  </SupportDevices>
+
+</Component>

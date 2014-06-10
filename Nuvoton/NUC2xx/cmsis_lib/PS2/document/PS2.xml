@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>PS2</Name>
+  <Description>NUC2xx PS/2 Device Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>PS2</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC2xx\cmsis_lib\lib\inc\PS2.h</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\PS2.h</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>GPIO</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC200LC2AN, NUC200LD2AN, NUC200LE3AN, NUC200SC2AN, NUC200SD2AN, NUC200SE3AN,NUC200VE3AN,NUC220LC2AN,
+            NUC220LD2AN, NUC220LE3AN, NUC220SC2AN, NUC220SD2AN, NUC220SE3AN, NUC220VE3AN
+    </Device>
+  </SupportDevices>
+
+</Component>

@@ -1,0 +1,24 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>RTC</h1>
+<h2>Overview</h2>
+<ul>
+    <li>The Real Time Clock (RTC) controller provides user with the real time and calendar message.
+The clock source of RTC controller is from an external 32.768 kHz low speed crystal which
+connected at pins X32_IN and X32_OUT (refer to pin Description) or from an external 32.768 kHz
+low speed oscillator output fed at pin X32_IN. The RTC controller provides the real time message
+(hour, minute, second) in TLR (RTC Time Loading Register) as well as calendar message (year,
+month, day) in CLR (RTC Calendar Loading Register). It also offers RTC alarm function that user
+can preset the alarm time in TAR (RTC Time Alarm Register) and alarm calendar in CAR (RTC
+Calendar Alarm Register). The data format of RTC time and calendar message are all expressed
+in BCD format.
+The RTC controller supports periodic RTC Time Tick and Alarm Match interrupts. The periodic
+RTC Time Tick interrupt has 8 period interval options 1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2 and 1
+second which are selected by TTR (TTR[2:0] Time Tick Register). When real time and calendar
+message in TLR and CLR are equal to alarm time and calendar settings in TAR and CAR, the AIF
+(RIIR [0] RTC Alarm Interrupt Flag) is set to 1 and the RTC alarm interrupt signal is generated if
+the AIER (RIER [0] Alarm Interrupt Enable) is enabled.
+Both RTC Time Tick and Alarm Match interrupt signal can cause chip to wake-up from Idle or
+Power-down mode if the correlate interrupt enable bit (AIER or TIER) is set to 1 before chip
+enters Idle or Power-down mode.</li>
+</ul>

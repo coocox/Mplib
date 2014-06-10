@@ -1,0 +1,51 @@
+<Example>
+    <Name>
+        UART_RS485
+    </Name>
+    <Description>
+    +-------------------------------------------------------------+
+    |            IO Setting                                       |
+    +-------------------------------------------------------------+
+    |  ______                                      _______        |
+    | |      |                                    |       |       |
+    | |Master|---TXD0(pin46) <====> RXD0(pin45)---|Slave  |       |
+    | |      |---RTS0(pin39) <====> RTS0(pin39)---|       |       |
+    | |______|                                    |_______|       |
+    |                                                             |
+    +-------------------------------------------------------------+
+    +-------------------------------------------------------------+
+    |       RS485 Function Test                                   |
+    +-------------------------------------------------------------+
+    |  Please enable semihosted to show messages on debug session.|
+    |  Keil users must define DEBUG_ENABLE_SEMIHOST in both C/C++ |
+    |  and Asm preprocessor symbols.                              |
+    |  IAR users must define DEBUG_ENABLE_SEMIHOST in both C/C++  |
+    |  Compiler and Assembler preprocessor symbols.               |
+    +-------------------------------------------------------------+
+    |  Please select Master or Slave test                         |
+    |  [0] Master    [1] Slave                                    |
+    +-------------------------------------------------------------+
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        UART
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_RS485.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_RS485.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> clk,SYS,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

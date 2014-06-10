@@ -1,0 +1,34 @@
+<Example>
+    <Name>
+        DAC_SignalsGeneration
+    </Name>
+    <Description>
+   This example provides a short description of how to use the DAC peripheral to 
+generate several signals using DMA controller.
+When the user presses the KEY push-button, DMA transfers the two selected 
+waveforms to DAC.
+For each press on KEY button, 2 signals has been selected and monitored on the 
+two dac channels:
+    - Escalator waveform (Channel 1) and Sine waveForm (Channel 2).
+    - Noise waveform (Channel 1) and Triangle waveform (Channel 2).
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        DAC_SignalsGeneration
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\DAC\example\DAC_SignalsGeneration\src\DAC_SignalsGeneration.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,TIM,DMA</Dependency>
+    </Dependencys>
+</Example>
+
+

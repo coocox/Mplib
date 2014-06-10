@@ -1,0 +1,90 @@
+<Example>
+    <Name>
+        CRC_TwoBoards
+    </Name>
+    <Description>
+  This example aims to show how to verify CRC checksum while USART communication
+between two STM32F30x boards.
+
+- Hardware Description
+
+To use this example, you need to load it on two STM32F30x boards (let's call them 
+Board A and Board B) then connect these two boards through UART lines and GND.
+
+In the firmware example uncomment the dedicated line in the main.h file to use
+the USART peripheral as TRANSMITTER device or as RECIVER device.
+
+- The connection between the pins should use a common Ground.
+
+@verbatim
+*------------------------------------------------------------------------------*
+|                BOARD A                                BOARD B                |
+|         ____________________                   ____________________          |
+|        |                    |                 |                    |         |
+|        |     TRANSMITTER    |                 |      RECIVER       |         | 
+|        |     __________     |                 |     __________     |         |
+|        |    |   USART  |____|TX_____________RX|____|   USART  |    |         |
+|        |    |  Device1 |____|RX_____________TX|____|  Device2 |    |         |
+|        |    |__________|    |                 |    |__________|    |         |
+|        |                    |                 |                    |         |
+|        |  O LD1             |                 |  O LD1             |         |
+|        |  O LD2    Joystick |                 |  O LD2    Joystick |         |
+|        |  O LD3        _    |                 |  O LD3        _    |         |
+|        |              |_|   |                 |              |_|   |         |
+|        |                    |                 |                    |         |
+|        |             GND O--|-----------------|--O GND             |         |
+|        |____________________|                 |____________________|         |
+|                                                                              |
+|                                                                              |
+*------------------------------------------------------------------------------*
+@endverbatim
+
+- Software Description
+
+The CRC peripheral is configured to use the 8-bit CRC polynomial x8 + x7 + x6 + x4 + x2 + 1 
+with the initialization value is set to 0.
+
+On Board A, at each joystick SEL button press:
+
+- The USART Board A sends data already defined in TxBuffer.
+
+- CRC value is computed during USART data transfer.  
+
+- After computing CRC of latest transferred byte, TxBuffer is updated with final CRC value.
+
+- The USART Board A sends latest byte which is the final computed CRC value.
+
+On Board B,
+
+- The USART Board B receives the data (data + CRC value) in RxBuffer.
+
+- CRC value of received data are computed in Board B and compared with the received one.
+  
+  CRC checksum result is signaled by LED lightening as following:
+    - CRC received and computed values are equal ==> LD2 toggles, LED4 OFF. 
+    - CRC received and computed values are not equal ==> LD2 Off, LED4 ON. 
+
+The SysTick is configured to generate interrupt each 10ms. A dedicated counter 
+inside the SysTick ISR is used to toggle the LD1 each 100ms indicating that the 
+firmware is running.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        CRC_TwoBoards
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\CRC\example\CRC_TwoBoards\src\CRC_TwoBoards.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,GPIO,USART,EXTI</Dependency>
+    </Dependencys>
+</Example>
+
+

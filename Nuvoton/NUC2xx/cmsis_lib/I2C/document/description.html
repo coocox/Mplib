@@ -1,0 +1,17 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>I2C</h1>
+<h2>Overview</h2>
+<ul>
+    <li>I2C is a two-wire, bidirectional serial bus that provides a simple and efficient method of data
+exchange between devices. The I2C standard is a true multi-master bus including collision
+detection and arbitration that prevents data corruption if two or more masters attempt to control
+the bus simultaneously.
+Data is transferred between a Master and a Slave. Data bits transfer on the SCL and SDA lines
+are synchronously on a byte-by-byte basis. Each data byte is 8-bit long. There is one SCL clock
+pulse for each data bit with the MSB being transmitted first, and an acknowledge bit follows each
+transferred byte. Each bit is sampled during the high period of SCL; therefore, the SDA line may
+be changed only during the low period of SCL and must be held stable during the high period of
+SCL. A transition on the SDA line while SCL is high is interpreted as a command (START or
+STOP). Please refer to Figure 5-18 for more detailed I2C BUS Timing.</li>
+</ul>

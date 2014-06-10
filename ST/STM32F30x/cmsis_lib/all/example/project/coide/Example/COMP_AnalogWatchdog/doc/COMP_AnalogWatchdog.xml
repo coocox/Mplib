@@ -1,0 +1,35 @@
+<Example>
+    <Name>
+        COMP_AnalogWatchdog
+    </Name>
+    <Description>
+   This example shows how to make an analog watchdog using the STM32F30x COMPs 
+peripherals in window mode:
+  - The upper threshold is set to VREFINT = 1.22V
+  - The lower threshold is set to VREFINT / 4 = 1.22V = 0.305V
+  - The input voltage is configured to be connected to PA.01
+
+If the input voltage is above the higher threshold, LD3 and LD1 are turned On.
+If the input voltage is under the lower threshold, LD2 and LD4 are turned On.
+If the input voltage is within the thresholds, the MCU remains in STOP mode
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        COMP_AnalogWatchdog
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\COMP\example\COMP_AnalogWatchdog\src\COMP_AnalogWatchdog.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,PWR,EXTI,NVIC,FLASH</Dependency>
+    </Dependencys>
+</Example>
+
+

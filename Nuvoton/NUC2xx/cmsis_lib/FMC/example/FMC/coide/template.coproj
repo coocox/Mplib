@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.2" name="template">
+  <Target name="template" isCurrent="1">
+    <Device manufacturerId="8" manufacturerName="Nuvoton" chipId="193" chipName="NUC122LC1AN" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="M3"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="UserEditLinker" value="--entry=main; "/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00020000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x20004000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="d:/coocox/coide1.7.3_coocox/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="template"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="Nu-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V468a\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./nuc2xx_128.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="cmsis_boot/Startup/startup_NUC2xx.c" path="../../../../lib/cmsis_boot/startup/coide/startup_NUC2xx.c" type="1"/>
+    <File name="cmsis_lib/Include/RTC.h" path="../../../../lib/inc/RTC.h" type="1"/>
+    <File name="cmsis_lib/Include" path="" type="2"/>
+    <File name="cmsis_boot/system_NUC200Series.h" path="../../../../lib/cmsis_boot/system_NUC200Series.h" type="1"/>
+    <File name="cmsis_lib/Include/GPIO.h" path="../../../../lib/inc/GPIO.h" type="1"/>
+    <File name="cmsis_lib/Include/WDT.h" path="../../../../lib/inc/WDT.h" type="1"/>
+    <File name="cmsis_lib/Include/I2S.h" path="../../../../lib/inc/I2S.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="cmsis_lib/Include/PWM.h" path="../../../../lib/inc/PWM.h" type="1"/>
+    <File name="cmsis_lib/Include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
+    <File name="cmsis_lib/Include/PS2.h" path="../../../../lib/inc/PS2.h" type="1"/>
+    <File name="cmsis_lib/Include/SPI.h" path="../../../../lib/inc/SPI.h" type="1"/>
+    <File name="cmsis_lib/Include/CAN.h" path="../../../../lib/inc/CAN.h" type="1"/>
+    <File name="cmsis_core" path="" type="2"/>
+    <File name="cmsis_boot/NUC200Series.h" path="../../../../lib/cmsis_boot/NUC200Series.h" type="1"/>
+    <File name="cmsis_lib/Include/ADC.h" path="../../../../lib/inc/ADC.h" type="1"/>
+    <File name="cmsis_lib/Source" path="" type="2"/>
+    <File name="cmsis_lib/Source/printf.c" path="../../../../lib/src/printf.c" type="1"/>
+    <File name="cmsis_lib/Include/SYS.h" path="../../../../lib/inc/SYS.h" type="1"/>
+    <File name="Example/FMC_example.c" path="../src/FMC_example.c" type="1"/>
+    <File name="cmsis_lib/Include/FMC.h" path="../../../../lib/inc/FMC.h" type="1"/>
+    <File name="cmsis_lib/Include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
+    <File name="Example" path="" type="2"/>
+    <File name="cmsis_lib/Include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
+    <File name="cmsis_lib/Include/SC.h" path="../../../../lib/inc/SC.h" type="1"/>
+    <File name="cmsis_core/core_cm0.h" path="../../../../lib/cmsis_core/core_cm0.h" type="1"/>
+    <File name="cmsis_lib/Include/TIMER.h" path="../../../../lib/inc/TIMER.h" type="1"/>
+    <File name="cmsis_lib/Include/PDMA.h" path="../../../../lib/inc/PDMA.h" type="1"/>
+    <File name="cmsis_boot/system_NUC200Series.c" path="../../../../lib/cmsis_boot/system_NUC200Series.c" type="1"/>
+    <File name="cmsis_boot/Startup" path="" type="2"/>
+    <File name="main.c" path="../src/main.c" type="1"/>
+    <File name="cmsis_core/core_cm0.c" path="../../../../lib/cmsis_core/core_cm0.c" type="1"/>
+  </Files>
+</Project>

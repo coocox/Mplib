@@ -1,0 +1,15 @@
+<Example>
+	<Name>TIM_Example</Name>
+	<Description>This example shows how to configure the TIM peripheral in Output Compare Timing mode with the corresponding Interrupt requests for each channel in order to generate 4 different time bases.</Description>
+	<Version>1.2.0</Version>
+	<Tags>TIM</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\TIM\example\TIM\src\TIM_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\TIM\example\TIM\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\TIM\example\TIM\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,TIM</Dependency>
+	</Dependencys>
+</Example>

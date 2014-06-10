@@ -1,0 +1,15 @@
+<Example>
+	<Name>SPI_Example</Name>
+	<Description>This example provides a basic example of how to use SPI.</Description>
+	<Version>1.2.0</Version>
+	<Tags>SPI</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SPI\example\SPI\src\SPI_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SPI\example\SPI\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\SPI\example\SPI\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,SPIO,RCC</Dependency>
+	</Dependencys>
+</Example>

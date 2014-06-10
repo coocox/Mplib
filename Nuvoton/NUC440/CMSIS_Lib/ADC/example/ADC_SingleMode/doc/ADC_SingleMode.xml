@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        ADC_SingleMode
+    </Name>
+    <Description>
+        This sample code demonstrate ADC single mode conversion,It convert channel 0 and print conversion result.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ADC
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\ADC\example\ADC_SingleMode\src\ADC_SingleMode.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

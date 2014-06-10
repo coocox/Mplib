@@ -1,0 +1,54 @@
+<Example>
+    <Name>
+        UART_IrDA
+    </Name>
+    <Description>
+    +-------------------------------------------------------------+
+    |     Pin Configure                                           |
+    +-------------------------------------------------------------+
+    |  ______                                      _______        |
+    | |      |                                    |       |       |
+    | |Master|---TXD0(pin46) <====> RXD0(pin45)---|Slave  |       |
+    | |      |                                    |       |       |
+    | |______|                                    |_______|       |
+    |                                                             |
+    +-------------------------------------------------------------+
+
+    +-------------------------------------------------------------+
+    |     IrDA Function Test                                      |
+    +-------------------------------------------------------------+
+    |  Please enable semihosted to show messages on debug session |
+    |  Keil users must define DEBUG_ENABLE_SEMIHOST in both C/C++ |
+    |  and Asm preprocessor symbols.                              |
+    |  IAR users must define DEBUG_ENABLE_SEMIHOST in both C/C++  |
+    |  Compiler and Assembler preprocessor symbols.               |
+    +-------------------------------------------------------------+
+    |  Description :                                              |
+    |    The sample code needs two boards. One is Master and      |
+    |    the other is slave.  Master will send data based on      |
+    |    terminal input and Slave will printf received data on    |
+    |    terminal screen.                                         |
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        UART
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_IrDA.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_IrDA.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> clk,SYS,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,34 @@
+<Example>
+    <Name>
+        UART_example
+    </Name>
+    <Description>
+        This example is NUC200 UART Driver Sample Code.
+        [1] UART function test
+        [2] IrDA funtion test 
+        [3] RS485 funtion test
+        [4] LIN Master funtion test
+        [5] Auto-Flow funtion test
+        LIN Master funtion test using UA_LIN_CTL register
+        
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        UART
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\UART\example\UART\src\UART_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

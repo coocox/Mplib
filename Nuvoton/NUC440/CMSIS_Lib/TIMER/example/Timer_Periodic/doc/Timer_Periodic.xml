@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        Timer_Periodic
+    </Name>
+    <Description>
+        This sample code use timer to generate interrupt every 1 second.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TIMER
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\TIMER\example\Timer_Periodic\src\Timer_Periodic.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

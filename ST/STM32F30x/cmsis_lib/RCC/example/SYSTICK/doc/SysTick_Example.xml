@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        SysTick_Example
+    </Name>
+    <Description>
+        This example shows how to configure the SysTick to generate a time base equal to
+1 ms. A "Delay" function is implemented based on the SysTick end-of-count event.
+Four LEDs are toggled with a timing defined by the Delay function.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        SysTick
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\RCC\example\SYSTICK\src\SysTick_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency> GPIO, RCC,USART,EXTI,SYSCFG,SPI,MISC,I2C</Dependency>
+    </Dependencys>
+</Example>
+
+

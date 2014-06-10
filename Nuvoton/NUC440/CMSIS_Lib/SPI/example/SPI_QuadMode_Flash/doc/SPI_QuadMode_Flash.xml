@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        SPI_QuadMode_Flash
+    </Name>
+    <Description>
+        NUC400 Series SPI Quad Mode with Flash Sample Code.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SPI
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\SPI\example\SPI_QuadMode_Flash\src\SPI_QuadMode_Flash.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,gpio, retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

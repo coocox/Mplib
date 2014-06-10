@@ -1,0 +1,31 @@
+<Example>
+    <Name>
+        LCD_Demo1
+    </Name>
+    <Description>
+        This example show how to LCD module to driver external LCD screen.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        LCD
+    </Tags>
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\LCD\example\LCD_Demo1\LCD_Demo1.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\LCD\example\LCD_Demo1\lcd061.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\LCD\example\LCD_Demo1\lcd061.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

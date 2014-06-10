@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>UART</Name>
+  <Description>Serial channel</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>UART</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\lib\inc\tmpm341_uart.h</File>
+    <File>$REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\lib\src\tmpm341_uart.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm341_uart.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm341_uart.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM341FDXBG</Device>
+    <Device>TMPM341FYXBG</Device>
+    <Device>TMPM342FYXBG</Device>
+  </SupportDevices>
+
+</Component>

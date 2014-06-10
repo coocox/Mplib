@@ -1,0 +1,31 @@
+<Example>
+    <Name>
+       SSP_LoopBack
+    </Name>
+    <Description>
+        This example show how to configure SSP into SPI mode, then test it via
+        loopback mode.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> SSP </Tags>
+
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\SSP\example\SSP_LoopBack\src\SSP_LoopBack.c
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\Utilities\TMPM341-SK\led.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\Utilities\TMPM341-SK\led.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

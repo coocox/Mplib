@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        BitBand
+    </Name>
+    <Description>
+  This example shows how to use CortexM4 Bit-Band access to perform atomic 
+read-modify-write and read operations on a variable in SRAM.
+ 
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        BitBand
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\CortexM4\example\BitBand\src\BitBand.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC</Dependency>
+    </Dependencys>
+</Example>
+
+

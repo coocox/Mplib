@@ -1,0 +1,67 @@
+<Example>
+    <Name>
+        RTC_Calendar_Example
+    </Name>
+    <Description>
+     
+This example demonstrates and explains how to setup the RTC peripheral, in 
+terms of prescaler and interrupts, to be used to keep time and to generate 
+alarm interrupt. 
+
+One from the following clock can be used as RTC clock source (uncomment the
+corresponding define in main.c): 
+  - LSE oscillator clock usually delivered by a 32.768 kHz quartz.
+  - LSI oscillator clock
+
+A key value is written in backup data register 0 to indicate if the RTC is already
+configured.
+
+The program behaves as follows:
+
+1. After startup the user is asked to set the time and alarm (entered on HyperTerminal).
+
+2. When an External Reset occurs the BKP domain is not reset and the RTC configuration
+   is not lost.
+
+3. When power on reset occurs:
+    - the BKP domain is reset and the RTC configuration is lost (JP16 must be in pos 1-2).
+
+4. When an RTC Alarm A event occurs the RTC Alarm interrupt is generated and the
+   LED1 is on.
+   
+The example uses HyperTerminal to configure the RTC clock and display the current time:
+ - When SEL button is pressed, a menu is displayed to configure the RTC Time and 
+   Alarm A registers.
+ - When Key button is pressed, the current time is displayed.
+ - When UP button is pressed, the current alarm A is displayed. 
+
+LED2 is turned ON when the RTC configuration is done correctly.
+ 
+The EVAL_COM1 is configured as follow:
+    - BaudRate = 115200 baud  
+    - Word Length = 8 Bits (7 data bit + 1 parity bit)
+    - One Stop Bit
+    - No parity
+    - Hardware flow control disabled (RTS and CTS signals)
+    - Receive and transmit enabled
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        RTC_Calendar
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\RTC\example\RTC_Calendar\src\RTC_Calendar_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,NVIC,PWR,EXTI,USART,C library</Dependency>
+    </Dependencys>
+</Example>
+
+

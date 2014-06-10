@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>EXB</Name>
+  <Description>External Bus interface</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>EXT</Tags>
+  <Tags>BUS</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\lib\inc\tmpm341_exb.h</File>
+    <File>$REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\lib\src\tmpm341_exb.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm341_exb.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm341_exb.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM341FDXBG</Device>
+    <Device>TMPM341FYXBG</Device>
+    <Device>TMPM342FYXBG</Device>
+  </SupportDevices>
+
+</Component>

@@ -1,0 +1,63 @@
+<Example>
+    <Name>
+        OPAMP_TimerControlledMux
+    </Name>
+    <Description>
+    This example shows how to configure OPAMP1 peripheral in timer-controlled multiplexer.
+In this mode, the selection of OPAMP inverting and non inverting inputs can be
+done automatically. This automatic switch is triggered by the TIM1 OC6 output.
+
+OPAMP1 is configured as following:
+   - Inverting input is connected to PC5
+   - Non Inverting input is connected to PA7 (default) and to PA5 (secondary) 
+   - Output is available on PA2 (ADC1 channel 3)
+   - Timer-controlled multiplxer is enabled: TIM1 OC6 state selects either
+     default non-inverting input (PA7) or secondary non-inverting input (PA5)
+
+TIM1 is configured in center-aligned mode 3: The counter counts up and down
+alternatively. Output compare event is set when the counter is counting up or down.
+TIM1 Time Base is configured at APB2 clock / ((prescaler+1) * period) 
+= 72000000 / (20 * 65535) = 54 Hz
+So an update event is generated every 18.5 ms. This event is used as trigger source
+for ADC conversion (ADC conversion is performed every 18.5 ms).
+TIM1 channel 6 (OC6) is configured in PWM mode with duty cycle set to
+pulse / period = 100 * (32767 / 65535) =  50%
+At compare event of TIM1 channel 6 (OC6), the OPAMP1 non Inverting input is switched
+from PA7 to PA5 and vice versa.
+
+The Analog to Digital Converter is used to convert voltage applied on OPAMP1
+output (PA2). The ADC conversion is triggered by update event coming from TIM1.
+The end of conversion interrupt is enabled and digital conversions are
+stored in ADCVal[] array.
+
+In order to test this example, follow these steps:
+- Connect the OPAMP1 inverting input (PC5) to OPAMP1 output (PA2) to create an
+  external folower
+- Connect an external signal to the default non-inverting input (PA7)
+- Connect another external signal to the secondary non-inverting input (PA5)
+
+As OPAMP1 is configured in external follower, the first conversion value ADCVal[0]
+should correspond to the voltage applied on default non-inverting input (PA7) and
+the second one should correspond to the voltage applied on the secondary non-inverting
+input (PA5).
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        OPAMP_TimerControlledMux
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\OPAMP\example\OPAMP_TimerControlledMux\src\OPAMP_TimerControlledMux.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,GPIO,ADC,TIM</Dependency>
+    </Dependencys>
+</Example>
+
+

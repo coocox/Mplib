@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        LED_Toggle
+    </Name>
+    <Description>
+        This example configures GPIO to LED , then turn on the LED or turn off the LED.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        GPIO
+    </Tags>
+    <EVKit>
+        pac5210、pac5220、pac5250
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Active-Semi\pac5xxx\cmsis_lib\GPIO\example\GPIO_LED\src\GPIO_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+            
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        SC_example
+    </Name>
+    <Description>
+        This example is NUC200Smart Card Driver Sample Code.This sample code will get smart card ATR data via SC0 port.\n  If more than one smart card designed in your system,\nuser can define SC_HAVE_SC1 and SC_HAVE_SC2 to enable SC1 and SC2 engine.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SC
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\SC\example\SC\src\SC_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

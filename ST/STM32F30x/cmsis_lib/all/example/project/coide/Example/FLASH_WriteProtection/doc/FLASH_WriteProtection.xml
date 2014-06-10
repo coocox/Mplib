@@ -1,0 +1,47 @@
+<Example>
+    <Name>
+        FLASH_WriteProtection
+    </Name>
+    <Description>
+  This example provides a description of how to enable and disable the write protection
+for the STM32F30x FLASH:
+
+- Enable Write protection: 
+   To enable the Write Protection, uncomment the line "#define WRITE_PROTECTION_ENABLE"
+   in main.c file.  
+   To protect a set of pages, the user has to call the function FLASH_EnableWriteProtection.
+   The parameter of this function will define the number of pages to be protected.
+   To load the new option byte values, a system Reset is necessary, for this, the
+   function FLASH_OB_Launch() is used.
+ 
+- Disable Write protection:
+   To disable the Write Protection, uncomment the line "#define WRITE_PROTECTION_DISABLE"
+   in main.c file.
+   To disable the write protection of the STM32F30x Flash, an erase of the Option 
+   Bytes is necessary. This operation is done by the function FLASH_EraseOptionBytes.
+   To load the new option byte values, a system Reset is necessary, for this, the
+   function FLASH_OB_Launch() is used.
+
+If the desired pages are not write protected, an erase and a write operation are
+performed.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        FLASH_WriteProtection
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\FLASH\example\FLASH_WriteProtection\src\FLASH_WriteProtection.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC</Dependency>
+    </Dependencys>
+</Example>
+
+

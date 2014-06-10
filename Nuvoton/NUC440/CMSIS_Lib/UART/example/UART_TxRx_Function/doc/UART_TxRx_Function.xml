@@ -1,0 +1,33 @@
+<Example>
+    <Name>
+        UART_TxRx_Function
+    </Name>
+    <Description>
+        Using a RS232 cable to connect UART0 and PC.
+        UART0 is set to debug port. UART0 is enable RDA and RLS interrupt.
+        When inputting char to terminal screen, RDA interrupt will happen and
+        UART0 will print the received char on screen.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        UART
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_TxRx_Function.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_TxRx_Function.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> clk,SYS,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

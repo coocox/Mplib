@@ -1,0 +1,44 @@
+<Example>
+    <Name>
+        TIM_Asymetric_Example
+    </Name>
+    <Description>
+   This example shows how to configure the TIM peripheral to generate an Asymetric signal.
+TIM8 is configured to generate an Asymetric signal with a programmable Phase-Shifted signal on TIM8_CH2:
+	 - TIM8 Channel 1 is configured in PWM2 mode
+	 - TIM8 Channel 2 is configured in Asymetric PWM2 mode
+	 - The counter mode is center aligned mode
+	 - The pulse length and the phase shift are programmed consecutively in TIM8_CCR2 and TIM8_CCR1.
+
+TIM1 is configured to generating the reference signal on Channel1 used by TIM8:
+	 - TIM1 is generating a PWM signal with frequency equal to 1.6363 KHz.
+	 - TIM1 is used as master for TIM8, the update event of TIM1 genarates the Reset counter of TIM8 to synchronize the two signals: the refernce signal (TIM1_CH1) and the shifted signal (TIM8_CH2). 
+	   
+In this example TIM1 and TIM8 input clock (TIM8CLK) is set to APB2 clock (PCLK2)    
+TIM1 and TIM8 signals are at frequency of  (SystemCoreClock / (Period + 1))  
+               
+TIM8 is generating a signal with the following caracteristics:
+	- Pulse lenght = (TIM8_CCR1 + TIM8_CCR2) / TIM8_CLK
+	- Phase shift = TIM8_CCR2/TIM8_CLK
+ with TIM8_CLK = (SystemCoreClock / (Period + 1)), as the prescaler is equal to zero. 
+ The Pulse is low level of the output signal of Channel 2 because TIM cannel is configured as Asymetric PWM2 mode.
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_Asymetric
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_Asymetric\src\TIM_Asymetric_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

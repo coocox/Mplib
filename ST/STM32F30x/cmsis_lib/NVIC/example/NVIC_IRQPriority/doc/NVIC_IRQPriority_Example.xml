@@ -1,0 +1,60 @@
+<Example>
+    <Name>
+        NVIC_IRQPriority_Example
+    </Name>
+    <Description>
+        This example demonstrates the use of the Nested Vectored Interrupt Controller (NVIC): 
+		- Configuration of 2 EXTI Lines (SEL button EXTI Line & KEY button EXTI Line)
+  to generate an interrupt on each falling edge and use the SysTick interrupt.
+- These interrupts are configured with the following parameters:
+    - SEL button EXTI Line:  
+        - PreemptionPriority = PreemptionPriorityValue
+        - SubPriority = 0
+    - KEY button EXTI Line:    
+        - PreemptionPriority = 0
+        - SubPriority = 1           
+    - SysTick Handler:  
+        - PreemptionPriority = !PreemptionPriorityValue
+        - SubPriority = 0             
+First, the PreemptionPriorityValue is equal to 0, the SEL button EXTI Line 
+has higher preemption priority than the SysTick handler. 
+
+In the KEY button EXTI Line interrupt routine the SEL button EXTI Line and 
+SysTick preemption priorities are inverted. 
+In the SEL button EXTI Line interrupt routine the pending bit of the SysTick 
+interrupt is set this will cause SysTick ISR to preempt the SEL button EXTI 
+Line ISR only if it has higher preemption priority.
+The system behaves as following:
+ 
+1) The first time KEY button EXTI Line interrupt occurs the SysTick preemption 
+become higher than SEL button EXTI Line one. So when the SEL button EXTI 
+Line interrupt occurs, the SysTick ISR is executed and the PreemptionOccured 
+variable become TRUE and the four leds (LED1, LED2, LED3, LED4) start toggling.
+
+2) When the next KEY button EXTI Line interrupt occurs the SysTick preemption
+become lower than SEL button EXTI Line one. So when the SEL button EXTI Line
+interrupt occurs and it will be not preempted by Systick ISR, the PreemptionOccured 
+variable became FALSE and the four leds (LED1, LED2, LED3, LED4) stop toggling.
+
+Then this behavior is repeated from point 1) in an infinite loop.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        NVIC_IRQPriority
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\NVIC\example\NVIC_IRQPriority\src\NVIC_IRQPriority_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,EXTI</Dependency>
+    </Dependencys>
+</Example>
+
+

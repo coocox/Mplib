@@ -1,0 +1,47 @@
+<Example>
+    <Name>
+        COMP_PWMSignalControl
+    </Name>
+    <Description>
+   This example shows how to configure COMP1 peripheral to hold on safe state
+(high level) TIM1 channels as soon as COMP1 output is set at high level.
+
+  - COMP1 is configured as following:
+     - Inverting input is internally connected to VREFINT = 1.22V
+     - Non Inverting input is connected to PA1
+     - Output is internally connected to TIM1 BKIN (Break Input)
+
+  - TIM1CLK is set to 72 MHz, the TIM1 Prescaler is equal to 0 so the TIM1 counter
+    clock used is 72 MHz.
+    TIM1 frequency is defined as follow:
+    TIM1 channels frequency = TIM1 counter clock / (Period + 1) 
+                            = 72000000 /(100 + 1) 
+                            = 713 KHz.
+
+  - External voltage should be connected to PA.01 (RV2 potentiometer can be used).
+
+  - Connect an oscilloscope to TIM1 channel PA.08 to display waveform. 
+
+  - While PA.01 is lower than VREFINT (1.22V), PWM signal is displayed on PA.08.
+    While PA.01 is higher than VREFINT, PA.08 is in high level.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        COMP_PWMSignalControl
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\COMP\example\COMP_PWMSignalControl\src\COMP_PWMSignalControl.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC</Dependency>
+    </Dependencys>
+</Example>
+
+

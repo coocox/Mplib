@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        EXTI_Example
+    </Name>
+    <Description>
+        This example shows how to configure external interrupt lines.
+In this example, 3 EXTI lines (EXTI5, EXTI6 and EXTI13) when using the STM32303C-EVAL
+are configured to generate an interrupt on each falling or rising edge. 
+In the interrupt routine a led connected to a specific GPIO pin is toggled.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        EXTI
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\EXTI\example\EXTI_Example\src\EXTI_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,36 @@
+<Example>
+    <Name>
+        DAC_ADC
+    </Name>
+    <Description>
+   This example describes how to use the ADC1 and DAC1 to output on DAC1_OUT1 sampled
+values of ADC1 channel7.
+The ADC1 is configured to convert continuously ADC1 channel7 (PC1).
+The End Of Conversion (EOC) interrupt is enabled and the conversion is triggered by software.
+
+The DAC1 channel 1 is configured with output buffer disabled.
+
+Each time the end of conversion interrupt occurs, converted value by ADC1 is written
+in DAC1 channel 1 register.
+Thus applied voltage on ADC1 channel7 (PC1) is output on DAC1_OUT1 (PA4).
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        DAC_ADC
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\DAC\example\DAC_ADC\src\DAC_ADC.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,ADC,DAC,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

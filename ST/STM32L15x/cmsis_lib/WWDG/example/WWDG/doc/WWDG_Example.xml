@@ -1,0 +1,15 @@
+<Example>
+	<Name>WWDG_Example</Name>
+	<Description>This example shows how to update at regular period the WWDG counter and how to simulate a software fault generating an MCU WWDG reset on expiry of a programmed time period.</Description>
+	<Version>1.2.0</Version>
+	<Tags>WWDG</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\WWDG\example\WWDG\src\WWDG_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\WWDG\example\WWDG\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\WWDG\example\WWDG\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,WWDG,EXTI,SYSCFG</Dependency>
+	</Dependencys>
+</Example>

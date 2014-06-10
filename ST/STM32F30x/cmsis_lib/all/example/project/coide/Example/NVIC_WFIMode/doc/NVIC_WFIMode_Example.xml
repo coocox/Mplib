@@ -1,0 +1,31 @@
+<Example>
+    <Name>
+        NVIC_WFIMode_Example
+    </Name>
+    <Description>
+        This example shows how to enter the system to WFI mode and wake-up from this mode 
+using External interrupt. In the associated software, the system clock is set to 72MHz. When the user presses
+on the Key push button, the MCU enters in WFI mode. If the user presses again on the
+Key push button, LED3 is toggled with a frequency depending on the system clock, this
+is used to indicate whether the MCU is in WFI or RUN mode. 
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        NVIC_WFIMode
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\NVIC\example\NVIC_WFIMode\src\NVIC_WFIMode_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,EXTI</Dependency>
+    </Dependencys>
+</Example>
+
+

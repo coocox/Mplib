@@ -1,0 +1,32 @@
+<Example>
+    <Name>
+        PWR_PVD_Example
+    </Name>
+    <Description>
+   This example shows how to configure the programmable voltage detector using
+an external interrupt line. In this example, EXTI line 16 is configured to generate 
+an interrupt on each rising or falling edge of the PVD output signal (which 
+indicates that the Vdd voltage is below the PVD threshold).
+In the interrupt routine a led connected to a specific GPIO pin is toggled every 
+time the voltage drops below or  the target threshold.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+         PWR_PVD
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\PWR\example\ PWR_PVD\src\ PWR_PVD_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,EXTI,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        RTC_example
+    </Name>
+    <Description>
+        This example is NUC200 RTC Driver Sample Code.RTC Date/Time test \RTC Tick Interrupt test\RTC Alarm and waken-up from Power Down test
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        RTC
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\RTC\example\RTC\src\RTC_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

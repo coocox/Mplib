@@ -1,0 +1,12 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>PWR</h1>
+<h2>Overview</h2>
+<ul>
+  An internal regulator is embedded in the STM32F3xx devices.
+    <li>The internal regulator is enabled in the STM32F30x MCUs:
+The STM32F30x devices require a 2.0 V - 3.6 V operating supply voltage (VDD) and a 2.0 V-3.6 V analog supply voltage (VDDA). The embedded regulator is used to supply 
+the internal 1.8 V digital power. </li>
+    <li>The internal regulator is disabled in the STM32F31x MCUs:
+The STM32F31x devices require a 1.8 V +/- 8% operating voltage supply (VDD) and 1.65 V - 3.6 V analog voltage supply (VDDA). The embedded regulator is OFF and VDD directly supplies the regulator output.</li>
+</ul>

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>DAC</Name>
+  <Description>Digital-to-analog converter (DAC). The DAC module is a 12-bit, voltage output digital-to-analog converter. The DAC can be 
+configured in 8- or 12-bit mode and may be used in conjunction with the DMA controller. In 
+12-bit mode, the data could be left- or right-aligned. An input reference voltage, VREF+ (shared with ADC) is available. The output can optionally be buffered for higher current drive.
+  </Description>
+  <Category>Peripheral</Category>
+  <Version>1.0.0</Version>
+  <Tags>DAC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\inc\stm32f30x_dac.h</File>
+	<File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\src\stm32f30x_dac.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\stm32f30x_dac.h</File>
+	<File>$PROJECT_ROOT$\cmsis_lib\rource\stm32f30x_dac.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>RCC</Dependency>
+	<Dependency>GPIO</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>STM32F302CB, STM32F302CC, STM32F302RB, STM32F302RC, STM32F302VB, STM32F302VC,STM32F303CB, STM32F303CC, STM32F303RB, STM32F303RC, STM32F303VB, STM32F303VC,STM32F313CC, STM32F313RC, STM32F313VC</Device>
+  </SupportDevices>
+
+</Component>

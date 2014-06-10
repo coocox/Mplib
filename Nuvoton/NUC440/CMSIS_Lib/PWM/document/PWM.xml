@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>PWM</Name>
+  <Description>NUC400 PWM Generator and Capture Timer</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>PWM</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\PWM.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\PWM.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\PWM.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\PWM.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+	<Dependency>clk</Dependency>
+
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC440,NUC470 series</Device>
+  </SupportDevices>
+
+</Component>

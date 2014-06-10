@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.4" name="TMPM061FWFG_Templet">
+  <Target name="TMPM061FWFG_Templet" isCurrent="1">
+    <Device manufacturerId="8" manufacturerName="Nuvoton" chipId="225" chipName="M0516LBN" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="M0516LBN"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00020000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00002000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide/configuration/programdata/tmpm061fwfg_templet/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="TMPM061FWFG_Templet"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ColinkEx"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V472a\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./tmpm06x_128.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="lib/cmsis_boot/startup/coide/startup_coide.c" path="../../../../lib/cmsis_boot/startup/coide/startup_coide.c" type="1"/>
+    <File name="Utilities/TMPM061-EVAL/led.h" path="../../../../Utilities/TMPM061-EVAL/led.h" type="1"/>
+    <File name="lib/inc/tmpm061_rtc.h" path="../../../../lib/inc/tmpm061_rtc.h" type="1"/>
+    <File name="lib/src/tmpm061_uart.c" path="../../../../lib/src/tmpm061_uart.c" type="1"/>
+    <File name="lib/src/tmpm061_wdt.c" path="../../../../lib/src/tmpm061_wdt.c" type="1"/>
+    <File name="lib/cmsis_core/core_cm0.h" path="../../../../lib/cmsis_core/core_cm0.h" type="1"/>
+    <File name="Example/CG_ModeSwitch/src/.CG_ModeSwitch.c.swp" path="../src/.CG_ModeSwitch.c.swp" type="1"/>
+    <File name="lib/inc/tmpm061_dsad.h" path="../../../../lib/inc/tmpm061_dsad.h" type="1"/>
+    <File name="lib/inc/tmpm061_tmr16a.h" path="../../../../lib/inc/tmpm061_tmr16a.h" type="1"/>
+    <File name="lib/src/tmpm061_dsad.c" path="../../../../lib/src/tmpm061_dsad.c" type="1"/>
+    <File name="Utilities/TMPM061-EVAL/lcd.h" path="../../../../Utilities/TMPM061-EVAL/lcd.h" type="1"/>
+    <File name="Example/CG_ModeSwitch/src/CG_ModeSwitch.c" path="../src/CG_ModeSwitch.c" type="1"/>
+    <File name="lib/cmsis_boot/system_TMPM061.c" path="../../../../lib/cmsis_boot/system_TMPM061.c" type="1"/>
+    <File name="lib/src/tmpm061_sbi.c" path="../../../../lib/src/tmpm061_sbi.c" type="1"/>
+    <File name="lib/inc/tmpm061_fc.h" path="../../../../lib/inc/tmpm061_fc.h" type="1"/>
+    <File name="lib/cmsis_boot/startup/coide" path="" type="2"/>
+    <File name="lib/inc/tmpm061_sbi.h" path="../../../../lib/inc/tmpm061_sbi.h" type="1"/>
+    <File name="lib/inc/tmpm061_adc.h" path="../../../../lib/inc/tmpm061_adc.h" type="1"/>
+    <File name="Example/CG_ModeSwitch/src/tmpm061_int.h" path="../src/tmpm061_int.h" type="1"/>
+    <File name="lib/src/tmpm061_tmr16a.c" path="../../../../lib/src/tmpm061_tmr16a.c" type="1"/>
+    <File name="Utilities/TMPM061-EVAL/sw.c" path="../../../../Utilities/TMPM061-EVAL/sw.c" type="1"/>
+    <File name="lib/inc/tmpm061_cg.h" path="../../../../lib/inc/tmpm061_cg.h" type="1"/>
+    <File name="lib/cmsis_boot/startup" path="" type="2"/>
+    <File name="lib/src/tmpm061_rtc.c" path="../../../../lib/src/tmpm061_rtc.c" type="1"/>
+    <File name="Utilities/TMPM061-EVAL" path="" type="2"/>
+    <File name="lib/cmsis_boot/system_TMPM061.h" path="../../../../lib/cmsis_boot/system_TMPM061.h" type="1"/>
+    <File name="lib/inc/tmpm061_uart.h" path="../../../../lib/inc/tmpm061_uart.h" type="1"/>
+    <File name="lib/src/tmpm061_lvd.c" path="../../../../lib/src/tmpm061_lvd.c" type="1"/>
+    <File name="lib/src/tmpm061_cg.c" path="../../../../lib/src/tmpm061_cg.c" type="1"/>
+    <File name="lib/inc/tx00_common.h" path="../../../../lib/inc/tx00_common.h" type="1"/>
+    <File name="lib/cmsis_boot" path="" type="2"/>
+    <File name="lib/src/tmpm061_fc.c" path="../../../../lib/src/tmpm061_fc.c" type="1"/>
+    <File name="lib" path="" type="2"/>
+    <File name="lib/inc/tmpm061_lvd.h" path="../../../../lib/inc/tmpm061_lvd.h" type="1"/>
+    <File name="Utilities/TMPM061-EVAL/sw.h" path="../../../../Utilities/TMPM061-EVAL/sw.h" type="1"/>
+    <File name="lib/cmsis_boot/TMPM061.h" path="../../../../lib/cmsis_boot/TMPM061.h" type="1"/>
+    <File name="lib/src" path="" type="2"/>
+    <File name="Example/CG_ModeSwitch/src/main.h" path="../src/main.h" type="1"/>
+    <File name="Utilities/TMPM061-EVAL/led.c" path="../../../../Utilities/TMPM061-EVAL/led.c" type="1"/>
+    <File name="lib/cmsis_core" path="" type="2"/>
+    <File name="Example/CG_ModeSwitch/src/cg.h" path="../src/cg.h" type="1"/>
+    <File name="lib/inc/tmpm061_wdt.h" path="../../../../lib/inc/tmpm061_wdt.h" type="1"/>
+    <File name="Utilities" path="" type="2"/>
+    <File name="Utilities/TMPM061-EVAL/.retarget.c.swp" path="../../../../Utilities/TMPM061-EVAL/.retarget.c.swp" type="1"/>
+    <File name="Utilities/TMPM061-EVAL/lcd.c" path="../../../../Utilities/TMPM061-EVAL/lcd.c" type="1"/>
+    <File name="Example" path="" type="2"/>
+    <File name="Example/CG_ModeSwitch/src" path="" type="2"/>
+    <File name="lib/inc/tmpm061_tmrb.h" path="../../../../lib/inc/tmpm061_tmrb.h" type="1"/>
+    <File name="lib/inc" path="" type="2"/>
+    <File name="lib/inc/tmpm061_lcd.h" path="../../../../lib/inc/tmpm061_lcd.h" type="1"/>
+    <File name="lib/src/tmpm061_lcd.c" path="../../../../lib/src/tmpm061_lcd.c" type="1"/>
+    <File name="lib/src/tmpm061_tmrb.c" path="../../../../lib/src/tmpm061_tmrb.c" type="1"/>
+    <File name="lib/cmsis_core/core_cm0.c" path="../../../../lib/cmsis_core/core_cm0.c" type="1"/>
+    <File name="Example/CG_ModeSwitch" path="" type="2"/>
+    <File name="Example/CG_ModeSwitch/src/tmpm061_int.c" path="../src/tmpm061_int.c" type="1"/>
+    <File name="lib/src/tmpm061_adc.c" path="../../../../lib/src/tmpm061_adc.c" type="1"/>
+    <File name="Example/CG_ModeSwitch/src/cg.c" path="../src/cg.c" type="1"/>
+    <File name="main.c" path="../main.c" type="1"/>
+  </Files>
+</Project>

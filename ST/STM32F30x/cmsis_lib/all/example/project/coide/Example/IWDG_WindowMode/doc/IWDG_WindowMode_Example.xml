@@ -1,0 +1,44 @@
+<Example>
+    <Name>
+        IWDG_WindowMode_Example
+    </Name>
+    <Description>
+      This example shows how to update at regular period the IWDG reload counter and 
+how to simulate a software fault generating an MCU IWDG reset on expiry of a 
+programmed time period using Window mode.
+
+The IWDG reload and window values are set respectively to 2000 and 1000.
+In this case the refresh window is: 
+  (2000-1000) / (LSI/16) = ~400 ms TO 2000 / (LSI/16) = ~800 ms
+   
+@note the refresh window may varies due to LSI frequency dispersion 
+
+The IWDG counter is refreshed each 750 ms in the main program infinite loop to 
+prevent a IWDG reset.
+
+The EXTI Line is used to simulate a software failure: once the EXTI Line event 
+occurs, by pressing the Key push-button, the corresponding interrupt is served.
+If the EXTI Line event does not occur, the IWDG counter is indefinitely refreshed
+in the main program infinite loop, and there is no IWDG reset.
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        IWDG_WindowMode
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\IWDG\example\IWDG_WindowMode\src\IWDG_WindowMode_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,EXTI,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

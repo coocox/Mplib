@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        I2C_example
+    </Name>
+    <Description>
+        This example is NUC200 I2C Driver Sample Code with EEPROM 24LC64.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        I2C
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\I2C\example\I2C\src\I2C_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

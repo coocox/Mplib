@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>ADC</Name>
+  <Description>NUC400 Analog-to-Digital Converter</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>ADC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\ADC.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\ADC.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\ADC.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\ADC.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>clk</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC400,NUC470Series</Device>
+  </SupportDevices>
+
+</Component>

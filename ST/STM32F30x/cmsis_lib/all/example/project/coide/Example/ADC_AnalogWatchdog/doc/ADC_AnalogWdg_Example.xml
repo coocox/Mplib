@@ -1,0 +1,37 @@
+<Example>
+    <Name>
+        ADC_AnalogWdg_Example
+    </Name>
+    <Description>
+   This example describes how to use the ADC analog watchdog to guard continuously  
+an ADC channel.
+The ADC1 is configured to convert continuously ADC channel7. 
+The analog watchdog is configured and enabled to guard a single regular channel.
+Each time the channel7 converted value exceeds programmed analog watchdog high 
+threshold (value 0x7F) or goes down analog watchdog low threshold (value 0x1F)
+an AWD interrupt is generated and the output pin connected to LED4 is toggled. 
+The LED will bright as long as the AWD interrupt is generated which means that the 
+converted value of regular ADC channel7 is outside the range limited by high and 
+low analog watchdog thresholds.
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        ADC_AnalogWdg
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\EXTI\example\ADC_AnalogWdg\src\ADC_AnalogWdg_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,SPI,NVIC,C Library</Dependency>
+    </Dependencys>
+</Example>
+
+

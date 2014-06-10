@@ -1,0 +1,59 @@
+<Example>
+    <Name>
+        TIM_TimeBase_Example
+    </Name>
+    <Description>
+        This example shows how to configure the TIM peripheral in Output Compare Timing 
+mode with the corresponding Interrupt requests for each channel in order to generate
+4 different time bases.
+The TIM3CLK frequency is set to SystemCoreClock (Hz), to get TIM3 counter 
+clock at 72 MHz so the Prescaler is computed as following:
+   - Prescaler = (TIM3CLK / TIM3 counter clock) - 1
+
+SystemCoreClock is set to 72MHz.
+
+The TIM3 CC1 register value is equal to 40961, 
+CC1 update rate = TIM3 counter clock / CCR1_Val = 1757.77 Hz,
+so the TIM3 Channel 1 generates an interrupt each 6.8ms
+
+The TIM3 CC2 register is equal to 27309, 
+CC2 update rate = TIM3 counter clock / CCR2_Val = 2636.49 Hz
+so the TIM3 Channel 2 generates an interrupt each 4.55ms
+
+The TIM3 CC3 register is equal to 13654, 
+CC3 update rate = TIM3 counter clock / CCR3_Val = 5273.18 Hz
+so the TIM3 Channel 3 generates an interrupt each 2.27ms
+
+The TIM3 CC4 register is equal to 6826, 
+CC4 update rate = TIM3 counter clock / CCR4_Val =  10547.9 Hz
+so the TIM3 Channel 4 generates an interrupt each 1.13ms.
+
+When the counter value reaches the Output compare registers values, the Output 
+Compare interrupts are generated and, in the handler routine, 4 leds (LED1, LED2, 
+LED3 and LED4) are toggled with the following frequencies: 
+
+- LED1: 878.88 Hz (CC1)
+- LED2: 1318.24 Hz (CC2)
+- LED3: 2636.59 Hz (CC3) 
+- LED4: 5273.95 Hz (CC4)
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_TimeBase
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_TimeBase\src\TIM_TimeBase_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

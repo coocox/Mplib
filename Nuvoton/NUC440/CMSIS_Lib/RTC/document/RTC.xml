@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>RTC</Name>
+  <Description>NUC400 RTC Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>RTC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\RTC.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\RTC.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\RTC.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\RTC.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>clk</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>nuc440,nuc470series</Device>
+  </SupportDevices>
+
+</Component>

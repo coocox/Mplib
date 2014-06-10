@@ -1,0 +1,15 @@
+<Example>
+	<Name>NVIC_Example</Name>
+	<Description>This example demonstrates the use of the Nested Vectored Interrupt Controller (NVIC) IRQ Channels configuration and how to mask/activate different IRQs.</Description>
+	<Version>1.2.0</Version>
+	<Tags>NVIC</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\NVIC\example\NVIC\src\NVIC_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\NVIC\example\NVIC\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\NVIC\example\NVIC\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,TIM,EXTI,SYSCFG</Dependency>
+	</Dependencys>
+</Example>

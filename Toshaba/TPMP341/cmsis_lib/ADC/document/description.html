@@ -1,0 +1,39 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>ADC</h1>
+<h2>Overview</h2>
+
+<pre>
+TMPM341FDXBG/FYXBG contains a 12-bit, sequential-conversion analog/digital converter (ADC) with 15 an-alog input channels.
+These 15 analog input channels (pins AIN00 through AIN14) are also used as input/output ports.
+The 12-bit AD converter has the following features:
+
+* Starting normal AD conversion and highest-priority AD conversion
+      Software activation
+      Activation with the 16-bit timer (TMRB)
+      Hardware activation with an external trigger input (ADTRG pin)
+* AD conversion
+      Fixed-channel single conversion mode
+      Channel scan single conversion mode
+      Fixed-channel repeat conversion mode
+      Channel scan repeat conversion mode
+* Highest-priority AD conversion
+* Normal AD conversion completion interrupt and highest-priority AD conversion completion interrupt
+* Normal AD conversion and highest-priority AD conversion status flags.
+      A flag indicating the AD conversion result data is valid, <ADRxRF>
+      A flag indicating the AD conversion result data is overwritten, <OVRx>
+      Normal AD conversion completion flag and highest-priority AD conversion completion flag
+      Normal AD conversion busy flag and highest-priority AD conversion busy flag
+* AD Monitor Function
+      When the AD monitor function is enabled, an interrupt is generated if any comparison result is matched.
+* AD conversion clock can be controlled from 1/fc to 1/16fc.
+* When AD conversion is completed, two types of DMA requests are supported.
+* Standby mode is supported.
+* Output switching monitor function
+
+This is the function that monitors output switching operation of general
+input-output ports, which is al-so used as analog input channels (pins AIN00
+through AIN14), during AD conversion. This monitor func-tion is used to suggest
+the possibility that output switching operation during AD conversion affects
+conver-sion accuracy.
+</pre>

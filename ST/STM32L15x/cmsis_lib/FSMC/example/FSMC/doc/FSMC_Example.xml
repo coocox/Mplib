@@ -1,0 +1,17 @@
+<Example>
+	<Name>FSMC_Example</Name>
+	<Description>This example provides a basic example of how to use the FSMC firmware library and an associate driver to perform read/write operations on the IS61WV51216BLL SRAMmemory mounted on STM32L152D-EVAL board.</Description>
+	<Version>1.2.0</Version>
+	<Tags>FSMC</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\FSMC\example\FSMC\src\FSMC_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\FSMC\example\FSMC\src\stm32l152d_eval_fsmc_sram.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\FSMC\example\FSMC\src\stm32l152d_eval_fsmc_sram.h</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\FSMC\example\FSMC\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\FSMC\example\FSMC\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,FSMC</Dependency>
+	</Dependencys>
+</Example>

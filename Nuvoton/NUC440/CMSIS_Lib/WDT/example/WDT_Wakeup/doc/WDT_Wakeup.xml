@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        WDT_Wakeup
+    </Name>
+    <Description>
+        This sample code demonstrate using WDT to wake system up from power down mode
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        WDT
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\WDT\example\WDT_Wakeup\src\WDT_Wakeup.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,uart,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

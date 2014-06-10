@@ -1,0 +1,90 @@
+<Example>
+    <Name>
+        I2S_FullDuplexDataExchangeDMA
+    </Name>
+    <Description>
+   This example provides a description of how to set a communication between two
+SPIs in I2S Full-Duplex mode using DMA and performing a transfer from Master to 
+Slave.
+
+- Hardware Description
+
+To use this example, you need to load it on two STM32 boards (let's call them 
+Board A and Board B) then connect these two boards through SPI lines and GND.
+In the firmware example uncomment the dedicated line in the main.h file  to use
+the SPI peripheral as STM32 Master device or as STM32 Slave .
+@verbatim
+*------------------------------------------------------------------------------*
+|                BOARD A                                BOARD B                |
+|                Master                                 Slave                  |
+|         ____________________                   ____________________          |
+|        |                    |                 |                    |         |
+|        |                    |                 |                    |         | 
+|        |     __________     |                 |     __________     |         |
+|        |    | I2Sext   |    |                 |    | I2Sext   |    |         |                                
+|        |    | Slave Rx |____|__SDin(I2Sext)___|____| Slave Tx |    |         |
+|        |    |__________|    |                 |    |__________|    |         |
+|        |    |SPI Master|____|______SDout______|____| SPI Slave|    |         |
+|        |    |Tx Device |____|_______WS________|____| Rx Device|    |         |
+|        |    |__________|____|_______CK________|____|__________|    |         |
+|        |                    |                 |                    |         |
+|        |                    |                 |  O LD1             |         |
+|        |              Key   |                 |  O LD2             |         |
+|        |               _    |                 |  O LD3             |         |
+|        |              |_|   |                 |  O LD4             |         |
+|        |                    |                 |                    |         |
+|        |             GND O--|-----------------|--O GND             |         |
+|        |____________________|                 |____________________|         |
+|                                                                              |
+|                                                                              |
+*------------------------------------------------------------------------------*
+@endverbatim
+
+- Software Description
+
+In master board, I2S3 peripheral is configured as Master Transmitter, whereas I2S3ext
+is configured as a slave Receiver.
+In Slave board, I2S3 peripheral is configured as Slave Receiver, whereas I2S3ext
+is configured as a slave Transmitter.
+The data transfer is managed with DMA. 
+Both devices are in Philips standard configuration with 16 bit and 48KHz audio frequency. 
+
+This example describes how to Configure I2S3 in Full duplex mode and send/Receive 
+in the meantime I2S_Buffer_Tx and I2S_Buffer_Rx or I2Sext_Buffer_Rx buffer from 
+(I2S3:BoradA) to (I2S3:BoardB).
+
+The I2S_Buffer_Tx is transmitted using DMA2 channel2 and the received values are 
+loaded in the I2S_Buffer_Rx buffer or I2Sext_Buffer_Rx buffer using DMA2 channel1. 
+
+When the user press on the Key Button on the Master Board(BoardA), the master 
+start sending data stored in the I2S_Buffer_Tx buffer while the Slave Board (BoardB)
+receives data in I2S_Buffer_Rx buffer.
+At the same time, the Slave Board(BoardB) send data stored in the I2S_Buffer_Tx 
+buffer while the BoardB receives data in I2Sext_Buffer_Rx buffer.
+
+Once the transfer is completed, a comparison is done and TransferStatus gives the 
+data transfer status:
+  - TransferStatus PASSED if transmitted and received data are the same: Green LED is On.
+  - TransferStatus FAILED if transmitted and received data are the different: Red LED is On.
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        I2S_FullDuplexDataExchangeDMA
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\I2S\example\I2S_FullDuplexDataExchangeDMA\src\I2S_FullDuplexDataExchangeDMA.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,DMA,SPI,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

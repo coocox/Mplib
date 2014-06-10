@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        GPIO_Example
+    </Name>
+    <Description>
+        This example configures GPIO to LED , then turn on the LED or turn off the LED.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        GPIO
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\GPIO\example\GPIO\src\GPIO_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk</Dependency>
+    </Dependencys>
+</Example>
+
+

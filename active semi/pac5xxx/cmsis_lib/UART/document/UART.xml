@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>UART</Name>
+  <Description>PAC5XXX UART Interface Controller</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>UART</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\active semi\pac5xxx\cmsis_lib\lib\drivers_inc\pac5xxx_driver_uart.h</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\pac5xxx_driver_uart.h</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>PAC5210、PAC5220、PAC5250</Device>
+  </SupportDevices>
+
+</Component>

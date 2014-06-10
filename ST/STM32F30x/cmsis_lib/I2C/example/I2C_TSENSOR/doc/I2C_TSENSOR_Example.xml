@@ -1,0 +1,43 @@
+<Example>
+    <Name>
+        I2C_TSENSOR_Example
+    </Name>
+    <Description>
+    This example provides a description of how to use the I2C to communicate with 
+an STTS751 (or a compatible device) I2C temperature sensor is mounted on the 
+STM32303C-EVAL board and used to get instantaneous external temperature (-55 to +125).
+ 
+Thanks to STM32 I2C SMBus feature, we can easily monitor the temperature 
+variations. This is managed by the SMBus Alert which is generating a dedicated 
+interrupt informing the system that the temperature is out of the selected 
+ranges.
+The user can configure the TOS and THYS thanks to a dedicated define values in 
+the code.
+
+By default the STM32303C-EVAL demo are setting them to (see main.c file):
+  
+#define TEMPERATURE_THYS        0x14 /* 20 */
+#define TEMPERATURE_TOS         0x28 /* 40 */
+ - STM32303C-EVAL Set-up
+    - Make sure that JP5 and JP6 jumpers are fitted in position 1-2.
+    - Make sure that JP1 jumper is fitted.
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        I2C_TSENSOR
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\I2C\example\I2C_TSENSOR\src\I2C_TSENSOR_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,SPI,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

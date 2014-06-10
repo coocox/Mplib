@@ -1,0 +1,38 @@
+<Example>
+    <Name>
+        RTC
+    </Name>
+    <Description>
+        This example show how to use RTC Module.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        RTC
+    </Tags>
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\RTC\example\RTC_Basic\src\RTC_Basic.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\RTC\example\RTC_Basic\src\main.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\RTC\example\RTC_Basic\src\rtc.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\RTC\example\RTC_Basic\src\rtc.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\RTC\example\RTC_Basic\src\tmpm061_rtc_int.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\RTC\example\RTC_Basic\src\tmpm061_rtc_int.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\led.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\led.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\lcd.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\lcd.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

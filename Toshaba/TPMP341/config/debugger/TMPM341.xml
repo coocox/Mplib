@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2010 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Debugger>
+    <Debug>
+        <Arch>Cortex-M3</Arch>
+        <SWD support="true">
+            <ExpectedID>0x1BA01477</ExpectedID>
+            <ExpectedID>0x2BA01477</ExpectedID>
+        </SWD>
+        <JTAG support="true">
+            <TAP name="ARM CoreSight JTAG-DP" irLen="4" ircapture="0x1" irmask="0xF" irIDCode="0xE" select="true">
+                <ExpectedID>0x3BA00477</ExpectedID>
+                <ExpectedID>0x4BA00477</ExpectedID>
+            </TAP>
+        </JTAG>
+        <Reset>
+            <HwReset support="true" />
+            <SoftSysReset support="true" select="true" />
+            <SoftVectReset support="true" />
+        </Reset>
+        <SystemResetClkFreq>8000000</SystemResetClkFreq>
+        <!-- HSI 8MHZ -->
+    </Debug>
+    <!-- 
+		Memory Blocks that can be read/written/executed
+		exclude ram,rom blocks
+		read(true,false)
+		write(true,false)
+		execute(true,false)	
+	 -->
+    <MemMap>
+        <Block addr="0xE00FF000" size="0x1000" read="true" write="true" execute="false" name="ROM Table" />
+        <Block addr="0xE0042000" size="0xD000" read="true" write="true" execute="false" name="External PPB" />
+        <Block addr="0xE0041000" size="0x1000" read="true" write="true" execute="false" name="ETM" />
+        <Block addr="0xE0040000" size="0x1000" read="true" write="true" execute="false" name="TPIU" />
+        <!--  Private peripheral bus - Internal -->
+        <Block addr="0xE000E000" size="0x1000" read="true" write="true" execute="false" name="System Control Space" />
+        <Block addr="0xE0002000" size="0x1000" read="true" write="true" execute="false" name="FPB" />
+        <Block addr="0xE0001000" size="0x1000" read="true" write="true" execute="false" name="DWT" />
+        <Block addr="0xE0000000" size="0x1000" read="true" write="true" execute="false" name="ITM" />
+        <!--  FiRM Peripherals -->
+        <Block addr="0x40000000" size="0x4000" read="true" write="true" execute="false" name="DMAC" />
+		<Block addr="0x40040000" size="0x8000" read="true" write="true" execute="false" name="SSP" />
+		<Block addr="0x40050000" size="0x4000" read="true" write="true" execute="false" name="ADC" />
+		<Block addr="0x40054000" size="0x4000" read="true" write="true" execute="false" name="DAC" />
+		<Block addr="0x40058000" size="0x4000" read="true" write="true" execute="false" name="TMRD" />
+		<Block addr="0x4005C000" size="0x1000" read="true" write="true" execute="false" name="EBIF" />
+		<Block addr="0x400C0000" size="0x1000" read="true" write="true" execute="false" name="PORT" />
+		<Block addr="0x400C4000" size="0x3000" read="true" write="true" execute="false" name="TMRB" />
+		<Block addr="0x400CA000" size="0x2000" read="true" write="true" execute="false" name="PHCNT" />
+		<Block addr="0x400E0000" size="0x1000" read="true" write="true" execute="false" name="I2C" />
+		<Block addr="0x400E1000" size="0x5000" read="true" write="true" execute="false" name="UART" />
+		<Block addr="0x400F1000" size="0x2000" read="true" write="true" execute="false" name="OFD" />
+		<Block addr="0x400F2000" size="0x1000" read="true" write="true" execute="false" name="WDT" />
+		
+		<Block addr="0x400F3000" size="0x1000" read="true" write="false" execute="false" name="CG" />
+    </MemMap>
+</Debugger>

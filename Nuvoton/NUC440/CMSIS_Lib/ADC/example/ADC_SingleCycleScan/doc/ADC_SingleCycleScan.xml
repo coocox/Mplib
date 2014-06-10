@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        ADC_SingleCycleScan
+    </Name>
+    <Description>
+        This sample code demonstrate ADC single cycle scan conversion.It convert channel 0,1,2 and print conversion result.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ADC
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\ADC\example\ADC_SingleCycleScan\src\ADC_SingleCycleScan.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

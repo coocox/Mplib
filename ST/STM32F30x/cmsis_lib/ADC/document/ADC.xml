@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>ADC</Name>
+  <Description>Analog-to-digital converters. This section describes the implementation of up to 4 ADCs:
+			ADC1 and ADC2 are tightly coupled and can operate in dual mode (ADC1 is master);
+			ADC3 and ADC4 are tightly coupled and can operate in dual mode (ADC3 is master).
+  Each ADC consists of 12-bit ADC is a successive approximation analog-to-digital converter.
+Each ADC has up to 19 multiplexed channels allowing the measurements of up to 16 
+external sources and up to three internal sources. A/D conversion of the various channels 
+can be performed in single, continuous, scan or discontinuous mode. The result of the ADC 
+is stored in a left-aligned or right-aligned 16-bit data register.
+The ADCs are mapped on the AHB bus to allow fast data handling.
+The analog watchdog features allow the application to detect if the input voltage goes 
+outside the user-defined high or low thresholds.
+An efficient low power mode is implemented to allow very low consumption at low frequency.
+  </Description>
+  <Category>Peripheral</Category>
+  <Version>1.0.0</Version>
+  <Tags>ADC</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\inc\stm32f30x_adc.h</File>
+	<File>$REPO_ROOT$\ST\STM32F30X\cmsis_lib\lib\src\stm32f30x_adc.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\stm32f30x_adc.h</File>
+	<File>$PROJECT_ROOT$\cmsis_lib\rource\stm32f30x_adc.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>RCC</Dependency>
+	<Dependency>GPIO</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>STM32F302CB, STM32F302CC, STM32F302RB, STM32F302RC, STM32F302VB, STM32F302VC,STM32F303CB, STM32F303CC, STM32F303RB, STM32F303RC, STM32F303VB, STM32F303VC,STM32F313CC, STM32F313RC, STM32F313VC</Device>
+  </SupportDevices>
+
+</Component>

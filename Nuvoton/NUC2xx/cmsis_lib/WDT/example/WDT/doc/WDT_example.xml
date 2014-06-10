@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        SPI_example
+    </Name>
+    <Description>
+        This example is NUC200 SPI Driver Sample Code.SPI loopback test  \SPI loopback test with PDMA\SPI master mode\SPI slave mode 
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SPI
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\SPI\example\SPI\src\SPI_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

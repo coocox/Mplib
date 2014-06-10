@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        LVD
+    </Name>
+    <Description>
+        This example show how to use LVD Module.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        LVD
+    </Tags>
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\LVD\example\LVD_Demo\src\LVD_Demo.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

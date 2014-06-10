@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+       Flash_UserBoot
+    </Name>
+    <Description>
+        This example show how to make your own bootloader.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> FC </Tags>
+    <Tags> FLASH </Tags>
+    <Tags> Bootloader </Tags>
+
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\FC\example\Flash_Userboot\src\Flash_userBoot.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+       Startup
+    </Name>
+    <Description>
+        This example show how to initialize system.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> OFD </Tags>
+
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\OFD\example\Startup\src\OFD_Startup.c
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\OFD\example\Startup\src\startup.c
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\OFD\example\Startup\src\startup.h
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

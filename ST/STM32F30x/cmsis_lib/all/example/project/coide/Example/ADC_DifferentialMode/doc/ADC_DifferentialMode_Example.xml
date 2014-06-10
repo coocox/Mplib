@@ -1,0 +1,34 @@
+<Example>
+    <Name>
+        ADC_DifferentialMode_Example
+    </Name>
+    <Description>
+      This example describes how to use the ADC1 to convert continuously voltage applied
+to a given analog input channel in differential mode.
+Detailed steps of ADC configuration are provided starting from GPIO configuration
+to the analog channel configuration without forgetting the ADC calibration procedure.  
+In this example the ADC1 Channel7(PC1) and ADC1 Channel8(PC2) are both used to convert the diffential voltage between them.
+ADC1 Channel7(PC1) is directly connected to the potentiometer(RV2) available on the STM32303C-EVAL evaluation board.
+ADC1 Channel8(PC2) should be connected to an external power supply.
+The converted differential voltage is displayed on the onboard LCD.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        ADC_DifferentialMode
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\EXTI\example\ADC_DifferentialMode\src\ADC_DifferentialMode_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,SPI,C Library</Dependency>
+    </Dependencys>
+</Example>
+
+

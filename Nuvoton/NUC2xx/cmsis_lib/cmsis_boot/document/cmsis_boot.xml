@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>cmsis_boot</Name>
+  <Description>NUC2xx CMSIS BOOT</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>cmsis_boot</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC2xx\cmsis_lib\lib\cmsis_boot\startup\coide\startup_NUC2xx.c</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC2xx\cmsis_lib\lib\cmsis_boot\NUC2xxSeries.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC2xx\cmsis_lib\lib\cmsis_boot\startup\system_NUC2xxSeries.c</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC2xx\cmsis_lib\lib\cmsis_boot\startup\system_NUC2xxSeries.h</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_boot\startup\startup_NUC2xx.c</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\system_NUC2xxSeries.c</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\NUC2xxSeries.h</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\system_NUC2xxSeries.h</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency></Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC200LC2AN, NUC200LD2AN, NUC200LE3AN, NUC200SC2AN, NUC200SD2AN, NUC200SE3AN,NUC200VE3AN,NUC220LC2AN,
+            NUC220LD2AN, NUC220LE3AN, NUC220SC2AN, NUC220SD2AN, NUC220SE3AN, NUC220VE3AN
+    </Device>
+  </SupportDevices>
+
+</Component>

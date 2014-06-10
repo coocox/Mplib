@@ -1,0 +1,43 @@
+<Example>
+    <Name>
+        OPAMP_InternalFollower
+    </Name>
+    <Description>
+   This example provides a short description of how to configure the OPAMP1 in 
+internal follower and how to use OPAMP1 output as ADC input.
+
+OPAMP1 is configured in internal follower mode or unity gain;
+the applied signal on OPAMP1 positive input (PA7) is reproduced on OPAMP1
+output (PA2): the output follows the input.
+
+The ADC1 is configured to convert continuously ADC1 channel 3 (PA2) which is internally
+connected to OPAMP1 output. Each time the channel 3 is converted an End Of Conversion
+interrupt is generated.
+The converted value of regular ADC1 channel 3 can be displayed on live watch.
+
+To run the example:
+   - Connect a variable power supply 0-3.3V to OPAMP1 non-inverting input mapped on pin PA7.
+   - Connect OPAMP1 output PA2 pin to an oscilloscope. It should be equal to PA7 level.
+   - Add "ADCVal" to live watch to display the measured voltage. It should be equal to PA7 level.
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        OPAMP_InternalFollower
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\OPAMP\example\OPAMP_InternalFollower\src\OPAMP_InternalFollower.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,NVIC,ADC</Dependency>
+    </Dependencys>
+</Example>
+
+

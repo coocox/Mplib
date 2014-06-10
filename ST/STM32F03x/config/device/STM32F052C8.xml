@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>STM32F052C8</Name>
+	<Vendor>ST</Vendor>
+	<Family>STM32F052</Family>
+	<Arch>Cortex-M0</Arch>
+	<Description>ST's STM32F052C8 operates at a maximum speed of 48MHz and features 64 Kbytes of Flash and 16 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>1 (16-bit) Advanced control Timers</Parameter>
+        <Parameter>5 (16-bit) 1 (32-bit) General purpose Timers</Parameter>
+        <Parameter>2 (16-bit) Basic Timers</Parameter>
+        <Parameter>2 SPI(I2S),2 I2C,4 USART</Parameter>
+        <Parameter>1 CAN, 1 USB , 1 CEC</Parameter>
+        <Parameter>10 ext. + 3 int 12-bit synchronized ADC</Parameter>
+        <Parameter>37 GPIOs, 1 channel 12-bit DAC</Parameter>
+        <Parameter>17 Capacitive sensing channels</Parameter>
+        <Parameter>2 Analog comparator</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1826/PF258966</Link>
+		<Link name="Chips Datasheet">http://www.st.com/web/en/resource/technical/document/datasheet/DM00088500.pdf</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\stm32f052x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x08000000" size="0x00010000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 64K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00004000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 16K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\STM32F052x_64.elf</loader>
+	</FlashLoader>
+</Device>

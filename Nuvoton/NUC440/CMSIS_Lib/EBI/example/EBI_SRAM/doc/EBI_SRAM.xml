@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        EBI_SRAM
+    </Name>
+    <Description>
+          NUC400 EBI Driver Sample Code BS616LV40 SRAM.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        EBI
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\EBI\example\EBI_SRAM\src\EBI_SRAM.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,uart,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

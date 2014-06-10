@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>WWDT</Name>
+  <Description>NUC400 Watchdog Timer (WDT)</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>WWDT</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\WWDT.h</File>
+	<File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\WWDT.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\WWDT.h</File>
+	<File>$PROJECT_ROOT$\cmsis_lib\source\WWDT.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>clk</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>nuc440,nuc470series</Device>
+  </SupportDevices>
+
+</Component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>LVD</Name>
+  <Description>Low Voltage Detection Circuit</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>LVD</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\TMPM061\TMPM061\cmsis_lib\lib\inc\tmpm061_lvd.h</File>
+    <File>$REPO_ROOT$\TMPM061\TMPM061\cmsis_lib\lib\src\tmpm061_lvd.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\tmpm061_lvd.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\tmpm061_lvd.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>TMPM061FWFG</Device>
+  </SupportDevices>
+
+</Component>

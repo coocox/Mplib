@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        PWM_example
+    </Name>
+    <Description>
+        This example is PWM Driver Sample Code.This sample code will use PWMA channel 0 to drive Buzzer or use PWMA channel 2 to capture\n  the signal from PWMA channel 1
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        PWM
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\PWM\example\PWM\src\PWM_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

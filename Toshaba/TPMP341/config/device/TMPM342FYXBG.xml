@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+    
+    This file is part of CooCox Softwares.
+-->
+<Device>
+    <Name>TMPM342FYXBG</Name>
+    <Vendor>TOSHIBA</Vendor>
+    <Family>TMPM342</Family>
+    <Arch>Cortex-M3</Arch>
+    <Description>TOSHIBA's TMPM342FYXBG operates at a maximum speed of 16MHz and features 256 Kbytes of Flash and 36 Kbytes of RAM.</Description>
+    <Parameters>
+        <Parameters>DMA controllers                         : 4   ch   <Parameters>
+        <Parameters>Sync Serial Interface                   : 1   ch   <Parameters>
+        <Parameters>UART                                    : 1   ch   <Parameters>
+        <Parameters>UART/SIO                                : 3   ch   <Parameters>
+        <Parameters>I2C                                     : 1   ch   <Parameters>
+        <Parameters>A/D converters(12bit)                   : 12  ch   <Parameters>
+        <Parameters>D/A converters(10bit)                   : 2   ch   <Parameters>
+        <Parameters>timer/counter(16bit)                    : 10  ch   <Parameters>
+        <Parameters>interrupt controllers                   : 8  pins <Parameters>
+        <Parameters>high-resolution 16-bit timer/PPG output : 8   ch   <Parameters>
+        <Parameters>watchdog timer                          : Available<Parameters>
+        <Parameters>clock gear function                     : Available<Parameters>
+        <Parameters>multiply and accumulation unit          : Available<Parameters>
+        <Parameters>JTAG (Boundary-Scan)                    : Available<Parameters>
+        <Parameters>trace function                          : Available<Parameters>
+        <Parameters>on-chip debug function                  : Available<Parameters>
+        <Parameters>I/O Ports                               : 63 pins  <Parameters>
+    </Parameters>
+    <ReferenceLinks>
+        <Link name="Chips Page"http://www.semicon.toshiba.co.jp/info/lookup.jsp?pid=TMPM342FYXBG&lang=en</Link>
+        <Link name="Chips Datasheet">http://www.semicon.toshiba.co.jp/info/docget.jsp?type=datasheet&lang=en&pid=TMPM342FYXBG</Link>
+    </ReferenceLinks>
+    
+    
+    <DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\$XXX$.xml</DebugSetting>
+    
+    <Flash>
+        <Block addr="0x00000000" size="0x00040000" read="true" write="false" execute="true" name="Embedded Flash" />    <!-- 256K -->
+    </Flash>
+    
+    <Ram>
+        <Block addr="0x20000000" size="0x00009000" read="true" write="true"  execute="true" name="Embedded RAM" />      <!-- 36K -->
+    </Ram>
+    
+    <FlashLoader>
+        <loader>$TOOLKIT_FLASH_DIR$\$XXX$_256.elf</loader>
+    </FlashLoader>
+</Device>

@@ -1,0 +1,89 @@
+<Example>
+    <Name>
+        SPI_DataExInt_Example
+    </Name>
+    <Description>
+   This example provides a small application in which joystick buttons are used 
+to trigger SPI communication using interrupts and though using SPI firmware 
+library.
+
+- Hardware Description
+
+To use this example, you need to load it on two STM32 boards (let's call them 
+Board A and Board B) then connect these two boards through SPI lines and GND.
+
+In the firmware example uncomment the dedicated line in the main.h file to use
+the SPI peripheral as STM32 Master device or as STM32 Slave.
+
+The size of transferred data can be configured by uncomment the dedicated size in main.h
+file. the same data size must be selected in both boards.
+- The connection between the pins should use a short wires and a common Ground. 
+
+In master board, SPI peripheral is configured as Master full duplex with Interrupt,
+whereas in Slave board, SPI peripheral is configured as Slave Full duplex with Interrupt. 
+
+At each joystick buttons press:
+- The Master sends the specific command to the Slave and waits for the ACK command 
+  from the Slave
+
+- The Master sends the specific command to the Slave (the command contains the 
+  transaction code (CMD_RIGHT, CMD_LEFT, CMD_UP or CMD_DOWN) and receives 
+  the ACK command from the Slave.
+
+- The Slave receives the command and sends the ACK command.
+
+- The Master sends the defined NumberOfByte from TxBuffer to the Slave and receives
+  NumberOfByte from the Slave into Rxbuffer.
+  
+- The Slave sends the defined NumberOfByte from Txbuffer to the Master and receives 
+  NumberOfByte from the Master into Rxbuffer.
+    
+- The Master compares the received data with TxBuffer and check the ACK command, 
+  Received data correctness is signaled by LED lightening and though as follow:
+   - Joystick JOY_RIGHT and data correctly received ==> LD2, LD3 ON and LD4 OFF 
+   - Joystick JOY_LEFT and data correctly received  ==> LD4 ON, LD2 and LD3 are OFF
+   - Joystick JOY_UP and data correctly received    ==> LD2 ON, LD3 and LD4 are OFF
+   - Joystick JOY_DOWN and data correctly received  ==> LD3 ON, LD2 and LD4 are OFF
+   
+- The Slave after check the received command, compares the received data with TxBuffer. 
+  Received data correctness is signaled by LED lightening and though as follow:
+   - Received command CMD_RIGHT and data correctly received --> LD2 and LD3 ON and LD4 OFF 
+   - Received command CMD_LEFT and data correctly received  --> LD2 ON, LD3 and LD4 are OFF
+   - Received command CMD_UP and data correctly received    --> LD2 ON, LD3 and LD4 are OFF
+   - Received command CMD_DOWN and data correctly received  --> LD3 ON, LD2 and LD4 are OFF
+
+In both boards, the data transfers is managed using SPI3_IRQHandler in stm32f30x_it.c 
+file.
+
+The SysTick is configured to generate interrupt each 10ms. A dedicated counter 
+inside the SysTick ISR is used to toggle the LD1 each 100ms indicating that the 
+firmware is running.
+
+A defined communication timeout is insuring that the application will not remain 
+stuck if the SPI communication is corrupted.
+You can adjust this timeout through the USER_TIMEOUT  define inside main.h file
+depending on CPU frequency and application conditions (interrupts routines, 
+number of data to transfer, baudrate, CPU frequency...).
+
+These operations can be repeated infinitely.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        SPI_DataExInt
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\SPI\example\SPI_DataExchangeInterrupt\src\SPI_DataExInt_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

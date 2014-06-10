@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        USBD_MASS_STORAGE_SRAM
+    </Name>
+    <Description>
+          NUC400Series USB Mass Storage.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        USBD
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\USBD\example\USBD_MASS_STORAGE_SRAM\src\USBD_MASS_STORAGE_SRAM.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,uart,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

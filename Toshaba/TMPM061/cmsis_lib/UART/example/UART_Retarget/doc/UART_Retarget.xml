@@ -1,0 +1,33 @@
+<Example>
+    <Name>
+       UART_Retarget
+    </Name>
+    <Description>
+        This example show how to retarget printf function with uart module.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> UART <Tags>
+
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\UART\example\UART_Retarget\src\main.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\UART\example\UART_Retarget\src\UART_Retarget.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\UART\example\UART_Retarget\src\printf.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\UART\example\UART_Retarget\src\tmpm061_uart_int.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\UART\example\UART_Retarget\src\tmpm061_uart_int.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\UART\example\UART_Retarget\src\uart.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\UART\example\UART_Retarget\src\uart.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

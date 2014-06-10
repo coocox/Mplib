@@ -1,0 +1,34 @@
+<Example>
+    <Name>
+        TMR16A_TIMER
+    </Name>
+    <Description>
+        This example show how to configure TMR16A module.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TMR16A
+    </Tags>
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\TMR16A\example\TMR16A_TIMER\src\main.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\TMR16A\example\TMR16A_TIMER\src\TMR16A_TIMER.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\TMR16A\example\TMR16A_TIMER\src\tmpm061_tmr16a_int.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\TMR16A\example\TMR16A_TIMER\src\tmpm061_tmr16a_int.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\led.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\Utilities\TMPM061-EVAL\led.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

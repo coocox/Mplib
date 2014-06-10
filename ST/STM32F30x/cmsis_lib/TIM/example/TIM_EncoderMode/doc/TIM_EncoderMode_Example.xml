@@ -1,0 +1,33 @@
+<Example>
+    <Name>
+        TIM_EncoderMode_Example
+    </Name>
+    <Description>
+   This example shows how to configure the TIM peripheral to interface with a encoder sensor.
+The TIM3 is configured in encoder mode1: Counter counts up/down on TI2 rising edge 
+depending on TI1 level 
+
+The TIM3 Autoreload value is set to 399, so the encoder round is 400 TIM counter clock. 
+An update interrupt is generated each time the TIM counter reach the Autoreload value, 
+in this example 400 TIM counter clock.			
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_EncoderMode
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_EncoderMode\src\TIM_EncoderMode_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

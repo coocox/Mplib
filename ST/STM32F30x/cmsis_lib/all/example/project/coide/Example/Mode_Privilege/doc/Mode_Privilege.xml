@@ -1,0 +1,43 @@
+<Example>
+    <Name>
+        Mode_Privilege
+    </Name>
+    <Description>
+  
+This example shows how to modify CortexM4 Thread mode privilege access and stack.
+CortexM4 Thread mode is entered on Reset, and can be entered as a result of an
+exception return.  
+
+The associated program is used to:
+
+1. Switch the Thread mode stack from Main stack to Process stack
+
+2. Switch the Thread mode from Privileged to Unprivileged
+
+3. Switch the Thread mode from Unprivileged back to Privileged
+
+To monitor the stack used and the privileged or unprivileged access level of code
+in Thread mode, a set of variables is available within the program. It is also
+possible to use the 'Cortex register' window of the debugger.
+ 
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        Mode_Privilege
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\CortexM4\example\Mode_Privilege\src\Mode_Privilege.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC</Dependency>
+    </Dependencys>
+</Example>
+
+

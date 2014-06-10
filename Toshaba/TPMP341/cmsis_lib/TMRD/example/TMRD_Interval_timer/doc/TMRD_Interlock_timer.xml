@@ -1,0 +1,32 @@
+<Example>
+    <Name>
+       TMRD_Interval_timer
+    </Name>
+    <Description>
+        This example show how to configure TMRD into timer mode.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags> TMRD <Tags>
+
+    <EVKit>
+        TMPM341-SK Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\TMRD\example\TMRD_Interval_timer\src\TMRD_Interval_TImer.c
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\TMRD\example\TMRD_Interval_timer\src\tmpm341_tmrd_int.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\TMRD\example\TMRD_Interval_timer\src\tmpm341_tmrd_int.c
+
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\Utilities\TMPM341-SK\led.h
+            $REPO_ROOT$\TMPM34x\TMPM341\cmsis_lib\Utilities\TMPM341-SK\led.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+

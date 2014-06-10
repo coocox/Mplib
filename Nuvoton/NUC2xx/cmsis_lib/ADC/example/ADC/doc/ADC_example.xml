@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        ADC_example
+    </Name>
+    <Description>
+        This example configures ADC , then get the ADC value.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ADC
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\ADC\example\ADC\src\ADC_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

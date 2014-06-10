@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>STM32F050K6</Name>
+	<Vendor>ST</Vendor>
+	<Family>STM32F05x</Family>
+	<Arch>Cortex-M0</Arch>
+	<Description>ST's STM32F050K6 operates at a maximum speed of 48MHz and features 32 Kbytes of Flash and 4 Kbytes of RAM.</Description>
+	<Parameters>
+		<Parameter>CRC calculation unit</Parameter>
+        <Parameter>Reset and supply managementVoltage range: 2.0 V to 3.6 VPower-on/Power-down reset (POR/PDR)Programmable voltage detector (PVD)Low power modes: Sleep, Stop and StandbyVBATsupply for RTC and backup registers</Parameter>
+        <Parameter>Clock management4 to 32 MHz crystal oscillator32 kHz oscillator for RTC with calibrationInternal 8 MHz RC with x6 PLL optionInternal 40 kHz RC oscillato</Parameter>
+        <Parameter>Up to 39 fast I/OsAll mappable on external interrupt vectorsUp to 25 I/Os with 5 V tolerant capability</Parameter>
+        <Parameter>5-channel DMA controller</Parameter>
+        <Parameter>1 ¡Á 12-bit, 1.0 ¦Ìs ADC (up to 10 channels)Conversion range: 0 to 3.6VSeparate analog supply from 2.4 up to 3.6 V</Parameter>
+        <Parameter>Up to 9 timers1 x 16-bit 7-channel advanced-control timer for 6 channels PWM output, with deadtime generation and emergency stop1 x 32-bit and 1 x 16-bit timer, with up to 4 IC/OC, usable for IR control decoding1 x 16-bit timer, with 2 IC/OC, 1 OCN, deadtime generation and emergency stop1 x 16-bit timer, with IC/OC and OCN, deadtime generation, emergency stop and modulator gate for IR control1 x 16-bit timer with 1 IC/OCIndependent and system watchdog timersSysTick timer: 24-bit downcounte</Parameter>
+        <Parameter>Calendar RTC with alarm and periodic wakeup from Stop/Standby</Parameter>
+        <Parameter>Communication interfaces1 x I2C interface; supporting Fast Mode Plus (1 Mbit/s) with 20 mA current sink, SMBus/PMBus, and wakeup from STOP1 x USART supporting master synchronous SPI and modem control; one with ISO7816 interface, LIN, IrDA capability auto baud rate detection and wakeup feature1 x SPI (18 Mbit/s) with 4 to 16 programmable bit frames, with I2S interface multiplexed</Parameter>
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1447/PF253344</Link>
+		<Link name="Chips Datasheet">http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00065136.pdf</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\stm32f05x.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x08000000" size="0x00008000" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 32K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00001000" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 4K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\STM32F05xx_32.elf</loader>
+	</FlashLoader>
+</Device>

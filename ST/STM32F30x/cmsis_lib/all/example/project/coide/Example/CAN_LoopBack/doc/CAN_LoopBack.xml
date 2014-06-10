@@ -1,0 +1,38 @@
+<Example>
+    <Name>
+        CAN_LoopBack
+    </Name>
+    <Description>
+  This example provides a description of how to set a communication with the CAN
+in loopback mode.
+
+The CAN cell first performs a transmission and a reception of a standard data
+frame by polling at 125 Kbps. The received frame is checked and some LEDs light
+up to indicate whether the communication was successful. Then, an extended data
+frame is transmitted at 500 Kbps. Reception is done in the interrupt handler
+when the message becomes pending in the FIFO. Finally, the LEDs indicate if both
+transmission and reception have been successful.
+ - STM32303C-EVAL Set-up 
+    - Use LED1, LED2, LED3 and LED4 connected respectively to PE.08, PE.09, PE.10
+      and PE.11 pins
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        CAN_LoopBack
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\CAN\example\CAN_LoopBack\src\CAN_LoopBack.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

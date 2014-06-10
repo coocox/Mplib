@@ -1,0 +1,15 @@
+<Example>
+	<Name>I2C_Example</Name>
+	<Description>This example provides a basic example of how to use I2C.</Description>
+	<Version>1.2.0</Version>
+	<Tags>I2C</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\I2C\example\I2C\src\I2C_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\I2C\example\I2C\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\I2C\example\I2C\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,I2C</Dependency>
+	</Dependencys>
+</Example>

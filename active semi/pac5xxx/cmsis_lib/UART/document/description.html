@@ -1,0 +1,16 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>UART</h1>
+<h2>Overview</h2>
+<ul>
+    <li>The Universal Asynchronous Receiver/Transmitter (UART) performs a serial-to-parallel
+conversion on data received from the peripheral, and a parallel-to-serial conversion on data
+transmitted from the CPU. 
+The UART0 and UART1 are built-in with a 16-byte transmitter FIFO (TX_FIFO) and a 14-byte
+receiver FIFO (RX_FIFO) that reduces the number of interrupts presented to the CPU. The CPU
+can read the status of the UART at any time during the operation. The reported status information
+includes the type and condition of the transfer operations being performed by the UART, as well
+as 4 error conditions (parity error, framing error, break interrupt and buffer error) probably occur
+while receiving data. The UART includes a programmable baud rate generator that is capable of
+dividing clock input by divisors to produce the serial clock that transmitter and receiver need.</li>
+</ul>

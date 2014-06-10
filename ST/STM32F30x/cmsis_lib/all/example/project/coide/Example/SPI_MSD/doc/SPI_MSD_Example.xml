@@ -1,0 +1,33 @@
+<Example>
+    <Name>
+        SPI_MSD_Example
+    </Name>
+    <Description>
+ This example provides a basic example of how to use the SPI firmware library
+and an associate SPI SDcard driver to communicate with an SDcard available on The eval board.
+The first step consist in filling the SPI Tx buffer. Then this last one is written 
+on the micro sd cards. A comparison between the Buffer transmitted (Tx_Buffer )and 
+the received one (Rx_Buffer) is done and LED1 is turned on in caseof success otherwise 
+LED2 is turned on.
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        SPI_MSD
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\SPI\example\SPI_MSD\src\SPI_MSD_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,SPI,GPIO,CRC</Dependency>
+    </Dependencys>
+</Example>
+
+

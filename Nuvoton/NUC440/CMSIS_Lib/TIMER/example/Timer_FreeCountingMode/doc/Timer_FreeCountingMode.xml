@@ -1,0 +1,28 @@
+<Example>
+    <Name>
+        Timer_FreeCountingMode
+    </Name>
+    <Description>
+        This sample code demonstrate timer free counting mode.
+		Please connect input source with Timer 0 capture pin T0EX (P3.2).
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TIMER
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\TIMER\example\Timer_FreeCountingMode\src\Timer_FreeCountingMode.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf,C library</Dependency>
+    </Dependencys>
+</Example>
+
+

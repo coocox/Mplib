@@ -1,0 +1,18 @@
+<Example>
+	<Name>LCD_Example</Name>
+	<Description>This example provides a basic example of how to use LCD on STM32L DISCOVERY board.</Description>
+	<Version>1.2.0</Version>
+	<Tags>LCD</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\LCD\example\LCD\src\LCD_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\LCD\example\LCD\src\discover_board.h</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\LCD\example\LCD\src\stm32l_discovery_lcd.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\LCD\example\LCD\src\stm32l_discovery_lcd.h</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\LCD\example\LCD\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\LCD\example\LCD\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,LCD</Dependency>
+	</Dependencys>
+</Example>

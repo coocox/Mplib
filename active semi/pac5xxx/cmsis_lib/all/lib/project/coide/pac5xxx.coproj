@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.5" name="pac5xxx">
+  <Target name="pac5xxx" isCurrent="1">
+    <Device manufacturerId="1" manufacturerName="ARM" chipId="1" chipName="M0" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="M0"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Use nano C Library"/>
+        <Option name="UserEditLinker" value=""/>
+        <LinkedLibraries>
+          <Libset dir="..\..\..\..\lib\src\" libs="coocox"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00008000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00001000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="d:/coocox/coide/configuration/programdata/pac5xxx/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="pac5xxx"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ColinkEx"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V456c\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./pac5xxx.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="31" name="Retarget printf" path="" type="2"/>
+    <Component id="46" name="M0 Cmsis Core" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_uart.h" path="../../../../lib/drivers_inc/pac5xxx_driver_uart.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_rtc.h" path="../../../../lib/drivers_inc/pac5xxx_driver_rtc.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_ADC.h" path="../../../../lib/peripheral_inc/pac5xxx_ADC.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="cmsis_lib/peripheral_inc" path="" type="2"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_tile_SystemManager.h" path="../../../../lib/peripheral_inc/pac5xxx_tile_SystemManager.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_UART.h" path="../../../../lib/peripheral_inc/pac5xxx_UART.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_spi.h" path="../../../../lib/drivers_inc/pac5xxx_driver_spi.h" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="cmsis_lib/src/libCooCox.a" path="../../../../lib/src/libCooCox.a" type="1"/>
+    <File name="cmsis_core" path="" type="2"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_tile_SignalManager.h" path="../../../../lib/peripheral_inc/pac5xxx_tile_SignalManager.h" type="1"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="cmsis_core/core_cm0.h" path="../../../../lib/cmsis_core/core_cm0.h" type="1"/>
+    <File name="example" path="" type="2"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_Memory.h" path="../../../../lib/peripheral_inc/pac5xxx_Memory.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_adc.h" path="../../../../lib/drivers_inc/pac5xxx_driver_adc.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_timer.h" path="../../../../lib/drivers_inc/pac5xxx_driver_timer.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_config.h" path="../../../../lib/drivers_inc/pac5xxx_driver_config.h" type="1"/>
+    <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_tile.h" path="../../../../lib/drivers_inc/pac5xxx_driver_tile.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_SYS.h" path="../../../../lib/peripheral_inc/pac5xxx_SYS.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_WDT.h" path="../../../../lib/peripheral_inc/pac5xxx_WDT.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_i2c.h" path="../../../../lib/drivers_inc/pac5xxx_driver_i2c.h" type="1"/>
+    <File name="cmsis_core/core_cm0.c" path="../../../../lib/cmsis_core/core_cm0.c" type="1"/>
+    <File name="cmsis_lib/src" path="" type="2"/>
+    <File name="example/UART_Example.c" path="example/UART_Example.c" type="1"/>
+    <File name="cmsis_lib/drivers_inc" path="" type="2"/>
+    <File name="stdio" path="" type="2"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_SocBridge.h" path="../../../../lib/peripheral_inc/pac5xxx_SocBridge.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_arm.h" path="../../../../lib/drivers_inc/pac5xxx_driver_arm.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_SPI.h" path="../../../../lib/peripheral_inc/pac5xxx_SPI.h" type="1"/>
+    <File name="cmsis_boot/system_pac5xxx.h" path="../../../../lib/cmsis_boot/system_pac5xxx.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_gpio.h" path="../../../../lib/drivers_inc/pac5xxx_driver_gpio.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_tile_PowerManager.h" path="../../../../lib/peripheral_inc/pac5xxx_tile_PowerManager.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_GPIO.h" path="../../../../lib/peripheral_inc/pac5xxx_GPIO.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_watchdog.h" path="../../../../lib/drivers_inc/pac5xxx_driver_watchdog.h" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_socbridge.h" path="../../../../lib/drivers_inc/pac5xxx_driver_socbridge.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_tile_DriverManager.h" path="../../../../lib/peripheral_inc/pac5xxx_tile_DriverManager.h" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx.h" path="../../../../lib/peripheral_inc/pac5xxx.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_RTC.h" path="../../../../lib/peripheral_inc/pac5xxx_RTC.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_Timers.h" path="../../../../lib/peripheral_inc/pac5xxx_Timers.h" type="1"/>
+    <File name="syscalls" path="" type="2"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_system.h" path="../../../../lib/drivers_inc/pac5xxx_driver_system.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_pac5xxx_CooCox.c" path="../../../../lib/cmsis_boot/startup/startup_pac5xxx_CooCox.c" type="1"/>
+    <File name="cmsis_boot/system_pac5xxx.c" path="../../../../lib/cmsis_boot/system_pac5xxx.c" type="1"/>
+    <File name="cmsis_lib/drivers_inc/pac5xxx_driver_memory.h" path="../../../../lib/drivers_inc/pac5xxx_driver_memory.h" type="1"/>
+    <File name="cmsis_lib/peripheral_inc/pac5xxx_I2C.h" path="../../../../lib/peripheral_inc/pac5xxx_I2C.h" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
+  </Files>
+</Project>

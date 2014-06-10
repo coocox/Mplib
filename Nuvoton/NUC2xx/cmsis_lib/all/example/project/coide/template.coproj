@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G" name="template">
+  <Target name="template" isCurrent="1">
+    <Device manufacturerId="8" manufacturerName="Nuvoton" chipId="443" chipName="NUC123LC2AN1" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+          <Includepath path="../../cmsis_lib/lib/include"/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="NUC123LC2AN1"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00008000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00003000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="d:/coocox/coide1.7.5_nuc/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="template"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="Nu-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V452\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="NUC1xx_32.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="Example/I2C_Example" path="" type="2"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="Example/I2S_Example" path="" type="2"/>
+    <File name="cmsis_boot/startup/startup_NUC123.c" path="../../../../lib/cmsis_boot/startup/coide/startup_NUC123.c" type="1"/>
+    <File name="Example/GPIO_LED" path="" type="2"/>
+    <File name="Example/GPIO_LED/Example_LED.c" path="../../../../GPIO/example/GPIO_LED/src/Example_LED.c" type="1"/>
+    <File name="Example/USB_Example/VCOMSys.c" path="../../../../USB/example/USB/src/VCOMSys.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="cmsis_lib/include/PDMA.h" path="../../../../lib/inc/PDMA.h" type="1"/>
+    <File name="cmsis_lib/include/I2S.h" path="../../../../lib/inc/I2S.h" type="1"/>
+    <File name="Example/FMC_Example/FMC_Example.c" path="../../../../FMC/example/FMC/src/FMC_example.c" type="1"/>
+    <File name="cmsis_core" path="" type="2"/>
+    <File name="Example/ADC_Example" path="" type="2"/>
+    <File name="Example/SPI_Example" path="" type="2"/>
+    <File name="cmsis_lib/include/SPI.h" path="../../../../lib/inc/SPI.h" type="1"/>
+    <File name="cmsis_lib/source/DrvTimer.c" path="../../../../lib/src/DrvTimer.c" type="1"/>
+    <File name="cmsis_lib/include/PS2.h" path="../../../../lib/inc/PS2.h" type="1"/>
+    <File name="cmsis_boot/NUC123Series.h" path="../../../../lib/cmsis_boot/NUC123Series.h" type="1"/>
+    <File name="cmsis_lib/source/DrvSYS.c" path="../../../../lib/src/DrvSYS.c" type="1"/>
+    <File name="cmsis_lib/source/DrvUSB.c" path="../../../../lib/src/DrvUSB.c" type="1"/>
+    <File name="Example/USB_Example" path="" type="2"/>
+    <File name="cmsis_lib/source/DrvPWM.c" path="../../../../lib/src/DrvPWM.c" type="1"/>
+    <File name="Example/CRC_Example" path="" type="2"/>
+    <File name="cmsis_core/core_cm0.h" path="../../../../lib/cmsis_core/core_cm0.h" type="1"/>
+    <File name="cmsis_lib/source/DrvUART.c" path="../../../../lib/src/DrvUART.c" type="1"/>
+    <File name="Example/I2C_Example/I2C_MASTER.c" path="../../../../I2C/example/I2C/src/I2C_MASTER.c" type="1"/>
+    <File name="Example/PDMA_Example" path="" type="2"/>
+    <File name="cmsis_lib/source" path="" type="2"/>
+    <File name="Example/UART_Example/UART_Example.c" path="../../../../UART/example/UART/src/UART_example.c" type="1"/>
+    <File name="cmsis_lib/source/DrvSPI.c" path="../../../../lib/src/DrvSPI.c" type="1"/>
+    <File name="cmsis_lib/source/DrvI2S.c" path="../../../../lib/src/DrvI2S.c" type="1"/>
+    <File name="cmsis_lib/include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
+    <File name="cmsis_lib/include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
+    <File name="Example/USB_Example/VCOMSys.h" path="../../../../USB/example/USB/src/VCOMSys.h" type="1"/>
+    <File name="cmsis_lib/include/WWDT.h" path="../../../../lib/inc/WWDT.h" type="1"/>
+    <File name="cmsis_lib/source/DrvPDMA.c" path="../../../../lib/src/DrvPDMA.c" type="1"/>
+    <File name="Example/USB_Example/Smpl_VCOM.c" path="../../../../USB/example/USB/src/Smpl_VCOM.c" type="1"/>
+    <File name="cmsis_lib/include/FMC.h" path="../../../../lib/inc/FMC.h" type="1"/>
+    <File name="Example/PWM_Example/PWM_Example.c" path="../../../../PWM/example/PWM/src/PWM_example.c" type="1"/>
+    <File name="Example/PS2_Example/PS2_Example.c" path="../../../../PS2/example/PS2/src/PS2_example.c" type="1"/>
+    <File name="cmsis_lib/source/DrvFMC.c" path="../../../../lib/src/DrvFMC.c" type="1"/>
+    <File name="cmsis_core/core_cm0.c" path="../../../../lib/cmsis_core/core_cm0.c" type="1"/>
+    <File name="cmsis_lib/include/ADC.h" path="../../../../lib/inc/ADC.h" type="1"/>
+    <File name="cmsis_lib/include/PWM.h" path="../../../../lib/inc/PWM.h" type="1"/>
+    <File name="cmsis_lib/source/DrvI2C.c" path="../../../../lib/src/DrvI2C.c" type="1"/>
+    <File name="Example/I2S_Example/hello.h" path="../../../../I2S/example/I2S/src/hello.h" type="1"/>
+    <File name="Example/CRC_Example/CRC_Example.c" path="../../../../CRC/example/CRC/src/CRC_Example.c" type="1"/>
+    <File name="cmsis_lib/include/GPIO.h" path="../../../../lib/inc/GPIO.h" type="1"/>
+    <File name="cmsis_lib/include/DrvUSB.h" path="../../../../lib/inc/DrvUSB.h" type="1"/>
+    <File name="cmsis_lib/include/TIMER.h" path="../../../../lib/inc/TIMER.h" type="1"/>
+    <File name="Example/PS2_Example" path="" type="2"/>
+    <File name="cmsis_boot/system_NUC123Series.c" path="../../../../lib/cmsis_boot/system_NUC123Series.c" type="1"/>
+    <File name="cmsis_lib/include/WDT.h" path="../../../../lib/inc/WDT.h" type="1"/>
+    <File name="Example/ADC_Example/ADC_example.c" path="../../../../ADC/example/ADC/src/ADC_example.c" type="1"/>
+    <File name="cmsis_lib/include/SYS.h" path="../../../../lib/inc/SYS.h" type="1"/>
+    <File name="cmsis_lib/source/DrvADC.c" path="../../../../lib/src/DrvADC.c" type="1"/>
+    <File name="Example/TIMER_Example/TIMER_Example.c" path="../../../../TIMER/example/TIMER/src/TIMER_example.c" type="1"/>
+    <File name="Example" path="" type="2"/>
+    <File name="cmsis_lib" path="" type="2"/>
+    <File name="cmsis_boot/system_NUC123Series.h" path="../../../../lib/cmsis_boot/system_NUC123Series.h" type="1"/>
+    <File name="Example/TIMER_Example" path="" type="2"/>
+    <File name="Example/I2S_Example/I2S_Example.c" path="../../../../I2S/example/I2S/src/I2S_example.c" type="1"/>
+    <File name="Example/PDMA_Example/ADC_PDMA_Example.c" path="../../../../PDMA/example/PDMA/src/ADC_PDMA_Example.c" type="1"/>
+    <File name="cmsis_lib/include/CRC.h" path="../../../../lib/inc/CRC.h" type="1"/>
+    <File name="cmsis_lib/include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
+    <File name="cmsis_lib/include/CLOCK.h" path="../../../../lib/inc/CLOCK.h" type="1"/>
+    <File name="Example/FMC_Example" path="" type="2"/>
+    <File name="cmsis_lib/source/DrvCRC.c" path="../../../../lib/src/DrvCRC.c" type="1"/>
+    <File name="Example/PWM_Example" path="" type="2"/>
+    <File name="cmsis_lib/include" path="" type="2"/>
+    <File name="Example/SPI_Example/SPI_Example.c" path="../../../../SPI/example/SPI/src/SPI_example.c" type="1"/>
+    <File name="Example/UART_Example" path="" type="2"/>
+    <File name="main.c" path="../src/main.c" type="1"/>
+  </Files>
+</Project>

@@ -1,0 +1,47 @@
+<Example>
+    <Name>
+        PWR_Standby_Example
+    </Name>
+    <Description>
+   This example shows how to enter the system to STANDBY mode and wake-up from this
+mode using RTC Alarm.
+
+In the associated software, the system clock is set to 72 MHz, the SysTick is programmed
+to generate an interrupt each 250 ms. In the SysTick interrupt handler, the LED3 is
+toggled, this is used to indicate whether the MCU is in STANDBY or RUN mode.
+
+When a falling edge is detected on the PE6(pressing on key button), the RTC is 
+configured to generate an Alarm event in 3 seconds then the system enters STANDBY 
+mode causing the LED3 to stop toggling. 
+An external RESET will wake-up the system from STANDBY. If within 3 seconds an 
+external RESET is not generated, the RTC Alarm will wake-up the system. 
+
+After wake-up from STANDBY mode, program execution restarts in the same way as after
+a RESET, the LED3 is toggling again,the RTC configuration(clock source, enable, prescaler,...) 
+is kept.
+As result there is no need to configure the RTC.
+
+Led LED3 is used to monitor the system state as following:
+ - LED3 toggling: system in RUN mode
+ - LED3 off : system in STANDBY mode
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        PWR_Standby
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\PWR\example\PWR_Standby\src\PWR_Standby_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,RTC</Dependency>
+    </Dependencys>
+</Example>
+
+

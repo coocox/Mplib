@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        SPI_SlaveMode
+    </Name>
+    <Description>
+        Configure SPI1 as a slave.SPI controller will enable FIFO mode and transfer TEST_COUNT data to a off-chip master device.
+		In the meanwhile the SPI controller will receive TEST_COUNT data from the off-chip master device.
+		After the transfer is done, the TEST_COUNT received data will be printed out.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SPI
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\SPI\example\SPI_SlaveMode\src\SPI_SlaveMode.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

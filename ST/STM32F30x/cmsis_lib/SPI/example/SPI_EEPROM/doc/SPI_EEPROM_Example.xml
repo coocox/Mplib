@@ -1,0 +1,49 @@
+<Example>
+    <Name>
+        SPI_EEPROM_Example
+    </Name>
+    <Description>
+   This firmware provides a basic example of how to use the SPI firmware library and
+an associate SPI EEPROM driver to communicate with an SPI EEPROM device (here the
+example is interfacing with M95M01 EEPROM)
+
+SPI peripheral is configured in Master during write and read operations from SPI 
+EEPROM. 
+
+The peripheral used is SPI2 but can be configured by modifying the defines values
+in stm32303c_eval.h file.
+
+First, the content of Tx1Buffer is written to the sEE_WRITE_ADDRESS1 and the
+written data are read. The written and the read buffers data are then compared.
+Following the read operation, the program waits that the EEPROM reverts to its 
+Standby state. A second write operation is, then, performed and this time, Tx2Buffer
+is written to sEE_WRITE_ADDRESS2, which represents the address just after the last 
+written one in the first write. After completion of the second write operation, the 
+written data are read. The contents of the written and the read buffers are compared.
+
+This example provides the possibility to use the STM32303C-EVAL LCD screen for
+messages display (transfer status: Ongoing, PASSED, FAILED).
+To enable this option uncomment the define ENABLE_LCD_MSG_DISPLAY in the main.c
+file.
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        SPI_EEPROM
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\SPI\example\SPI_EEPROM\src\SPI_EEPROM_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,SPI,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,50 @@
+<Example>
+    <Name>
+        TIM_DMABurst_Example
+    </Name>
+    <Description>
+   This example shows how to update the TIM1 channel1 period and the duty cycle 
+using the TIM DMA burst feature.
+
+Every update DMA request, the DMA will do 3 transfers of half words into Timer 
+registers beginning from ARR register.
+On the DMA update request, 0x0FFF will be transferred into ARR, 0x0000 
+will be transferred into RCR, 0x0555 will be transferred into CCR1. 
+
+The TIM1CLK frequency is set to SystemCoreClock (Hz), to get TIM1 counter
+clock at 36 MHz the Prescaler is computed as following:
+   - Prescaler = (TIM1CLK / TIM1 counter clock) - 1
+
+SystemCoreClock is set to 72 MHz.
+
+The TIM1 period is 8.79 KHz: TIM1 Frequency = TIM1 counter clock/(ARR + 1)
+                                           = 36 MHz / 4096 = 8.79 KHz
+
+The TIM1 CCR1 register value is equal to 0x555, so the TIM1 Channel 1 generates a 
+PWM signal with a frequency equal to 8.79 KHz and a duty cycle equal to 33.33%:
+TIM1 Channel1 duty cycle = (TIM1_CCR1/ TIM1_ARR + 1)* 100 = 33.33%
+
+The PWM waveform can be displayed using an oscilloscope.
+- STM32303C-EVAL Set-up
+    - Connect TIM1 CH1 (PA.08) to an oscilloscope to monitor the waveforms.		
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_DMABurst
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_DMABurst\src\TIM_DMABurst_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,DMA</Dependency>
+    </Dependencys>
+</Example>
+
+

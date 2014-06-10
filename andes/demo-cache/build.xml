@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="postbuild" name="test">
+	<property name="project.name" value="aaaa"/>
+	<property name="project.path" value="D:/CooCox/CoIDE_an/workspace/aaaa"/>
+	<property name="output.name" value="aaaa"/>
+	<property name="output.folder" value="D:/CooCox/CoIDE_an/workspace/aaaa"/>
+	<property name="output.path" value="${output.folder}/${output.name}"/>
+	<property name="project.debug" value="${output.path}/Debug"/>
+	<property name="project.obj" value="${output.path}/Debug/obj"/>
+	<property name="project.bin" value="${output.path}/Debug/bin"/>
+
+	<!-- associate current path to the link file path-->
+	<dirname file="D:/CooCox/CoIDE_an/workspace/aaaa/nds32.ld" property="linkdir"/>
+
+	<target depends="compile" name="postbuild">
+		<exec executable="cmd">
+			<arg line="/C ${gcc.home}\nds32le-elf-nm -n -l -C &quot;${project.bin}\${project.name}.adx&quot;  &gt; &quot;${project.bin}\${project.name}_symbol.txt&quot;"/>
+		</exec>
+		<exec executable="cmd">
+		   <arg line="/C ${gcc.home}\nds32le-elf-readelf -a &quot;${project.bin}\${project.name}.adx&quot; &gt; &quot;${project.bin}\${project.name}_readelf.txt&quot; "/>
+	    </exec>
+		<exec executable="${gcc.home}\nds32le-elf-objcopy.exe">
+	      <arg line="-S -O binary &quot;${project.bin}\${project.name}.adx&quot; &quot;${project.bin}\${project.name}.bin&quot; "/>
+	   </exec>
+	   <exec dir="${project.bin}" executable="${gcc.home}\nds32le-elf-size.exe">
+		   <arg value="${project.name}.adx"/>
+	   </exec>
+	</target>
+
+	<taskdef resource="cpptasks.tasks"/>
+	<target name="compile">
+		<mkdir dir="${project.bin}"/>
+		<mkdir dir="${project.obj}"/>
+		<cc debug="true" objdir="${project.obj}" outfile="${project.bin}/${project.name}.adx" outtype="executable" subsystem="console">
+			<!-- compile all the c source file in the project -->
+			<fileset casesensitive="false" file="D:/CooCox/CoIDE_an/workspace/aaaa/src/init-default.c"/>
+      <fileset casesensitive="false" file="D:/CooCox/CoIDE_an/workspace/aaaa/src/uart.c"/>
+      <fileset casesensitive="false" file="D:/CooCox/CoIDE_an/workspace/aaaa/src/main-cache.c"/>
+      <fileset casesensitive="false" file="D:/CooCox/CoIDE_an/workspace/aaaa/src/interrupt.c"/>
+      <fileset casesensitive="false" file="D:/CooCox/CoIDE_an/workspace/aaaa/src/init-soc.c"/>
+      <fileset casesensitive="false" file="D:/CooCox/CoIDE_an/workspace/aaaa/src/crt0.S"/>
+      <project outfile="${output.path}/${project.name}.adx" overwrite="true" type="xcode"/>
+			<defineset>
+			</defineset>
+      <includepath path="D:/CooCox/CoIDE_an/workspace/aaaa/src"/>
+      <includepath path="D:/CooCox/CoIDE_an/workspace"/>
+      <includepath path="D:/CooCox/CoIDE_an/workspace/aaaa"/>
+      <compilerarg value="-DREMAP"/>
+      <compilerarg value="-g3"/>
+      <compilerarg value="-Wall"/>
+      <compilerarg value="-c"/>
+      <compilerarg value="-fmessage-length=0"/>
+      <compilerarg value="-MMD"/>
+      <compilerarg value="-MP"/>
+      <compilerarg value="-MF"/>
+      <compilerarg value="-O0"/>
+      <linkerarg value="-nostartfiles"/>
+      <linkerarg value="-static"/>
+      <linkerarg value="-O0"/>
+      <linkerarg value="-TD:/CooCox/CoIDE_an/workspace/aaaa/nds32.ld"/>
+		</cc>
+	</target>
+
+	<target name="clean">
+		<delete dir="${project.bin}"/>
+		<delete dir="${project.obj}"/>
+		<delete dir="${project.debug}"/>
+		<delete dir="${output.path}/${project.name}.adx.xcodeproj"/>
+	</target>
+
+	<target depends="clean" name="rebuild">
+		<antcall target="postbuild"/>
+	</target>
+
+</project>

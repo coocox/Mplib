@@ -1,0 +1,41 @@
+<Example>
+    <Name>
+        USART_HyperTerminalInterrupt
+    </Name>
+    <Description>
+    This example provides a description of how to use the EVAL_COM1 when using the
+STM32303C-EVAL Transmit and Receive interrupts to communicate with the hyperterminal.
+
+First, the EVAL_COM1 sends the TxBuffer to the hyperterminal and still waiting for 
+a string from the hyperterminal that you must enter.The string that you have entered 
+is stored in the RxBuffer array. The receive buffer have a RxBufferSize bytes as 
+maximum (the reception is stopped when this maximum receive value is reached).
+
+The EVAL_COM1 is configured as follow:
+    - BaudRate = 9600 baud  
+    - Word Length = 8 Bits (7 data bit + 1 parity bit)
+    - Two Stop Bit
+    - Odd parity
+    - Hardware flow control disabled (RTS and CTS signals)
+    - Receive and transmit enabled
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        USART_HyperTerminalInterrupt
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\USART\example\USART_HyperTerminalInterrupt\src\USART_HyperTerminalInterrupt.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

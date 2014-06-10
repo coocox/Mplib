@@ -1,0 +1,46 @@
+<Example>
+    <Name>
+        PWR_Stop_Example
+    </Name>
+    <Description>
+   This example shows how to enter the system to STOP mode and wake-up using EXTI
+Line interrupts. The EXTI Line sources are PE.6 and RTC Alarm.
+
+The EXTI line6 is configured to generate interrupt on falling edge.
+The EXTI line17(RTC Alarm) is configured to generate interrupt on rising edge.
+
+The system enters and exits STOP mode as following:
+After system start-up, the RTC is configured to generate an Alarm event then the 
+system enters STOP mode. To wake-up from STOP mode you have to apply a falling
+edge on EXTI line0, otherwise the  RTC Alarm will wake-up the system within 5 
+seconds. After exit from STOP, the system clock is reconfigured to its previous 
+state (as HSE and PLL are disabled in STOP mode).
+Then, after a delay the system will enter again in STOP mode and exit in the way
+described above. This behavior is repeated in an infinite loop.
+
+Three leds LD2, LD3 and LD4 are used to monitor the system state as following:
+ - LD3 Toggling: system in RUN mode
+ - All LED off: system in STOP mode
+ - LD2 is on if EXTI Line6 is used to exit from STOP
+ - LD4 is on if EXTI line17(RTC Alarm) is used to exit from STOP 
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        PWR_Stop
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\PWR\example\PWR_Stop\src\PWR_Stop_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,NVIC,EXTI</Dependency>
+    </Dependencys>
+</Example>
+
+

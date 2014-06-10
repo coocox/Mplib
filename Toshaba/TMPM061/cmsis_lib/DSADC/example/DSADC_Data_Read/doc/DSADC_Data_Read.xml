@@ -1,0 +1,35 @@
+<Example>
+    <Name>
+        DSADC_Data_Read
+    </Name>
+    <Description>
+        This example show how to use DSADC to measure analog signal.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        DSADC
+    </Tags>
+    <EVKit>
+        PM-EBD007-045A Evaluation BOARD for TMPM061FWFG
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\DSADC\example\DSADC_Data_Read\src\DSADC_Data_Read.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\DSADC\example\DSADC_Data_Read\src\main.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\DSADC\example\DSADC_Data_Read\src\printf.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\DSADC\example\DSADC_Data_Read\src\tmpm061_uart_int.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\DSADC\example\DSADC_Data_Read\src\tmpm061_uart_int.c
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\DSADC\example\DSADC_Data_Read\src\uart.h
+            $REPO_ROOT$\TMPM06x\TMPM061\cmsis_lib\DSADC\example\DSADC_Data_Read\src\uart.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>
+
+        </Dependency>
+    </Dependencys>
+</Example>
+
+

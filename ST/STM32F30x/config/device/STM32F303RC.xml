@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Device>
+	<Name>STM32F303RC</Name>
+	<Vendor>ST</Vendor>
+	<Family>STM32F3X</Family>
+	<Arch>Cortex-M4</Arch>
+	<Description>ST's STM32F303CB operates at a maximum speed of 72MHz and features 256 Kbytes of Flash and 48 Kbytes of Internal RAM.</Description>
+	<Parameters>
+			<Parameter>Core: ARMCortex-M4 32-bit CPU with FPU (72 MHz max), single-cycle multiplication and HW division, 90 DMIPS (from CCM) /1.25 DMIPS/MHz (Dhrystone 2.1) performance at 0 wait state memory access, DSP instruction and MPU (memory protection unit)</Parameter>
+			<Parameter>Memories:128 to 256 Kbytes of Flash memory;Up to 32 Kbytes of SRAM, with HW parity check implemented on the first 16 Kbytes,Routine booster: 8 Kbytes of SRAM on instruction and data bus, with HW parity check (CCM).</Parameter>
+			<Parameter>Up to 87 fast I/Os.All mappable on external interrupt vectors.Several 5 V-tolerant</Parameter>
+			<Parameter>CRC calculation unit</Parameter>
+			<Parameter>12-channel DMA controller</Parameter>
+			<Parameter>Serial wire debug, Cortex-M4 with FPU ETM, JTAG</Parameter>
+			<Parameter>Four  operational amplifiers that can be used in PGA mode, all terminals accessible with analog supply from 2.4 to 3.6 V</Parameter>
+			<Parameter>9x16-bit  timers with Input Capture, Output Compare and PWM functions</Parameter>
+			<Parameter>1x32-bit  timers with Input Capture, Output Compare and PWM functions</Parameter>
+			<Parameter>2xWDT</Parameter>
+			<Parameter>SYSTICK timer: 24-bit downcounter</Parameter>
+			<Parameter>RTC</Parameter>
+			<Parameter>22x12-bit ADC converter</Parameter>
+			<Parameter>2x12-bit DAC converter</Parameter>
+			<Parameter>3xSPI</Parameter>
+			<Parameter>2xI2S</Parameter>
+			<Parameter>2xI2C</Parameter>
+			<Parameter>5xUSART</Parameter>
+			<Parameter>1xUSB2.0 full speed interface</Parameter>
+			<Parameter>1xCAN</Parameter>
+		
+		
+	</Parameters>
+	<ReferenceLinks>
+		<Link name="Chips Page">http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1576/LN1531/PF252052</Link>
+		<Link name="Chips Datasheet">http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00058181.pdf</Link>
+	</ReferenceLinks>
+	
+	
+	<DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\STM32F3.xml</DebugSetting>
+	
+	<Flash>
+		<Block addr="0x08000000" size="0x0003FFFF" read="true" write="false" execute="true" name="Embedded Flash" />	<!-- 256K -->
+	</Flash>
+	
+	<Ram>
+		<Block addr="0x20000000" size="0x00007FFF" read="true" write="true"  execute="true" name="Embedded RAM" />	    <!-- 32K -->
+	</Ram>
+	
+	<FlashLoader>
+		<loader>$TOOLKIT_FLASH_DIR$\STM32F3_256.elf</loader>
+	</FlashLoader>
+</Device>

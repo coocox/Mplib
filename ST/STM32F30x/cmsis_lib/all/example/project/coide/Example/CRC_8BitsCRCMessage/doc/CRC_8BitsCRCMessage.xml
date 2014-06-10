@@ -1,0 +1,29 @@
+<Example>
+    <Name>
+        CRC_8BitsCRCMessage
+    </Name>
+    <Description>
+  This example aims to show how to use the CRC peripheral in order to compute
+32-bit CRC checksum of a message.
+The CRC peripheral is configured to use the 32-bit CRC polynomialX8 + X7 + X5 + X4 + X2+ X +1 with the initialization value is set to 0.The message is declared as an array and labeled "CRCBuffer".Once the CRC value is computed, the computed CRC value is compared to the expectedone. In case of match the green led LD1 is turned on. Otherwise the led LD3 is turned on.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        CRC_8BitsCRCMessage
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\CRC\example\CRC_8BitsCRCMessage\src\CRC_8BitsCRCMessage.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

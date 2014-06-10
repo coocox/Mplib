@@ -1,0 +1,49 @@
+<Example>
+    <Name>
+        IWDG_Reset_Example
+    </Name>
+    <Description>
+     This example shows how to update at regular period the IWDG reload counter and 
+how to simulate a software fault generating an MCU IWDG reset on expiry of a 
+programmed time period.
+
+The IWDG timeout is set to 250 ms (the timeout may varies due to LSI frequency 
+dispersion).
+
+First, the TIM16 timer is configured to measure the LSI frequency as the 
+LSI is internally connected to TIM16 CH1, in order to adjust the IWDG clock.
+
+The LSI measurement using the TIM16 is described below:
+ - Configure the TIM16 to remap internally the TIM16 Channel 1 Input Capture to 
+   the LSI clock output.
+ - Enable the TIM16 Input Capture interrupt: after one cycle of LSI clock, the
+   period value is stored in a variable and compared to the HCLK clock to get
+   its real value. 
+   
+As a result, when the IWDG counter reaches 00h, the IWDG reset occurs.
+If the IWDG reset is generated, after the system resumes from reset, LED1 turns on.
+
+If the EXTI Line event does not occur, the IWDG counter is indefinitely refreshed
+in the main program infinite loop, and there is no IWDG reset.
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        IWDG_Reset
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\IWDG\example\IWDG_Reset\src\IWDG_Reset_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,EXTI,GPIO,TIM</Dependency>
+    </Dependencys>
+</Example>
+
+

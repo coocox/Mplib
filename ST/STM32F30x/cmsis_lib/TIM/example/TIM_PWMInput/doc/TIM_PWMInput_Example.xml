@@ -1,0 +1,45 @@
+<Example>
+    <Name>
+        TIM_PWMInput_Example
+    </Name>
+    <Description>
+        This example shows how to use the TIM peripheral to measure the frequency and 
+duty cycle of an external signal.
+
+The TIMxCLK frequency is set to SystemCoreClock(Hz), the Prescaler is 0 so the 
+counter clock is SystemCoreClock(Hz).
+SystemCoreClock is set to 72 MHz for STM32F30x Devices.
+
+TIM2 is configured in PWM Input Mode: the external signal is connected to 
+TIM2 Channel2 used as input pin.
+To measure the frequency and the duty cycle we use the TIM2 CC2 interrupt request,
+so In the TIM2_IRQHandler routine, the frequency and the duty cycle of the external 
+signal are computed. 
+The "Frequency" variable contains the external signal frequency:
+TIM2 counter clock = SystemCoreClock,
+Frequency = TIM2 counter clock / TIM2_CCR2 in Hz, 
+The "DutyCycle" variable contains the external signal duty cycle:
+DutyCycle = (TIM2_CCR1*100)/(TIM2_CCR2) in %.
+
+The minimum frequency value to measure is 1098 Hz (TIM2 counter clock / CCR MAX).
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_PWMInput
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_Synchronization\src\TIM_Synchronization_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

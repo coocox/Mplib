@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2010 coocox.org
+	
+    This file is part of CooCox Softwares.
+-->
+<Debugger>
+	<Debug>
+		<Arch>Cortex-M4</Arch>
+		
+		<SWD support="true">
+			<ExpectedID>0x0BB11477</ExpectedID>
+		</SWD>
+		<JTAG support="false">	
+		</JTAG>
+		
+		<Reset>
+			<HwReset       support="true" />
+			<SoftSysReset  support="true" select="true" />
+			<SoftVectReset support="true" />
+		</Reset>
+		
+		<SystemResetClkFreq>22000000</SystemResetClkFreq> <!-- OSC22M 22MHZ -->
+	</Debug>
+
+	<!-- 
+		Memory Blocks that can be read/written/executed
+		exclude ram,rom blocks
+		read(true,false)
+		write(true,false)
+		execute(true,false)	
+	 -->
+	<MemMap>
+		<!-- <Block addr="" size="" read="true"   write="true"   execute="false" name="" /> -->
+				
+		<!-- System Controllers Space -->
+		<Block addr="0xE000E010" size="0xF0"   read="true"   write="true"   execute="false" name="SCS" />
+		<Block addr="0xE000E100" size="0xC00"   read="true"   write="true"   execute="false" name="SCS" />
+		<Block addr="0xE000ED00" size="0x90"   read="true"   write="true"   execute="false" name="SCS" />
+		
+		<!-- AHB -->
+		<Block addr="0x40000000" size="0x200" read="true"   write="true"   execute="false"  name="GCR" />
+		<Block addr="0x40000200" size="0x100"  read="true"   write="true"   execute="false"  name="CLK" />
+		<Block addr="0x40000300" size="0x100"  read="true"   write="true"   execute="false"  name="INT" />
+		<Block addr="0x40004000" size="0x1000" read="true"   write="true"   execute="false" name="GPIO" />
+		<Block addr="0x40008000" size="0x1000" read="true"   write="true"   execute="false" name="PDMA" />
+		<Block addr="0x40009000" size="0x1000"  read="true"   write="true"   execute="false" name="UHC" />
+		<Block addr="0x4000C000" size="0x1000"  read="true"   write="true"   execute="false" name="FMC" />
+		<Block addr="0x4000D000" size="0x1000"  read="true"   write="true"   execute="false" name="SDHOST" />
+		<Block addr="0x40010000" size="0x1000"   read="true"   write="true"   execute="false" name="EBI" />
+		<Block addr="0x40019000" size="0x1000"   read="true"   write="true"   execute="false" name="UDC" />
+		<Block addr="0x40030000" size="0x1000"   read="true"   write="true"   execute="false" name="CAP" />
+		<Block addr="0x40031000" size="0x1000"   read="true"   write="true"   execute="false" name="CRC" />
+		<Block addr="0x50008000" size="0x8000"   read="true"   write="true"   execute="false" name="CRYP" />
+		
+		<!-- APB0 -->
+		<Block addr="0x40040000" size="0x1000"   read="true"   write="true"   execute="false" name="WDT" /> 
+		<Block addr="0x400E0000" size="0x1000"   read="true"   write="true"   execute="false" name="PS2" />
+		<Block addr="0x40046000" size="0x1000"   read="true"   write="true"   execute="false" name="OPA" />
+		<Block addr="0x40044000" size="0x1000"    read="true"   write="true"   execute="false" name="EADC" />
+		<Block addr="0x4005C000" size="0x1000"  read="true"   write="true"   execute="false" name="EPWMA" />
+		<Block addr="0x400B0000" size="0x1000"    read="true"   write="true"   execute="false" name="ECAP0" />
+		<Block addr="0x40058000" size="0x1000"   read="true"   write="true"   execute="false" name="PWMA" />
+		<Block addr="0x40070000" size="0x1000"   read="true"   write="true"   execute="false" name="UART0" />
+		<Block addr="0x40072000" size="0x1000"   read="true"   write="true"   execute="false" name="UART2" />
+		<Block addr="0x40074000" size="0x1000"   read="true"   write="true"   execute="false" name="UART4" />
+		<Block addr="0x400B0000" size="0x1000"   read="true"   write="true"   execute="false" name="QEI0" />
+		<Block addr="0x40060000" size="0x1000"   read="true"   write="true"   execute="false" name="SPI0" />
+		<Block addr="0x40062000" size="0x1000"   read="true"   write="true"   execute="false" name="SPI2" />
+		<Block addr="0x40050000" size="0x1000"  read="true"   write="true"   execute="false" name="TMR01" />
+		<Block addr="0x40080000" size="0x1000"  read="true"   write="true"   execute="false"  name="I2C0" />
+		<Block addr="0x40082000" size="0x1000"   read="true"   write="true"   execute="false" name="I2C2" />
+		<Block addr="0x40084000" size="0x1000"   read="true"   write="true"   execute="false" name="I2C4" />
+		<Block addr="0x40090000" size="0x1000"   read="true"   write="true"   execute="false" name="SC0" />
+		<Block addr="0x40092000" size="0x1000"   read="true"   write="true"   execute="false" name="SC2" />
+		<Block addr="0x40094000" size="0x1000"   read="true"   write="true"   execute="false" name="SC4" />
+		<Block addr="0x400A0000" size="0x1000"   read="true"   write="true"   execute="false" name="CAN0" />
+		<Block addr="0x40048000" size="0x1000"   read="true"   write="true"   execute="false" name="I2S0" />
+		
+		<!-- APB1 -->
+		<Block addr="0x40071000" size="0x1000"  read="true"   write="true"   execute="false"  name="UART1" />
+		<Block addr="0x40073000" size="0x1000"  read="true"   write="true"   execute="false"  name="UART3" />
+		<Block addr="0x40075000" size="0x1000"  read="true"   write="true"   execute="false"  name="UART5" />
+		<Block addr="0x400B1000" size="0x1000"   read="true"   write="true"   execute="false" name="EQI1" />
+		<Block addr="0x40061000" size="0x1000"  read="true"   write="true"   execute="false" name="SPI1" />
+		<Block addr="0x40063000" size="0x1000"   read="true"   write="true"   execute="false" name="SPI3" />
+		<Block addr="0x40059000" size="0x1000"   read="true"   write="true"   execute="false" name="PMWB" />
+		<Block addr="0x40051000" size="0x1000"  read="true"   write="true"   execute="false" name="TMR23" />
+		<Block addr="0x40081000" size="0x1000"  read="true"   write="true"   execute="false"  name="I2C1" />
+		<Block addr="0x40083000" size="0x1000"  read="true"   write="true"   execute="false"  name="I2C3" />
+		<Block addr="0x40080000" size="0x1000"  read="true"   write="true"   execute="false"  name="SC1" />
+		<Block addr="0x40093000" size="0x1000"  read="true"   write="true"   execute="false" name="SC3" />
+		<Block addr="0x40095000" size="0x1000"  read="true"   write="true"   execute="false"  name="SC5" />
+		<Block addr="0x400A1000" size="0x1000"  read="true"   write="true"   execute="false"  name="CAN1" />
+		<Block addr="0x40049000" size="0x1000"  read="true"   write="true"   execute="false" name="I2S1" />
+		<Block addr="0x4004D000" size="0x1000"   read="true"   write="true"   execute="false" name="USBD" />
+		<Block addr="0x40045000" size="0x1000"   read="true"   write="true"   execute="false" name="ACMP" />
+		<Block addr="0x4005C000" size="0x1000"   read="true"   write="true"   execute="false" name="EPWMA" />
+		<Block addr="0x400B1000" size="0x1000"   read="true"   write="true"   execute="false" name="ECAP1" />
+		<Block addr="0x40041000" size="0x1000"  read="true"   write="true"   execute="false" name="RTC" />
+		
+	</MemMap>
+</Debugger>

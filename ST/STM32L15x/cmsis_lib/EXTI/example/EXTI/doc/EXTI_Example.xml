@@ -1,0 +1,15 @@
+<Example>
+	<Name>EXTI_Example</Name>
+	<Description>This example shows how to configure an external interrupt line. In this example, an EXTI line is configured to generate an interrupt on each falling edge. In the interrupt routine a led connected to a specific GPIO pin is toggled.</Description>
+	<Version>1.2.0</Version>
+	<Tags>EXTI</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\EXTI\example\EXTI\src\EXTI_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\EXTI\example\EXTI\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\EXTI\example\EXTI\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,EXTI,SYSCFG</Dependency>
+	</Dependencys>
+</Example>

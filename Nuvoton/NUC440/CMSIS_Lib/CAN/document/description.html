@@ -1,0 +1,19 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>CAN</h1>
+<h2>Overview</h2>
+<ul>
+    <li>The C_CAN consists of the CAN Core, Message RAM, Message Handler, Control Registers and 
+Module  Interface.  The  CAN  Core  performs  communication  according  to 
+the  CAN  protocol  version  2.0  part  A  and  B.  The  bit  rate  can  be  programmed  to  values  up  to 
+1MBit/s. For the connection to the physical layer, additional transceiver hardware is required. 
+For communication on a CAN network, individual Message Objects are configured. The Message 
+Objects  and  Identifier  Masks  for  acceptance  filtering  of  received  messages  are  stored  in  the 
+Message  RAM.  All  functions  concerning  the  handling  of  messages  are  implemented  in  the 
+Message  Handler.  These  functions  include  acceptance  filtering,  the  transfer  of  messages 
+between the CAN Core and the Message RAM, and the handling of transmission requests as well 
+as the generation of the module interrupt. 
+The  register  set  of  the  C_CAN  can  be  accessed  directly  by  the  software  through  the  module 
+interface. These registers are used to control/configure the CAN Core and the Message Handler 
+and to access the Message RAM. </li>
+</ul>

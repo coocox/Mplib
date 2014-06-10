@@ -1,0 +1,71 @@
+<Example>
+    <Name>
+        CAN_DualFIFO
+    </Name>
+    <Description>
+  This example shows how to configure the CAN peripheral to send and receive 
+CAN frames in normal mode and using FIFO0 and FIFO1. The sent frames are used to control Leds 
+by pressing key or SEL push buttons.
+For the sent frames two different.standard identifier are used "0x321" is used when 
+pressing SEL and the other one (0x123) is transmited by pressing on KEY push button .
+
+The CAN serial communication link is a bus to which a number of units may be
+connected. This number has no theoretical limit. Practically the total number
+of units will be limited by delay times and/or electrical loads on the bus line.
+
+
+This program behaves as follows:
+  - By Pressing on SEL Button : LED1 turns ON and all other Leds are OFF, on the N
+    eval boards connected to the bus. 
+  - Press on SEL Button again to send CAN Frame to command LEDn+1 ON, all other Leds 
+    are OFF on the N eval boards.
+
+  - By Pressing on KEY Button : LED4 turns ON and all other Leds are OFF, on the N
+    eval boards connected to the bus. 
+  - Press on KEY Button again to send CAN Frame to command LEDn-1 ON, all other Leds 
+    are OFF on the N eval boards.
+    
+  - The USER can use KEY and SEL in the same time to Control LEDs.
+@note This example is tested with a bus of 3 units. The same program example is 
+      loaded in all units to send and receive frames.
+@note Any unit in the CAN bus may play the role of sender (by pressing KEY/SEL button)
+      or receiver.
+
+The CAN is configured as follow:
+    - Bit Rate   = 1 Mbit/s  
+    - CAN Clock  = external clock (HSE)
+    - ID Filter for FIFO0: 0x123 identifiers are allowed
+    - ID Filter for FIFO1: 0x321 identifiers are allowed 
+    - RTR = Data
+    - DLC = 1 byte
+    - Data: Led number that should be turned ON
+
+- STM32303C-EVAL Set-up
+    - Use LED1, LED2, LED3 and LED4 connected respectively to PE.08, PE.09, PE.10
+      and PE.11 pins
+    - Use KEY Push Button connected to PE.06 
+    - Use SEL Push Button connected to PC.13 
+    - Connect a female/female CAN cable between at least 2 EVAL CAN connectors (CN3)
+    - Jumper JP3 must be fitted.
+    - Jumper JP4 must be fitted in 1-2 position.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        CAN_DualFIFO
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\CAN\example\CAN_DualFIFO\src\CAN_DualFIFO.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,GPIO,SPI,EXTI</Dependency>
+    </Dependencys>
+</Example>
+
+

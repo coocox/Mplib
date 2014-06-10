@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        I2C_EEPROM
+    </Name>
+    <Description>
+         NUC400 I2C Driver Sample Code with EEPROM 24LC64.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        I2C
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\I2C\example\I2C_EEPROM\src\I2C_EEPROM.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,uart,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

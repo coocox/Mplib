@@ -1,0 +1,46 @@
+<Example>
+    <Name>
+        TIM_RetriggerableOPM_Example
+    </Name>
+    <Description>
+      This example shows how to use the TIM peripheral to generate a Retrigerrable One pulse Mode 
+after a Rising edge of an external signal is received in Timer Input pin.
+
+TIM2CLK = SystemCoreClock, we want to get TIM2 counter clock at 36 MHz:
+  - Prescaler = (TIM2CLK / TIM2 counter clock) - 1
+
+SystemCoreClock is set to 72 MHz.
+
+The Autoreload value is 65535 (TIM2->ARR), so the maximum frequency value to 
+trigger the TIM2 input is 36000000/65535 = 549.3 Hz.
+
+The TIM2 is configured as follows: 
+The Retrigerrable One Pulse mode is used, the external signal is connected to TIM2 CH2 pin (PA.01), 
+the rising edge is used as active edge, the One Pulse signal is output on TIM2_CH1 (PA.00).
+
+The TIM_Pulse defines the One Pulse value, the pulse value is fixed to:
+Retrigerrable One Pulse value = TIM_Period/TIM2 counter clock = 65535 / 36000000 = 1.8 ms.
+- STM32303C-EVAL Set-up
+    - Connect the external signal to the TIM2_CH2 pin (PA.01)
+    - Connect the TIM2_CH1 (PA.00) pin to an oscilloscope to monitor the waveform.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_RetriggerableOPM
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_RetriggerableOPM\src\TIM_RetriggerableOPM_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

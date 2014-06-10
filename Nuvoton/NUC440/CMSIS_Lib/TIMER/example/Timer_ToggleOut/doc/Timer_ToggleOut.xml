@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        Timer_ToggleOut
+    </Name>
+    <Description>
+        This sample code use timer 0 to generate 500Hz toggle output to TM0_CNT_OUT(PB.4) pin.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TIMER
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\TIMER\example\Timer_ToggleOut\src\Timer_ToggleOut.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

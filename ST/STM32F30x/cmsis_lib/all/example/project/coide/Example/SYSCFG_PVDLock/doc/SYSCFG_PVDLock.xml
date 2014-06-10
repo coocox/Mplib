@@ -1,0 +1,35 @@
+<Example>
+    <Name>
+        SYSCFG_PVDLock
+    </Name>
+    <Description>
+  This example shows how to configure the SYSCFG to enable and lock the PVD connection 
+to TIM1 Break input.
+
+In this example:
+  - TIM1 is configured to generate a PWM signal on pin PA.08.
+  - PVD threshold is configured to 2.9V.
+   
+While Vdd is higher than the PVD threshold (2.9V), PWM signal is displayed on PA.08.
+While Vdd is lower than the PVD threshold (2.9V), PA.08 is in low level.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        SYSCFG_PVDLock
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\SYSCFG\example\SYSCFG_PVDLock\src\SYSCFG_PVDLock.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,PWR,TIM</Dependency>
+    </Dependencys>
+</Example>
+
+

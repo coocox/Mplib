@@ -1,0 +1,52 @@
+<Example>
+    <Name>
+        CAN_FIFOExtension
+    </Name>
+    <Description>
+  This example shows how to configure the CAN peripheral to send and receive 
+CAN frames in normal mode using FIFO0 and FIFO1. This application example shows 
+how to manage the both CAN FIFO as a single FIFO composed by 6 mail boxes.
+
+The CAN serial communication link is a bus to which a number of units may be
+connected. This number has no theoretical limit. Practically the total number
+of units will be limited by delay times and/or electrical loads on the bus line.
+
+This program behaves as follows:
+  - By Pressing on KEY Button : 6 messages are sent to the N eval boards 
+    connected to the bus and the received messages are displayed on the LCD. 
+  Each time a new 6 messages are sent.
+    
+@note This example is tested with a bus of 3 units. The same program example is 
+      loaded in all units to send and receive frames.
+@note Any unit in the CAN bus may play the role of sender (by pressing KEY button)
+      or receiver.
+
+The CAN is configured as follow:
+    - Bit Rate   = 1 Mbit/s  
+    - CAN Clock  = external clock (HSE)
+    - ID Filter  = All identifiers are allowed
+    - RTR = Data
+    - DLC = 1 byte
+    - Data: Led number that should be turned ON
+
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        CAN_FIFOExtension
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\CAN\example\CAN_FIFOExtension\src\CAN_FIFOExtension.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,NVIC,GPIO,SPI</Dependency>
+    </Dependencys>
+</Example>
+
+

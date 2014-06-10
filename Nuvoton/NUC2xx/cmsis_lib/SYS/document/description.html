@@ -1,0 +1,23 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>SYS</h1>
+<h2>Overview</h2>
+<ul>
+    <li>System management includes the following sections:
+ System Resets
+ System Memory Map
+ System management registers for Part Number ID, chip reset and on-chip controllers
+reset , multi-functional pin control
+ System Timer (SysTick)
+ Nested Vectored Interrupt Controller (NVIC)
+ System Control registers</li>
+ <li>The clock controller generates clocks for the whole chip, including system clocks and all
+peripheral clocks. The clock controller also implements the power control function with the
+individually clock ON/OFF control, clock source selection and clock divider. The chip enters
+Power-down mode when Cortex?-M0 core executes the WFI instruction only if the
+PWR_DOWN_EN (PWRCON[7]) bit and PD_WAIT_CPU (PWRCON[8]) bit are both set to 1.
+After that, chip enters Power-down mode and waits for wake-up interrupt source triggered to exit
+Power-down mode. In Power-down mode, the clock controller turns off the external 4~24 MHz
+high speed crystal and internal 22.1184 MHz high speed oscillator to reduce the overall system
+power consumption.</li>
+</ul>

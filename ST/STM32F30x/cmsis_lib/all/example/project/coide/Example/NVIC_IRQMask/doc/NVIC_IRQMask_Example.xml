@@ -1,0 +1,74 @@
+<Example>
+    <Name>
+        NVIC_IRQMask_Example
+    </Name>
+    <Description>
+        This example demonstrates the use of the Nested Vectored Interrupt Controller (NVIC)
+IRQ Channels configuration and how to mask/activate different IRQs: 
+
+- Configuration of 3 TIM (TIM2..TIM4) timers to generate an interrupt on each 
+  counter update event.
+
+- The three timers are linked to their correspondent Update IRQ channel.
+
+- Assignment of a ascendant IRQ priority for each IRQ channel :
+     - TIM2 has a preemption priority of 0
+     - TIM3 has a preemption priority of 1
+     - TIM4 has a preemption priority of 2
+- In each interrupt routine: 
+   - TIM2 toggles a LED1 each 1s 
+   - TIM3 toggles a LED2 each 2s 
+   - TIM4 toggles a LED3 each 3s 
+
+- The KEY and SEL buttons are used to boost the execution priority as follows:
+
+  - The KEY button is used in GPIO mode and at each KEY button press, the execution 
+    priority is raised to 0 and turn LED4 ON. This prevents all exceptions with 
+    configurable priority from activating, other than through the HardFault fault 
+    escalation mechanism. As consequence, all LEDs stop toggling as TIM2, TIM3 
+    and TIM4 IRQs are prevented from activation. 
+    
+    Pressing again the KEY button will release the priority boosting, turn LED4 
+    OFF and will allow all exceptions with configurable priority to be activated 
+    and TIM2, TIM3 and TIM4 can be generated again and the LEDs restart toggling.
+    
+    This execution priority is made using the CMSIS functions "__disable_irq()" 
+    and "__enable_irq()". 
+    These two functions are managing the Cortex-M4 PRIMASK special register.
+
+  - The SEL button is used in EXTI mode and at each SEL button press, the
+    execution priority is masked to 0x40 using the BASEPRI register. 
+    A non-zero value will act as a priority mask, affecting the execution priority 
+    when the priority defined by BASEPRI is the same or higher than the current 
+    executing priority. 
+    As consequence, LED2 and LED3 stop toggling as TIM3 and TIM4 IRQs are 
+    prevented from activation. 
+    Pressing again the SEL button will configure the BASEPRI register to 0, 
+    thus it has no effect on the current priority and TIM3 and TIM4 can be 
+    generated again and LED2 and LED3 restart toggling.
+    
+    This execution priority is made using the CMSIS functions "__set_BASEPRI()". 
+    This function is managing the Cortex-M4 BASEPRI special register.
+    Setting the BASEPRI register has no effect when the execution priority is
+    raised to 0 using the "__disable_irq()" function.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        NVIC_IRQMask
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\NVIC\example\NVIC_IRQMask\src\NVIC_IRQMask_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,EXTI,TIM</Dependency>
+    </Dependencys>
+</Example>
+
+

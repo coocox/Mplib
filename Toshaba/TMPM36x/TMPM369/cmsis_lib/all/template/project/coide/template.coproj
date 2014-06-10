@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G" name="template">
+  <Target name="template" isCurrent="1">
+    <Device manufacturerId="1" manufacturerName="ARM" chipId="3" chipName="M3" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+          <Includepath path="../../cmsis_lib/lib/include"/>
+        </Includepaths>
+        <DefinedSymbols/>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00080000" startValue="0x00000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00010000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="d:/coocox/coide1.7.1/configuration/programdata/template/link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="template"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="J-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V452\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2331"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./tmpm33x_512.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="source/tmpm369_tmrb.c" path="../../../../lib/source/tmpm369_tmrb.c" type="1"/>
+    <File name="cmsis_boot/system_TMPM369.h" path="../../../../lib/cmsis_boot/system_TMPM369.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="source/tmpm369_ofd.c" path="../../../../lib/source/tmpm369_ofd.c" type="1"/>
+    <File name="source/tmpm369_fc.c" path="../../../../lib/source/tmpm369_fc.c" type="1"/>
+    <File name="source/tmpm369_gpio.c" path="../../../../lib/source/tmpm369_gpio.c" type="1"/>
+    <File name="source/tmpm369_cg.c" path="../../../../lib/source/tmpm369_cg.c" type="1"/>
+    <File name="include/tmpm369_fc.h" path="../../../../lib/include/tmpm369_fc.h" type="1"/>
+    <File name="source/tmpm369_igbt.c" path="../../../../lib/source/tmpm369_igbt.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="cmsis_core" path="" type="2"/>
+    <File name="include/tmpm369_ssp.h" path="../../../../lib/include/tmpm369_ssp.h" type="1"/>
+    <File name="source/tmpm369_exb.c" path="../../../../lib/source/tmpm369_exb.c" type="1"/>
+    <File name="cmsis_boot/TMPM369.h" path="../../../../lib/cmsis_boot/TMPM369.h" type="1"/>
+    <File name="include/tmpm369_cg.h" path="../../../../lib/include/tmpm369_cg.h" type="1"/>
+    <File name="include/tmpm369_igbt.h" path="../../../../lib/include/tmpm369_igbt.h" type="1"/>
+    <File name="cmsis_boot/startup/startup_coide.c" path="../../../../lib/cmsis_boot/startup/coide/startup_coide.c" type="1"/>
+    <File name="include/tmpm369_can.h" path="../../../../lib/include/tmpm369_can.h" type="1"/>
+    <File name="include/tmpm369_udmac.h" path="../../../../lib/include/tmpm369_udmac.h" type="1"/>
+    <File name="cmsis_core/core_cm3.c" path="../../../../lib/cmsis_core/core_cm3.c" type="1"/>
+    <File name="source/tmpm369_lvd.c" path="../../../../lib/source/tmpm369_lvd.c" type="1"/>
+    <File name="source/tmpm369_rmc.c" path="../../../../lib/source/tmpm369_rmc.c" type="1"/>
+    <File name="source/tmpm369_udmac.c" path="../../../../lib/source/tmpm369_udmac.c" type="1"/>
+    <File name="include/tmpm369_adc.h" path="../../../../lib/include/tmpm369_adc.h" type="1"/>
+    <File name="source/tmpm369_ssp.c" path="../../../../lib/source/tmpm369_ssp.c" type="1"/>
+    <File name="include/tmpm369_lvd.h" path="../../../../lib/include/tmpm369_lvd.h" type="1"/>
+    <File name="source/tmpm369_wdt.c" path="../../../../lib/source/tmpm369_wdt.c" type="1"/>
+    <File name="include/tmpm369_rmc.h" path="../../../../lib/include/tmpm369_rmc.h" type="1"/>
+    <File name="source" path="" type="2"/>
+    <File name="source/tmpm369_sbi.c" path="../../../../lib/source/tmpm369_sbi.c" type="1"/>
+    <File name="include" path="" type="2"/>
+    <File name="include/tmpm369_dac.h" path="../../../../lib/include/tmpm369_dac.h" type="1"/>
+    <File name="include/tmpm369_tmrb.h" path="../../../../lib/include/tmpm369_tmrb.h" type="1"/>
+    <File name="source/tmpm369_rtc.c" path="../../../../lib/source/tmpm369_rtc.c" type="1"/>
+    <File name="include/tmpm369_sbi.h" path="../../../../lib/include/tmpm369_sbi.h" type="1"/>
+    <File name="source/tmpm369_adc.c" path="../../../../lib/source/tmpm369_adc.c" type="1"/>
+    <File name="cmsis_core/core_cm3.h" path="../../../../lib/cmsis_core/core_cm3.h" type="1"/>
+    <File name="cmsis_boot/system_TMPM369.c" path="../../../../lib/cmsis_boot/system_TMPM369.c" type="1"/>
+    <File name="include/tmpm369_rtc.h" path="../../../../lib/include/tmpm369_rtc.h" type="1"/>
+    <File name="source/tmpm369_dac.c" path="../../../../lib/source/tmpm369_dac.c" type="1"/>
+    <File name="include/tmpm369_gpio.h" path="../../../../lib/include/tmpm369_gpio.h" type="1"/>
+    <File name="include/tmpm369_ofd.h" path="../../../../lib/include/tmpm369_ofd.h" type="1"/>
+    <File name="source/tmpm369_fuart.c" path="../../../../lib/source/tmpm369_fuart.c" type="1"/>
+    <File name="include/tmpm369_wdt.h" path="../../../../lib/include/tmpm369_wdt.h" type="1"/>
+    <File name="source/tmpm369_uart.c" path="../../../../lib/source/tmpm369_uart.c" type="1"/>
+    <File name="source/tmpm369_can.c" path="../../../../lib/source/tmpm369_can.c" type="1"/>
+    <File name="include/tx03_common.h" path="../../../../lib/include/tx03_common.h" type="1"/>
+    <File name="include/tmpm369_uart.h" path="../../../../lib/include/tmpm369_uart.h" type="1"/>
+    <File name="include/tmpm369_fuart.h" path="../../../../lib/include/tmpm369_fuart.h" type="1"/>
+    <File name="main.c" path="../src/main.c" type="1"/>
+    <File name="include/tmpm369_exb.h" path="../../../../lib/include/tmpm369_exb.h" type="1"/>
+  </Files>
+</Project>

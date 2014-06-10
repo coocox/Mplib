@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        UART_Example
+    </Name>
+    <Description>
+        Main function of this demo is to test UART transmit and receive.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        UART
+    </Tags>
+    <EVKit>
+      pac5210、pac5220、pac5250
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\active semi\pac5xxx\cmsis_lib\UART\example\UART\src\UART_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency> UART,SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

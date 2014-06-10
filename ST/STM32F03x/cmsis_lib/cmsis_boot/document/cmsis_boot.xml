@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>cmsis_boot</Name>
+  <Description>NUC123 CMSIS BOOT</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>cmsis_boot</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\cmsis_boot\startup\coide\startup_NUC123.c</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\cmsis_boot\NUC123Series.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\cmsis_boot\startup\system_NUC123Series.c</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\lib\cmsis_boot\startup\system_NUC123Series.h</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_boot\startup\startup_NUC123.c</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\system_NUC123Series.c</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\NUC123Series.h</File>
+    <File>$PROJECT_ROOT$\cmsis_boot\system_NUC123Series.h</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency></Dependency>
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC123LC2AN1, NUC123LD4AN0, NUC123SC2AN1, NUC123SD4AN0, NUC123ZC2AN1, NUC123ZD4AN0</Device>
+  </SupportDevices>
+
+</Component>

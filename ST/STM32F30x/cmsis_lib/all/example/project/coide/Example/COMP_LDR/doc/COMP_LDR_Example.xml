@@ -1,0 +1,32 @@
+<Example>
+    <Name>
+        COMP_LDR_Example
+    </Name>
+    <Description>
+   The STM32F30x microcontroller has an embedded comparator which can be used
+in combination with DAC peripheral for more application like the mesure of light
+intensity (using the LDR sensor).
+
+In this example when the luminosity changes the progress bar displayed on the color
+LCD changes according to light intensity level detected on comparator.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        COMP_LDR
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\COMP\example\COMP_LDR\src\COMP_LDR_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>GPIO,RCC,DAC</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,35 @@
+<Example>
+    <Name>
+        RCC_Example
+    </Name>
+    <Description>
+        This example handles also the High Speed External clock (HSE) failure detection:
+when the HSE clock disappears (broken or disconnected external Quartz); HSE, PLL
+are disabled (but no change on PLL config), HSI selected as system clock source
+and an interrupt (NMI) is generated. In the NMI ISR, the HSE clock and the HSE 
+ready interrupt are enabled and once HSE clock recovers, the HSERDY interrupt is
+generated and in the RCC ISR routine the system clock is reconfigured to its 
+previous state (before HSE clock failure). You can monitor the HSE clock on MCO pin(PA8).
+On the STM32303C-EVAL board, to generate the HSE failure you can remove
+      the HSE quartz from the socket.
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        HSE,NMI ISR
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL  Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\RCC\example\SYSTICK\src\RCC_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency> GPIO, RCC,USART,EXTI,SYSCFG,SPI,MISC,I2C</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,15 @@
+<Example>
+	<Name>ADC_example</Name>
+	<Description>This example describes how to use the ADC analog watchdog to guard continuously an ADC channel.</Description>
+	<Version>1.2.0</Version>
+	<Tags>ADC</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\ADC\example\ADC\src\ADC_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\ADC\example\ADC\src\stm32l1xx_it.h</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\ADC\example\ADC\src\stm32l1xx_it.c</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,ADC,DMA</Dependency>
+	</Dependencys>
+</Example>

@@ -27,7 +27,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="d:/coocox/coide1.7.4/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="d:/coocox/coide1.7.6/configuration/programdata/template/link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -68,8 +68,8 @@
     <File name="cmsis_lib/include/PWM.h" path="../../../../lib/inc/PWM.h" type="1"/>
     <File name="cmsis_lib/source/DrvI2C.c" path="../../../../lib/src/DrvI2C.c" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
-    <File name="cmsis_lib/include/GPIO.h" path="../../../../lib/inc/GPIO.h" type="1"/>
     <File name="cmsis_boot/startup/startup_NUC123.c" path="../../../../lib/cmsis_boot/startup/coide/startup_NUC123.c" type="1"/>
+    <File name="cmsis_lib/include/GPIO.h" path="../../../../lib/inc/GPIO.h" type="1"/>
     <File name="cmsis_lib/include/DrvUSB.h" path="../../../../lib/inc/DrvUSB.h" type="1"/>
     <File name="cmsis_lib/include/TIMER.h" path="../../../../lib/inc/TIMER.h" type="1"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
@@ -94,11 +94,11 @@
     <File name="cmsis_lib/source" path="" type="2"/>
     <File name="cmsis_lib/source/DrvSPI.c" path="../../../../lib/src/DrvSPI.c" type="1"/>
     <File name="cmsis_lib/source/DrvI2S.c" path="../../../../lib/src/DrvI2S.c" type="1"/>
+    <File name="cmsis_lib/include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
+    <File name="cmsis_lib/include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
     <File name="cmsis_lib/include/CRC.h" path="../../../../lib/inc/CRC.h" type="1"/>
     <File name="cmsis_lib/include/CLOCK.h" path="../../../../lib/inc/CLOCK.h" type="1"/>
-    <File name="cmsis_lib/include/I2C.h" path="../../../../lib/inc/I2C.h" type="1"/>
     <File name="cmsis_lib/include/USB.h" path="../../../../lib/inc/USB.h" type="1"/>
-    <File name="cmsis_lib/include/UART.h" path="../../../../lib/inc/UART.h" type="1"/>
     <File name="cmsis_lib/include/WWDT.h" path="../../../../lib/inc/WWDT.h" type="1"/>
     <File name="cmsis_lib/source/DrvCRC.c" path="../../../../lib/src/DrvCRC.c" type="1"/>
     <File name="cmsis_lib/include" path="" type="2"/>

@@ -1,0 +1,49 @@
+<Example>
+    <Name>
+        USART_AutoBaudRate
+    </Name>
+    <Description>
+     This example provides a description of how to use the Auto BaudRate capability
+of the USART via the HyperTerminal.
+
+First, the USART1 is configured to detect BaudRate automatically with StartBit
+Measurement Method (Any character starting with a bit at 1 should be send to USART 
+to detect Baud Rate).
+
+After configuration, the USART waits until a data is received via HyperTerminal
+to launch auto-detection of Baud Rate phase. The end of this phase is monitored 
+by ABRF flag.
+
+The result of auto-detection is indicated by Eval_Board LEDs. If an error occurred 
+in Auto BaudRate phase ABRE flag is set and LED3 is turned on. If this phase is 
+completed successfully, LED2 is turned on and the received data is transmitted to
+HyperTerminal.
+
+The USART1 is configured as follow:
+    - BaudRate = 9600 baud (any value can be chosen)  
+    - Word Length = 8 Bits 
+    - One Stop Bit
+    - No parity
+    - Hardware flow control disabled (RTS and CTS signals)
+    - Receive and transmit enabled
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        USART_AutoBaudRate
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\USART\example\USART_AutoBaudRate\src\USART_AutoBaudRate.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

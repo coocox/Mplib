@@ -1,0 +1,60 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>PWM</h1>
+<h2>Overview</h2>
+<ul>
+    <li>NUC200 series has 2 sets of PWM group supporting a total of 4 sets of PWM
+generators that can be configured as 8 independent PWM outputs, PWM0~PWM7, or as 4
+complementary PWM pairs, (PWM0, PWM1), (PWM2, PWM3), (PWM4, PWM5) and (PWM6,
+PWM7) with 4 programmable Dead-zone generators.
+Each PWM generator has one 8-bit prescaler, one clock divider with 5 divided frequencies (1, 1/2,
+1/4, 1/8, 1/16), two PWM Timers including two clock selectors, two 16-bit PWM counters for PWM
+period control, two 16-bit comparators for PWM duty control and one Dead-zone generator. The 4
+sets of PWM generators provide eight independent PWM interrupt flags set by hardware when the
+corresponding PWM period down counter reaches 0. Each PWM interrupt source with its
+corresponding enable bit can cause CPU to request PWM interrupt. The PWM generators can be
+configured as one-shot mode to produce only one PWM cycle signal or auto-reload mode to
+output PWM waveform continuously.
+When PCR.DZEN01 is set, PWM0 and PWM1 perform complementary PWM paired function; the
+paired PWM period, duty and Dead-time are determined by PWM0 timer and Dead-zone
+generator 0. Similarly, the complementary PWM pairs of (PWM2, PWM3), (PWM4, PWM5) and
+(PWM6, PWM7) are controlled by PWM2, PWM4 and PWM6 timers and Dead-zone generator 2,
+4 and 6, respectively. Refer to Figure 5-36 and Figure 5-43 for the architecture of PWM Timers.
+To prevent PWM driving output pin with unsteady waveform, the 16-bit period down counter and
+16-bit comparator are implemented with double buffer. When user writes data to
+counter/comparator buffer registers the updated value will be load into the 16-bit down counter/
+comparator at the time down counter reaching 0. The double buffering feature avoids glitch at
+PWM outputs.
+When the 16-bit period down counter reaches 0, the interrupt request is generated. If PWM-timer
+is set as auto-reload mode, when the down counter reaches 0, it is reloaded with PWM Counter
+Register (CNRx) automatically then start decreasing, repeatedly. If the PWM-timer is set as oneshot
+mode, the down counter will stop and generate one interrupt request when it reaches 0.
+The value of PWM counter comparator is used for pulse high width modulation. The counter
+control logic changes the output to high level when down-counter value matches the value of
+compare register.
+The alternate feature of the PWM-timer is digital input Capture function. If Capture function is
+enabled the PWM output pin is switched as capture input mode. The Capture0 and PWM0 share
+one timer which is included in PWM0 and the Capture1 and PWM1 share PWM1 timer, and etc.
+Therefore user must setup the PWM-timer before enable Capture feature. After capture feature is
+enabled, the capture always latched PWM-counter to Capture Rising Latch Register (CRLR)
+when input channel has a rising transition and latched PWM-counter to Capture Falling Latch
+Register (CFLR) when input channel has a falling transition. Capture channel 0 interrupt is
+programmable by setting CCR0.CRL_IE0[1] (Rising latch Interrupt enable) and
+CCR0.CFL_IE0[2]] (Falling latch Interrupt enable) to decide the condition of interrupt occur.
+Capture channel 1 has the same feature by setting CCR0.CRL_IE1[17] and CCR0.CFL_IE1[18].
+And capture channel 2 to channel 3 on each group have the same feature by setting the
+corresponding control bits in CCR2. For each group, whenever Capture issues Interrupt 0/1/2/3,
+the PWM counter 0/1/2/3 will be reload at this moment.
+The maximum captured frequency that PWM can capture is confined by the capture interrupt
+latency. When capture interrupt occurred, software will do at least three steps, including: Read
+PIIR to get interrupt source and Read CRLRx/CFLRx(x=0~3) to get capture value and finally write
+1 to clear PIIR to 0. If interrupt latency will take time T0 to finish, the capture signal mustn?t
+transition during this interval (T0). In this case, the maximum capture frequency will be 1/T0. For
+NuMicro? NUC200/220
+Technical Reference Manual
+Dec. 07, 2012 Page 251 of 622 Revision V1.00
+NUMICRO? NUC200/220 TECHNICAL REFERENCE MANUAL
+example:
+HCLK = 50 MHz, PWM_CLK = 25 MHz, Interrupt latency is 900 ns
+So the maximum capture frequency will be 1/900ns ¡Ö 1000 kHz</li>
+</ul>

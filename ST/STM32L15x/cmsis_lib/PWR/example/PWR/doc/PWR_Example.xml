@@ -1,0 +1,15 @@
+<Example>
+	<Name>PWR_Example</Name>
+	<Description>This example shows how to configure the programmable voltage detector using an external interrupt line. In this example, EXTI line 16 is configured to generate an interrupt on each rising or falling edge of the PWR output signal (which indicates that the Vdd voltage is below the PWR threshold).</Description>
+	<Version>1.2.0</Version>
+	<Tags>PWR</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\PWR\example\PWR\src\PWR_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\PWR\example\PWR\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\PWR\example\PWR\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,PWR,EXTI</Dependency>
+	</Dependencys>
+</Example>

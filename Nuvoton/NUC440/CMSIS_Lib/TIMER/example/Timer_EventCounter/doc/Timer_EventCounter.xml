@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        Timer_EventCounter
+    </Name>
+    <Description>
+        This sample code use TM0_CNT_OUT(PB.4) to count PB.3 input event in event counter mode.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TIMER
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\TIMER\example\Timer_EventCounter\src\Timer_EventCounter.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf,C library</Dependency>
+    </Dependencys>
+</Example>
+
+

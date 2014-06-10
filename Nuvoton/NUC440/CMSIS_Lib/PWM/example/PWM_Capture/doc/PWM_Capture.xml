@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        PWM_Capture
+    </Name>
+    <Description>
+        PWM0 channel 2 will capture the output of PWM0 channel 0.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        PWM
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\PWM\example\PWM_Capture\src\PWM_Capture.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

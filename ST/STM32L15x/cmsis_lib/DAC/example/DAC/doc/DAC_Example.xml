@@ -1,0 +1,15 @@
+<Example>
+	<Name>DAC_Example</Name>
+	<Description>This example shows how to use DAC.</Description>
+	<Version>1.2.0</Version>
+	<Tags>DAC</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\DAC\example\DAC\src\DAC_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\DAC\example\DAC\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\DAC\example\DAC\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,ADC,DAC</Dependency>
+	</Dependencys>
+</Example>

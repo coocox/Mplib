@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        PDMA_example
+    </Name>
+    <Description>
+        This example is PDMA Driver Sample Code.Using TWO PDMA channel to test. < TX1(CH1)-->RX1(CH0) then Using ONE PDMA channel to test. < TX1-->RX1(CH0).
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        PDMA
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\PDMA\example\PDMA\src\PDMA_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

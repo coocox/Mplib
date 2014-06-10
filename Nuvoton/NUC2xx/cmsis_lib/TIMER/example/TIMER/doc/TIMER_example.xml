@@ -1,0 +1,33 @@
+<Example>
+    <Name>
+        TIMER_example
+    </Name>
+    <Description>
+        This example is NUC200 TIMER Driver Sample Code.
+        [1] TIMER0/1/2/3 timeout interrupt and frequency test
+        [2] Delay time by TIMER0 interrupt ticks test 
+        [3] TIMER1 External Counter Pin and Function test
+        [4] TIMER1 External Capture Pin and Function test
+        [5] Power Down and waken-up by TIMER2 interrupt event
+        
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        TIMER
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\TIMER\example\TIMER\src\TIMER_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

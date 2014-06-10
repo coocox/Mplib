@@ -1,0 +1,28 @@
+<Example>
+    <Name>
+        PWM_DeadZone
+    </Name>
+    <Description>
+        This sample code will output PWM0 channel 0 to with different frequency and duty, enable dead zone function of all PWM0 pairs.
+		And also enable/disable PWM0 output every 1 second.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        PWM
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\PWM\example\PWM_DeadZone\src\PWM_DeadZone.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

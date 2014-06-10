@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        SPI_Flash
+    </Name>
+    <Description>
+        NUC400 Series SPI Sample with SPI Flash .
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SPI
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\SPI\example\SPI_Flash\src\SPI_Flash.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

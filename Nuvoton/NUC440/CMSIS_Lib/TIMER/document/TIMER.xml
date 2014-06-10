@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<Component>
+  <Name>TIMER</Name>
+  <Description>NUC400 Serial Peripheral Interface</Description>
+  <Category>Peripheral</Category>
+  <Version>1.200</Version>
+  <Tags>TIMER</Tags>
+  
+  <files>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\inc\TIMER.h</File>
+    <File>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\lib\src\TIMER.c</File>
+  </files>
+  
+  <CoIDEFiles>
+    <File>$PROJECT_ROOT$\cmsis_lib\include\TIMER.h</File>
+    <File>$PROJECT_ROOT$\cmsis_lib\source\TIMER.c</File>
+  </CoIDEFiles>
+  
+  <Dependencys>
+    <Dependency>CMSIS_BOOT</Dependency>
+    <Dependency>SYS</Dependency>
+    <Dependency>clk</Dependency>
+
+  </Dependencys>
+  
+  <SupportDevices>
+    <Device>NUC440,NUC470 Series</Device>
+  </SupportDevices>
+
+</Component>

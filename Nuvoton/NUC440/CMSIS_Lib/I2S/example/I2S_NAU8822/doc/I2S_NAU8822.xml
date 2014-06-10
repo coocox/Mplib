@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        I2S_NAU8822
+    </Name>
+    <Description>
+          I2S Driver Sample Code with WAU8822 .
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        I2S
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\I2s\example\I2S_NAU8822\src\I2S_NAU8822.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,uart,gpio,i2c,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

@@ -1,0 +1,50 @@
+<Example>
+    <Name>
+        TIM_7PWMOutputs_Example
+    </Name>
+    <Description>
+   This example shows how to configure the TIM1 peripheral to generate 7 PWM signals 
+with 4 different duty cycles (50%, 37.5%, 25% and 12.5%).
+
+TIM1CLK = SystemCoreClock, Prescaler = 0, TIM1 counter clock = SystemCoreClock
+SystemCoreClock is set to 72 MHz.
+
+The objective is to generate 7 PWM signal at 17.57 KHz:
+  - TIM1_Period = (SystemCoreClock / 17570) - 1
+The channel 1 and channel 1N duty cycle is set to 50%
+The channel 2 and channel 2N duty cycle is set to 37.5%
+The channel 3 and channel 3N duty cycle is set to 25%
+The channel 4 duty cycle is set to 12.5%
+The Timer pulse is calculated as follows:
+  - ChannelxPulse = DutyCycle * (TIM1_Period - 1) / 100
+
+The TIM1 waveform can be displayed using an oscilloscope.
+- STM32303C-EVAL Set-up
+    - Connect the TIM1 pins to an oscilloscope to monitor the different waveforms:
+      - TIM1_CH1  pin (PA.08)
+      - TIM1_CH1N pin (PA.07)
+      - TIM1_CH2  pin (PA.09)
+      - TIM1_CH2N pin (PB.00)
+      - TIM1_CH3  pin (PA.10)
+      - TIM1_CH3N pin (PB.01)
+      - TIM1_CH4  pin (PA.11)
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_7PWMOutputs
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_7PWMOutputs\src\TIM_7PWMOutputs_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO</Dependency>
+    </Dependencys>
+</Example>
+
+

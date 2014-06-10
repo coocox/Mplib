@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        CRYPTO_AES
+    </Name>
+    <Description>
+          NUC400 Crypto Driver AES Sample Code.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        CRYPTO
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\CRYPTO\example\CRYPTO_AES\src\CRYPTO_AES.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,uart,retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+

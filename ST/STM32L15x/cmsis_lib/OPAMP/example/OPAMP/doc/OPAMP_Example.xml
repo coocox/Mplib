@@ -1,0 +1,15 @@
+<Example>
+	<Name>OPAMP_Example</Name>
+	<Description>This example provides a basic example of how to use OPAMP.</Description>
+	<Version>1.2.0</Version>
+	<Tags>OPAMP</Tags>
+	<EVKit>STM32L-DISCOVERY Development Board</EVKit>
+	<Files>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\OPAMP\example\OPAMP\src\OPAMP_Example.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\OPAMP\example\OPAMP\src\stm32l1xx_it.c</File>
+		<File>$REPO_ROOT$\ST\STM32L1xx\cmsis_lib\OPAMP\example\OPAMP\src\stm32l1xx_it.h</File>
+	</Files>
+	<Dependencys>
+		<Dependency>RCC,GPIO,OPAMP</Dependency>
+	</Dependencys>
+</Example>

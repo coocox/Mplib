@@ -1,0 +1,43 @@
+<Example>
+    <Name>
+        TIM_InputCapture_Example
+    </Name>
+    <Description>
+  This example shows how to use the TIM peripheral to measure the frequency of an 
+external signal.
+
+The TIMxCLK frequency is set to SystemCoreClock (Hz), the Prescaler is 0 so the 
+TIM2 counter clock is SystemCoreClock (Hz).
+
+SystemCoreClock is set to 72 MHz.
+
+TIM2 is configured in Input Capture Mode: the external signal is connected to 
+TIM2 Channel2 used as input pin.
+To measure the frequency we use the TIM2 CC2 interrupt request,
+so In the TIM2_IRQHandler routine, the frequency of the external signal is computed. 
+The "TIM2Freq" variable contains the external signal frequency:
+TIM2Freq = TIM2 counter clock / Capture in Hz,
+where the Capture is the difference between two consecutive TIM2 captures. 
+
+The minimum frequency value to measure is 1Hz.			
+    </Description>
+    <Version>
+        1.0.0
+    </Version>
+    <Tags>
+        TIM_InputCapture
+    </Tags>
+    <EVKit>
+        STM32303C-EVAL Evaluation Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\ST\STM32F30X\cmsis_lib\TIM\example\TIM_InputCapture\src\TIM_InputCapture_Example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>RCC,GPIO,NVIC</Dependency>
+    </Dependencys>
+</Example>
+
+

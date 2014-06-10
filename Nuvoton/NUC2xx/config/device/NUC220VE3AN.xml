@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!--
+    Copyright 2013 coocox.org
+    
+    This file is part of CooCox Softwares.
+-->
+<Device>
+    <Name>NUC220VE3AN</Name>
+    <Vendor>NUVOTON</Vendor>
+    <Family>NUC220</Family>
+    <Arch>Cortex-Mx</Arch>
+    <Description>NUVOTON's NUC220VE3AN operates at a maximum speed of 50MHz and features 128 Kbytes of Flash and 16 Kbytes of RAM.</Description>
+    <Parameters>
+        <Parameters>DMA controllers                         : 9   ch   <Parameters>
+        <Parameters>SPI                                     : 4   ch   <Parameters>
+        <Parameters>UART                                    : 3   ch   <Parameters>
+        <Parameters>I2C                                     : 2   ch   <Parameters>
+        <Parameters>A/D converters(12bit)                   : 7   ch   <Parameters>
+        <Parameters>timer(32bit)                            : 4   ch   <Parameters>
+        <Parameters>PWM                                     : 8   ch   <Parameters>
+        <Parameters>USB                                     : 1   ch   <Parameters>
+        <Parameters>ISO7816-3                               : 3   ch   <Parameters>
+        <Parameters>watchdog timer                          : Available<Parameters>
+        <Parameters>RTC                                     : Available<Parameters>
+        <Parameters>ISP/ICP/IAP                             : Available<Parameters>
+        <Parameters>IRC 22MHz                               : Available<Parameters>
+        <Parameters>VBAT supply 22MHz                       : Available<Parameters>
+        <Parameters>I/O Ports                               : 79 pins  <Parameters>
+    </Parameters>
+    <ReferenceLinks>
+        <Link name="Chips Page">http://www.nuvoton.com/NuvotonMOSS/Community/ProductInfo.aspx?tp_GUID=5dbf7d7a-b6df-4fe1-91c9-063449500ce7</Link>
+        <Link name="Chips Datasheet">http://download.nuvoton.com/NuvotonMOSS/DownloadService/Member/DocumentsInfo.aspx?tp_GUID=UG0820121210112226</Link>
+    </ReferenceLinks>
+    
+    
+    <DebugSetting>$TOOLKIT_CONFIG_DIR$\debugger\NUC2xx.xml</DebugSetting>
+    
+    <Flash>
+        <Block addr="0x00000000" size="0x00020000" read="true" write="false" execute="true" name="Embedded Flash" />    <!-- 128K -->
+    </Flash>
+    
+    <Ram>
+        <Block addr="0x20000000" size="0x00004000" read="true" write="true"  execute="true" name="Embedded RAM" />      <!-- 16K -->
+    </Ram>
+    
+    <FlashLoader>
+        <loader>$TOOLKIT_FLASH_DIR$\NUC2xx_128.elf</loader>
+    </FlashLoader>
+</Device>

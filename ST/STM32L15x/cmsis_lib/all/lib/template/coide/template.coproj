@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.2" name="template">
+  <Target name="template" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="567" chipName="STM32L162ZD" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="M3"/>
+          <Define name="STM32L162ZD"/>
+          <Define name="STM32L1XX_HD"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="UserEditLinker" value="--entry=main; "/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00060000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x0000C000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide1.7.5/configuration/programdata/template/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="template"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="500K"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value="C:\Program Files\SEGGER\JLinkARM_V468a\JLinkGDBServerCL.exe"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32L1xx_384.elf"/>
+      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd C:/TDDownload/stm32l15xxx/ST(myproject)/ST/STM32L1xx/cmsis_lib/GPIO/example/GPIO/coide/template/Debug/bin restore template.elf set {unsigned int*}0xE000ED08 = 0x20000000 set $sp = {unsigned int*}0x20000000 set $pc = {unsigned int*}0x20000004 "/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="50" name="CMSIS core" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="cmsis_lib/Source/stm32l1xx_tim.c" path="../../../../lib/src/stm32l1xx_tim.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_flash.c" path="../../../../lib/src/stm32l1xx_flash.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_i2c.h" path="../../../../lib/inc/stm32l1xx_i2c.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_comp.c" path="../../../../lib/src/stm32l1xx_comp.c" type="1"/>
+    <File name="cmsis_core/core_cmInstr.h" path="../../../../lib/cmsis_core/core_cmInstr.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_lcd.h" path="../../../../lib/inc/stm32l1xx_lcd.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_rcc.h" path="../../../../lib/inc/stm32l1xx_rcc.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="cmsis_lib/Source/stm32l1xx_rcc.c" path="../../../../lib/src/stm32l1xx_rcc.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_gpio.c" path="../../../../lib/src/stm32l1xx_gpio.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_pwr.h" path="../../../../lib/inc/stm32l1xx_pwr.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_dac.h" path="../../../../lib/inc/stm32l1xx_dac.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_usart.c" path="../../../../lib/src/stm32l1xx_usart.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_wwdg.h" path="../../../../lib/inc/stm32l1xx_wwdg.h" type="1"/>
+    <File name="cmsis_core" path="" type="2"/>
+    <File name="cmsis_lib/Source/stm32l1xx_sdio.c" path="../../../../lib/src/stm32l1xx_sdio.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_usart.h" path="../../../../lib/inc/stm32l1xx_usart.h" type="1"/>
+    <File name="cmsis_lib/Source" path="" type="2"/>
+    <File name="cmsis_lib/Include/stm32l1xx_comp.h" path="../../../../lib/inc/stm32l1xx_comp.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_dma.c" path="../../../../lib/src/stm32l1xx_dma.c" type="1"/>
+    <File name="cmsis_boot/Startup/startup_stm32l1xx_hd.c" path="../../../../lib/cmsis_boot/startup/coide/startup_stm32l1xx_hd.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_syscfg.c" path="../../../../lib/src/stm32l1xx_syscfg.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_gpio.h" path="../../../../lib/inc/stm32l1xx_gpio.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_iwdg.h" path="../../../../lib/inc/stm32l1xx_iwdg.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_adc.h" path="../../../../lib/inc/stm32l1xx_adc.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_pwr.c" path="../../../../lib/src/stm32l1xx_pwr.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_lcd.c" path="../../../../lib/src/stm32l1xx_lcd.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_opamp.h" path="../../../../lib/inc/stm32l1xx_opamp.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_rtc.h" path="../../../../lib/inc/stm32l1xx_rtc.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_spi.c" path="../../../../lib/src/stm32l1xx_spi.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_adc.c" path="../../../../lib/src/stm32l1xx_adc.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_iwdg.c" path="../../../../lib/src/stm32l1xx_iwdg.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_aes_util.c" path="../../../../lib/src/stm32l1xx_aes_util.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_aes.c" path="../../../../lib/src/stm32l1xx_aes.c" type="1"/>
+    <File name="Example/main.c" path="../src/main.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_spi.h" path="../../../../lib/inc/stm32l1xx_spi.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_fsmc.c" path="../../../../lib/src/stm32l1xx_fsmc.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_crc.c" path="../../../../lib/src/stm32l1xx_crc.c" type="1"/>
+    <File name="cmsis_boot/stm32l1xx.h" path="../../../../lib/cmsis_boot/stm32l1xx.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_dma.h" path="../../../../lib/inc/stm32l1xx_dma.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_dac.c" path="../../../../lib/src/stm32l1xx_dac.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_fsmc.h" path="../../../../lib/inc/stm32l1xx_fsmc.h" type="1"/>
+    <File name="cmsis_boot/Startup/startup_stm32l1xx_md.c" path="../../../../lib/cmsis_boot/startup/coide/startup_stm32l1xx_md.c" type="1"/>
+    <File name="cmsis_boot/system_stm32l1xx.h" path="../../../../lib/cmsis_boot/system_stm32l1xx.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_dbgmcu.c" path="../../../../lib/src/stm32l1xx_dbgmcu.c" type="1"/>
+    <File name="cmsis_lib/Include" path="" type="2"/>
+    <File name="cmsis_lib/Include/stm32l1xx_crc.h" path="../../../../lib/inc/stm32l1xx_crc.h" type="1"/>
+    <File name="cmsis_core/core_cmFunc.h" path="../../../../lib/cmsis_core/core_cmFunc.h" type="1"/>
+    <File name="cmsis_boot/Startup/startup_stm32l1xx_mdp.c" path="../../../../lib/cmsis_boot/startup/coide/startup_stm32l1xx_mdp.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_aes.h" path="../../../../lib/inc/stm32l1xx_aes.h" type="1"/>
+    <File name="cmsis_boot/system_stm32l1xx.c" path="../../../../lib/cmsis_boot/system_stm32l1xx.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_wwdg.c" path="../../../../lib/src/stm32l1xx_wwdg.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_syscfg.h" path="../../../../lib/inc/stm32l1xx_syscfg.h" type="1"/>
+    <File name="Example" path="" type="2"/>
+    <File name="cmsis_core/core_cm3.h" path="../../../../lib/cmsis_core/core_cm3.h" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
+    <File name="cmsis_lib/Source/stm32l1xx_exti.c" path="../../../../lib/src/stm32l1xx_exti.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_dbgmcu.h" path="../../../../lib/inc/stm32l1xx_dbgmcu.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_rtc.c" path="../../../../lib/src/stm32l1xx_rtc.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_flash_ramfunc.c" path="../../../../lib/src/stm32l1xx_flash_ramfunc.c" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_opamp.c" path="../../../../lib/src/stm32l1xx_opamp.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_flash.h" path="../../../../lib/inc/stm32l1xx_flash.h" type="1"/>
+    <File name="cmsis_lib/Source/stm32l1xx_i2c.c" path="../../../../lib/src/stm32l1xx_i2c.c" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_tim.h" path="../../../../lib/inc/stm32l1xx_tim.h" type="1"/>
+    <File name="cmsis_lib/Include/misc.h" path="../../../../lib/inc/misc.h" type="1"/>
+    <File name="cmsis_boot/Startup" path="" type="2"/>
+    <File name="cmsis_lib/Include/stm32l1xx_sdio.h" path="../../../../lib/inc/stm32l1xx_sdio.h" type="1"/>
+    <File name="cmsis_lib/Include/stm32l1xx_exti.h" path="../../../../lib/inc/stm32l1xx_exti.h" type="1"/>
+    <File name="cmsis_lib/Source/misc.c" path="../../../../lib/src/misc.c" type="1"/>
+  </Files>
+</Project>

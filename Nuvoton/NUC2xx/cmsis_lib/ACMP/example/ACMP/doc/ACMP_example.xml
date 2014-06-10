@@ -1,0 +1,27 @@
+<Example>
+    <Name>
+        ACMP_example
+    </Name>
+    <Description>
+        NUC200 Series ACMP Driver Sample Code.
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        ACMP
+    </Tags>
+    <EVKit>
+        NUC200VE3AN Development Board
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC123\cmsis_lib\ACMP\example\ACMP\src\ACMP_example.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>UART , C lib , GPIO, SYS</Dependency>
+    </Dependencys>
+</Example>
+
+

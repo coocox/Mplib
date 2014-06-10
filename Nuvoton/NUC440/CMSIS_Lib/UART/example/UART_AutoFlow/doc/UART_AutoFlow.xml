@@ -1,0 +1,47 @@
+<Example>
+    <Name>
+        UART_AutoFlow
+    </Name>
+    <Description>
+    +-------------------------------------------------------------+
+    |     Pin Configure                                           |
+    +-------------------------------------------------------------+
+    |  ______                                      _______        |
+    | |      |                                    |       |       |
+    | |Master|---TXD1    <============>    RXD1---|Slave  |       |
+    | |      |---RTS1    <============>    CTS1---|       |       |
+    | |______|---CTS1    <============>    RTS1---|_______|       |
+    |                                                             |
+    +-------------------------------------------------------------+
+
+    +-------------------------------------------------------------+
+    |      AutoFlow Function Test                                 |
+    Description :                                            
+    |    The sample code needs two boards. One is Master and    |
+    |    the other is slave. Master will send 1k bytes data     |
+    |    to slave.Slave will check if received data is correct  |
+    |    after getting 1k bytes data.                           |
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        UART
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_AutoFlow.c
+        </File>
+    </Files>
+    <MainFiles>
+      <MainFile>$REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\UART\example\UART\src\UART_AutoFlow.c </MainFile>
+    </MainFiles>
+    <Dependencys>
+        <Dependency> clk,SYS,retarget printf,c library</Dependency>
+    </Dependencys>
+</Example>
+
+

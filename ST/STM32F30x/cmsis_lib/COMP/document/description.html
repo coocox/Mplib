@@ -1,0 +1,23 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>COMP</h1>
+<h2>Overview</h2>
+<ul>
+  The STM32F30xxx embeds seven general purpose comparators that can be used either as 
+standalone devices (all terminal are available on I/Os) or combined with the timers. They 
+can be used for a variety of functions including:Wake-up from low-power mode triggered by an analog signal; Analog signal conditioning;Cycle-by-cycle current control loop when combined with the DAC and a PWM output from a timer.
+	COMP main features
+    	<li>Rail-to-rail comparators</li>
+	<li>Each comparator has configurable positive and negative inputs used for flexible voltage selection:
+¨C Multiplexed I/O pins
+¨C DAC channel 1 or DAC channel 2
+¨C Internal reference voltage and three submultiple values (1/4, 1/2, 3/4) provided by 
+scaler (buffered voltage divider).</li>
+	<li>Programmable hysteresis</li>
+	<li>Programmable speed and consumption</li>
+	<li>COMP1 and COMP2, COMP3/COMP4, and COMP5/COMP6 comparators can be 
+combined in a window comparator. COMP7 does not support the window mode.</li>
+	<li>Comparators output with blanking source</li>
+	<li>Each comparator has interrupt generation capability with wake-up from Sleep and Stop modes (through the EXTI controller)</li>
+    	
+</ul>

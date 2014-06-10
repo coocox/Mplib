@@ -1,0 +1,17 @@
+<p>
+<link href="cox_series_component.css" type="text/css" rel="stylesheet" /></p>
+<h1>FMC</h1>
+<h2>Overview</h2>
+<ul>
+    <li>The NUC400 is equipped with 256/512K bytes on-chip embedded flash for application program 
+memory  (APROM)  and  data  flash  that  can  be  updated  through  ISP  procedure.  In-System-
+Programming (ISP) and In-Application-Programming (IAP) enables user to update chip embedded 
+flash when chip is soldered on PCB. After chip is powered on, Cortex-M4 CPU fetches code from 
+APROM  or  LDROM  decided  by  boot  select  (CBS)  in  Config0.  By  the  way,  the  NUC400  also 
+provides Data Flash for user to store some application dependent data before chip is powered off. 
+The NUC400 supports another flexible feature: configurable data flash size. The data flash size is 
+decided  by  data  flash  enable  (DFEN)  in  Config0  and  data  flash  base  address  (DFBADR)  in 
+Config1. When DFEN is set to 1, the data flash size is zero. When DFEN is set to 0, the APROM 
+and data flash share 256/512K bytes continuous address and the start address of data flash  is 
+defined by (DFBADR) in Config1.</li>
+</ul>

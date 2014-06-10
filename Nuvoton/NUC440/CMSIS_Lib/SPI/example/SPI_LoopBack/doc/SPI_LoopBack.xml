@@ -1,0 +1,30 @@
+<Example>
+    <Name>
+        SPI_LoopBack
+    </Name>
+    <Description>
+        Configure SPI0 as a master and SPI1 as a slave.Data width of a transaction: 32.
+		The I/O connection for SPI0/SPI1 loopback:
+		SPI0_SS  (PE.4) <--> SPI1_SS(PC.12)    SPI0_CLK(PE.5)  <--> SPI1_CLK(PD.1)
+		SPI0_MISO(PE.2) <--> SPI1_MISO(PD.0)   SPI0_MOSI(PE.3) <--> SPI1_MOSI(PC.15)
+    </Description>
+    <Version>
+        1.200
+    </Version>
+    <Tags>
+        SPI
+    </Tags>
+    <EVKit>
+        NuTiny-EVB-NUC472_LQFP176 V2.0
+    </EVKit>
+    <Files>
+        <File>
+            $REPO_ROOT$\Nuvoton\NUC400\cmsis_lib\SPI\example\SPI_LoopBack\src\SPI_LoopBack.c
+        </File>
+    </Files>
+    <Dependencys>
+        <Dependency>sys,clk,c library, retarget printf</Dependency>
+    </Dependencys>
+</Example>
+
+
