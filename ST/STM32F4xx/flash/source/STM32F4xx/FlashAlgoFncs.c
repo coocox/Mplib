@@ -62,6 +62,7 @@ typedef struct {
 #define FLASH_PG                ((unsigned int)0x00000001)
 #define FLASH_SER               ((unsigned int)0x00000002)
 #define FLASH_MER               ((unsigned int)0x00000004)
+#define FLASH_MER1              ((unsigned int)0x00008000)
 #define FLASH_SNB_POS           ((unsigned int)0x00000003)
 #define FLASH_SNB_MSK           ((unsigned int)0x00000078)
 #define FLASH_PSIZE_POS         ((unsigned int)0x00000008)
@@ -119,6 +120,8 @@ unsigned long GetSecNum (unsigned long addr)
   {
     n = 0 + (n >> 2);                                    //  16kB Sector
   }
+  if (addr & 0x00100000)
+    n |=0x00000010;
 
   return (n);                                            // Sector Number
 }
@@ -185,6 +188,27 @@ int FlashUnInit (unsigned long operateFuc)
   return (0);
 
   return 0;
+}
+
+int FlashEraseChip (void) 
+{
+
+  FLASH->CR |=  FLASH_MER;                              // Mass Erase Enabled (sectors  0..11)
+#ifdef STM32F4xx_2048
+  FLASH->CR |=  FLASH_MER1;                             // Mass Erase Enabled (sectors 12..23)
+#endif
+  FLASH->CR |=  FLASH_STRT;                             // Start Erase
+
+  while (FLASH->SR & FLASH_BSY) {
+    IWDG->KR = 0xAAAA;                                  // Reload IWDG
+  }
+
+  FLASH->CR &= ~FLASH_MER;                              // Mass Erase Disabled
+#ifdef STM32F4xx_2048
+  FLASH->CR &= ~FLASH_MER1;                             // Mass Erase Disabled
+#endif
+
+  return (0);                                           // Done
 }
 
 /**

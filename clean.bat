@@ -7,7 +7,6 @@ echo clean project/coide_gen/rvmdk/ewarm
     @if exist "%%a\Debug_Flash" rd /s /q "%%a\Debug_Flash"
     @if exist "%%a\Debug_Ram" rd /s /q "%%a\Debug_Ram"
 	@if exist "%%a\Output" rd /s /q "%%a\Output"
-	@if exist "%%a\Flash" rd /s /q "%%a\Flash"
 	@if exist "%%a\Debug" rd /s /q "%%a\Debug"
 	@if exist "%%a\settings" rd /s /q "%%a\settings"
     @if exist "%%a\ewarm\settings" rd /s /q "%%a\ewarm\settings"
